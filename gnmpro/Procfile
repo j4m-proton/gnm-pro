@@ -1,1 +1,2 @@
-web: daphne -b 0.0.0.0 -p ${PORT} ecomprj.asgi:application
+web: gunicorn gnmpro.wsgi:application --bind 0.0.0.0:${PORT}
+
