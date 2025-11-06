@@ -1,0 +1,337 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+    /* ===== BLOG DETAIL DARK MODE STYLING ===== */
+body {
+  background: #0d0d0d; /* pure dark background */
+  color: #e0e0e0;      /* light text */
+  font-family: 'Inter', sans-serif;
+}
+
+/* General typography */
+main h1, main h2, main h3, main h4 {
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+main p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+  color: #d1d1d1;
+}
+
+/* Dropcap */
+.dropcap {
+  float: left;
+  font-size: 3.5rem;
+  line-height: 1;
+  font-weight: 700;
+  margin-right: 10px;
+  color: var(--secondary-color);
+  font-family: 'Georgia', serif;
+}
+
+/* Figure images */
+figure img {
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+figure img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.6);
+}
+
+/* Blockquote */
+blockquote {
+  font-size: 1.3rem;
+  font-style: italic;
+  border-left: 4px solid var(--primary-color);
+  padding-left: 1rem;
+  color: #f5f5f5;
+}
+blockquote-footer {
+  margin-top: .5rem;
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+}
+
+/* Author box */
+.d-flex.py-4 {
+  background: #1a1a1a;
+  border-radius: 14px;
+  padding: 1.5rem !important;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.d-flex.py-4 h4 a {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+.d-flex.py-4 small {
+  color: #aaa;
+}
+
+/* Sidebar share icons */
+.nav .nav-link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff !important;
+  border-radius: 50%;
+  transition: 0.3s ease;
+  background: var(--primary-color);
+}
+.nav .nav-link:hover {
+  background: var(--secondary-color);
+  transform: translateY(-3px) scale(1.1);
+}
+
+/* Sticky next/prev post */
+.sticky-post {
+  background: #141414;
+  border-radius: 10px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.sticky-post:hover {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: #fff;
+}
+.sticky-post:hover a {
+  color: #fff !important;
+}
+
+/* Related posts cards */
+.card {
+  border: none;
+  background: #1b1b1b;
+  border-radius: 12px;
+  transition: all .3s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+}
+.card-title a {
+  font-weight: 600;
+  color: #fff;
+}
+.card-title a:hover {
+  color: var(--primary-color);
+}
+
+/* Light highlight sections */
+.bg-light {
+  background: #191919 !important;
+  color: #ddd;
+  border-radius: 12px;
+  padding: 1rem;
+}
+.bg-light p, .bg-light q {
+  font-style: italic;
+  color: #ccc;
+}
+
+/* Inline mark highlight */
+mark {
+  background: var(--secondary-color);
+  color: #fff;
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
+</style>
+
+<style>
+ 
+/* Sticky sidebars for desktop only */
+.sticky-sidebar-left,
+.sticky-sidebar-right {
+  position: sticky;
+  top: 100px;  /* distance from top navbar */
+  height: calc(100vh - 120px);
+  overflow-y: auto;
+  background: #141414;
+  border-radius: 12px;
+  padding: 1rem;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Mobile & Tablet responsive fix */
+@media (max-width: 991.98px) {
+  .sticky-sidebar-left,
+  .sticky-sidebar-right {
+    position: static;   /* remove sticky */
+    height: auto;       /* let it grow naturally */
+    overflow: visible;  /* no scroll inside */
+    margin-bottom: 2rem; /* spacing under */
+  }
+}
+
+/* Tablet & Mobile: bigger avatar + spacing */
+@media (max-width: 991.98px) {
+  .avatar-sm {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 0.5rem;
+  }
+
+  .sticky-sidebar-left {
+    text-align: center !important; /* center everything */
+    margin-bottom: 2rem;
+  }
+}
+
+</style>
+<!-- **************** MAIN CONTENT START **************** -->
+<main>
+    
+    <!-- =======================
+    Inner intro START -->
+    <section class="pb-3 pb-lg-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>"{{post.title}}".</h2>
+                </div>
+                 <p class="lead">{{post.description}} </p>
+            </div>
+        </div>
+    </section>
+    <!-- =======================
+    Inner intro END -->
+    
+    <!-- =======================
+    Main START -->
+    <section class="pt-0">
+        <div class="container position-relative" data-sticky-container>
+            <div class="row">
+                <!-- Left sidebar START -->
+                <div class="col-lg-2 sticky-sidebar-left">
+                    <div class="text-start text-lg-center mb-5" data-sticky data-margin-top="80" data-sticky-for="991">
+                        <!-- Author info -->
+                        <div class="position-relative text-center">
+                            <img class="avatar-sm rounded-circle" src="{{ post.author.profile.image.url }}" alt="{{ post.author.username }}">
+                            <a href="#" class="h6 stretched-link mt-2 mb-0 d-block">{{ post.author.username }}</a>
+                            <p class="small text-muted">An editor at GNM-Cargo</p>
+                        </div>
+  
+                        <hr class="d-none d-lg-block">
+                        <!-- Card info -->
+                        <ul class="list-inline list-unstyled">
+                            <li class="list-inline-item d-lg-block my-lg-2">{{post.created_at|date:"M d, Y"}}</li>
+                            <li class="list-inline-item d-lg-block my-lg-2">{{post.time_to_read}} min read</li>
+                            <li class="list-inline-item d-lg-block my-lg-2"><a href="#" class="text-body"><i class="far fa-heart me-1"></i></a> {{post.likes}}</li>
+                            <li class="list-inline-item d-lg-block my-lg-2"><i class="far fa-eye me-1"></i> {{post.views}} Views</li>
+                        </ul>
+                        
+                    </div>
+                </div>
+                <!-- Left sidebar END -->
+                <!-- Main Content START -->
+                <div class="col-lg-7 mb-5">
+
+                    {% for section in sections %}
+                      {# Heading ikiwa ipo #}
+                      {% if section.heading %}
+                        <h4 class="mt-4">{{ section.heading }}</h4>
+                      {% endif %}
+                  
+                      {# Content ikiwa ipo #}
+                      {% if section.content %}
+                        <p>{{ section.content|linebreaks }}</p>
+                      {% endif %}
+                  
+                      {# Image ikiwa ipo #}
+                      {% if section.image %}
+                      <div class="mt-3">
+                        <figure class="figure text-center w-100">
+                          <a href="{{ section.image.url }}" data-glightbox data-gallery="image-popup">
+                            <img class="rounded img-fluid w-100" src="{{ section.image.url }}" alt="{{ section.heading }}">
+                          </a>
+                          <figcaption class="figure-caption text-center">Image via GNM Cargo</figcaption>
+                        </figure>
+                      </div>                      
+                      {% endif %}
+                  
+                      {# Video ikiwa ipo #}
+                      {% if section.video %}
+                        <div class="mt-3 mb-3">
+                          <video class="w-100 rounded" controls>
+                            <source src="{{ section.video.url }}" type="video/mp4">
+                            Your browser does not support the video tag.
+                          </video>
+                        </div>
+                      {% endif %}
+                  
+                      {# Divider kila baada ya section #}
+                      {% if not forloop.last %}
+                        <div class="text-center h5 my-4">. . .</div>
+                      {% endif %}
+                    {% endfor %}
+                  
+                  </div>
+                  
+                  
+                <!-- Main Content END -->
+                
+                <!-- Right sidebar START -->
+                <div class="col-lg-3 sticky-sidebar-right">
+                    <h4>Related blogs</h4>
+                    {% for recently  in latest_posts %}
+                    <div class="card mb-4">
+                        <div class="row g-3">
+                            <!-- Card img -->
+                            <div class="col-4 col-sm-3">
+                            <img class="rounded-3" src="{{recently.cover_image.url}}" alt="">
+                            </div>
+                            <div class="col-8">
+                            <h6><a href="{% url 'blog:blog-detail' recently.id %}" class="btn-link stretched-link text-light fw-bold">{{recently.title}}.</a></h6>
+                            <!-- Card info -->
+                            <ul class="nav nav-divider align-items-center small">
+                                <!-- Card date -->
+                                <li class="nav-item">{{recently.created_at|date:"M d, Y"}}</li>
+                            </ul>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    
+                </div>
+                <!-- Right sidebar END -->
+            </div>
+        </div>
+    </section>
+    <!-- =======================
+    Main END -->
+    
+    <!-- =======================
+    Sticky post START -->
+    <div class="sticky-post bg-light border p-4 mb-5 text-sm-end rounded d-none d-xxl-block">
+      <div class="d-flex align-items-center">
+        <!-- Title -->
+        <div class="me-3">
+          <span>Next post<i class="bi bi-arrow-right ms-3 rtl-flip"></i></span>
+          <h6 class="m-0"> <a href="javascript:void(0)" class="stretched-link btn-link text-reset">Bad habits that people in the industry need to quit</a></h6>
+        </div>
+        <!-- image -->
+        <div class="col-4 d-none d-md-block">
+          <img src="assets/images/blog/4by3/05.jpg" alt="Image">
+        </div>
+      </div>
+    </div>
+    <!-- =======================
+    Sticky post END -->
+    
+</main>
+<!-- **************** MAIN CONTENT END **************** -->
+  
+  
+
+{% endblock content %}

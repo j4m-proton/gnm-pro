@@ -1,0 +1,242 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+    :root {
+        --primary-color: {{ primarycolor }};
+        --secondary-color: {{ secondarycolor }};
+    }
+    
+    /* GLOBAL STYLES */
+    
+    
+    a, .btn-link {
+        color: var(--primary-color);
+        transition: all 0.3s ease;
+    }
+    a:hover, .btn-link:hover {
+        color: var(--secondary-color);
+        text-shadow: 0 0 10px var(--secondary-color);
+    }
+    
+    /* CARD BASE */
+    .card {
+        background: linear-gradient(145deg, rgba(0,0,0,0.9), rgba(20,20,20,0.9));
+        border: none;
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0,0,0,0.8);
+        transition: all 0.4s ease;
+    }
+    .card:hover {
+        transform: translateY(-6px) scale(1.02);
+        box-shadow: 0 0 25px rgba(0,0,0,0.9), 0 0 20px var(--primary-color);
+    }
+    
+    /* CARD IMAGE OVERLAY */
+    .card-img-overlay {
+        background: linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.95));
+        transition: background 0.4s ease;
+    }
+    .card:hover .card-img-overlay {
+        background: linear-gradient(180deg, rgba(0,0,0,0.4), rgba(0,0,0,1));
+    }
+    
+    /* TITLES */
+    .card-title a {
+        color: #fff;
+        background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 700;
+    }
+    .card-title a:hover {
+        text-shadow: 0 0 15px var(--secondary-color);
+    }
+    
+    /* BADGES */
+    .badge {
+        border-radius: 20px;
+        padding: 0.4em 0.8em;
+        font-size: 0.75rem;
+        font-weight: 600;
+        background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+        color: #fff !important;
+        box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    }
+    
+    /* BUTTONS */
+    .btn {
+        border-radius: 30px;
+        font-weight: 600;
+        padding: 0.6em 1.2em;
+        background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+        border: none;
+        color: #fff;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.7);
+    }
+    .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px var(--secondary-color);
+    }
+    
+    /* HIGHLIGHT SECTIONS */
+    section.bg-dark {
+        background: linear-gradient(160deg, #000 0%, #111 100%);
+        border-top: 2px solid var(--primary-color);
+        border-bottom: 2px solid var(--secondary-color);
+    }
+    
+    /* IMAGE SCALE EFFECT */
+    .card-img-scale img {
+        transition: transform 0.5s ease;
+    }
+    .card-img-scale:hover img {
+        transform: scale(1.1);
+    }
+    
+    /* OVERLAY GRADIENTS */
+    .card-overlay-bottom .card-img-overlay {
+        background: linear-gradient(to top, rgba(0,0,0,0.95) 20%, rgba(0,0,0,0.2) 100%);
+    }
+    </style>
+    
+
+
+<!-- **************** MAIN CONTENT START **************** -->
+<main>
+
+<!-- =======================
+Post hero START -->
+<section class="position-relative pb-0">
+  <!-- SVG decoration right START -->
+  <div class="position-absolute top-0 start-0 translate-middle opacity-1">
+    
+  </div>
+  <div class="container">
+    <div class="row g-4 justify-content-between">
+      <div class="col-lg-6">
+        <!-- Card item START -->
+        <div class="card">
+          <!-- Card img -->
+          <div class="position-relative">
+            <img class="card-img" 
+                 src="{{pinned_post.cover_image.url}}">
+            <div class="card-img-overlay d-flex align-items-start flex-column p-3">
+              <div class="w-100 mt-auto">
+                <!-- Card category -->
+                <a href="{% url 'blog:blog-detail' pinned_post.id %}" class="badge text-bg-warning mb-2"><i class="fas fa-pin me-2 small fw-bold"></i>Pinned blog</a>
+              </div>
+            </div>
+          </div>
+          <!-- Card Info --> 
+          <div class="card-body pt-3">
+            <h4 class="card-title"><a href="{% url 'blog:blog-detail' pinned_post.id %}" class="btn-link text-reset fw-bold">{{pinned_post.title}}</a></h4>
+            <p class="card-text">{{pinned_post.description}}</p>
+          </div>
+        </div>
+        <!-- Card item END -->
+      </div>
+      <div class="col-lg-6">
+        <div class="ps-lg-5">
+          <!-- Card item START -->
+          {% for recently  in latest_posts %}
+            <div class="card mb-4">
+              <div class="row g-3">
+                <!-- Card img -->
+                <div class="col-4 col-sm-3">
+                  <img class="rounded-3" src="{{recently.cover_image.url}}" alt="">
+                </div>
+                <div class="col-8">
+                  <h5><a href="{% url 'blog:blog-detail' recently.id %}" class="btn-link stretched-link text-light fw-bold">{{recently.title}}.</a></h5>
+                  <!-- Card info -->
+                  <ul class="nav nav-divider align-items-center small">
+                    <li class="nav-item">
+                      <div class="nav-link position-relative">
+                        <span>by <a href="#" class="stretched-link text-reset btn-link">{{recently.author.username}}</a></span>
+                      </div>
+                    </li>
+                    <!-- Card date -->
+                    <li class="nav-item">{{recently.created_at|date:"M d, Y"}}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- =======================
+Post hero END -->
+
+
+
+
+
+<!-- =======================
+Last week top highlights START -->
+<section class="bg-dark">
+  <div class="container">
+    <div class="row">
+      <!-- Main Post START -->
+      <div class="col-lg-9 mx-auto">
+        <!-- Top highlights START -->
+        <div class="mb-4 text-center">
+          <h2 class="text-white mt-4">Last week top highlights</h2>
+          <p class="text-white">Check last weeks top highlights, news, stories and headline news</p>
+        </div>
+      </div>
+    </div>
+    <div class="row g-4 pb-4">
+      <!-- Card item START -->
+      {% for post  in all_posts %}
+      <div class="col-sm-6 col-lg-3">
+        <div class="card card-overlay-bottom card-img-scale">
+          <!-- Card Image -->
+          <img class="card-img" src="{{post.cover_image.url}}" alt="">
+          <!-- Card Image overlay -->
+          <div class="card-img-overlay d-flex flex-column p-3 p-sm-4"> 
+            <div>
+              <!-- Card category -->
+              <a href="#" class="badge text-bg-warning"><i class="fas fa-circle me-2 small fw-bold"></i>
+                {% if post.category %}
+                    {{post.category }}
+                {% else %}    
+                    Hot post
+                {% endif %}
+              </a>
+            </div>
+            <div class="w-100 mt-auto">
+              <!-- Card title -->
+              <h4 class="text-white"><a href="{% url 'blog:blog-detail' post.id %}" class="btn-link text-reset stretched-link">{{post.title}}</a></h4>
+              <!-- Card info -->
+              <ul class="nav nav-divider text-white-force align-items-center d-none d-sm-inline-block small">
+                <li class="nav-item position-relative">
+                  <div class="nav-link">by <a href="#" class="stretched-link text-reset btn-link">{{post.author.username}}</a>
+                  </div>
+                </li>
+                <li class="nav-item">{{post.created_at|date:"M d, Y"}}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+      <!-- Card item END -->
+    </div>
+    <button type="button" class="btn btn-primary-soft w-100 mb-4">Load more post <i class="bi bi-arrow-down-circle ms-2 align-middle"></i></button>
+  </div>
+</section>
+<!-- =======================
+Last week top highlights START -->
+
+</main>
+<!-- **************** MAIN CONTENT END **************** -->
+  
+
+{% endblock content %}

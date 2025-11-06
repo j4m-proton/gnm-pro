@@ -1,0 +1,883 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    
+
+    <meta charset="utf-8" />
+    {% if title %}
+        <title>{{ title }} GNM-Cargo</title>
+    {% else %}
+        <title>GNM-Cargo </title> 
+    {% endif %}     
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    
+
+
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <style>
+        :root {
+            --primary-color: {{ primarycolor }};
+            --secondary-color: {{ secondarycolor }};
+        }
+    </style>
+    <!-- Favicon -->
+    <!-- In your HTML <head> -->
+    <link rel="stylesheet" href="https://example.com/path/to/josephine-sans.css">
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/theme/favicon.svg" />
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="assets/css/plugins/slider-range.css" />
+    <!-- <link rel="stylesheet" href="{% static 'assets/css/main.css' %}" /> -->
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- JKI Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jki-icons@1.0.0/css/jki-icons.min.css">
+    
+    {% block extra_css %}{% endblock %}
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+        .text-secondary{
+            color: #fff !important;
+        }
+        .cursive-logo {
+            font-family: 'Pacifico', cursive;
+            font-size: 36px;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-align: center;
+            
+        }
+        .footer-cursive-logo {
+            font-family: 'Pacifico', cursive;
+            font-size: 46px;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .bottom-nav {
+            display: none;   
+        }
+	@media (max-width: 768px) {
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: space-around;
+            background-color: #fff;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .bottom-nav img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .bottom-nav a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #444;
+            font-size: 14px;
+            flex-grow: 1;
+            padding: 5px 0;
+        }
+
+        .bottom-nav a i {
+            font-size: 20px;
+            margin-bottom: 2px;
+        }
+
+        /* Common styles for the icons */
+        .bottom-nav .icon {
+            width: 30px;
+            height: 30px;
+            fill: #444; /* Default color */
+            transition: fill 0.3s ease; /* Smooth transition */
+        }
+
+        /* Set fill color dynamically using the theme's primary color */
+        .bottom-nav a.active .icon path,
+        .bottom-nav a:hover .icon path {
+            stroke: var(--primary-color); /* Apply dynamic primary color */
+        }
+        .bottom-nav a.active {
+            color: var(--primary-color);
+            
+        }
+
+        .bottom-nav a:hover {
+            color: var(--primary-color);
+            background-color: var(--primary-color);
+        }
+	    }
+      
+        .whatsapp-button {
+            position: fixed;
+            bottom: 100px;
+            /* Added margin from the bottom */
+            right: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 30px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+            z-index: 1000;
+        }
+
+        .whatsapp-button:hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .whatsapp-button i {
+            font-size: 28px;
+        }
+
+        /* Scroll to Top Button Style */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 50px;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, opacity 0.3s ease;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .scroll-to-top:hover {
+            background-color: #0056b3;
+        }
+
+        .scroll-to-top i {
+            font-size: 28px;
+        }
+
+        .scroll-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .default-logo {
+            font-family: 'Raleway', sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color) /* Adjust color as needed */
+        }
+
+        .payment-methods .payment-method {
+            padding: 10px;
+        }
+
+        .payment-methods .payment-img {
+            max-width: 80px; /* Set a consistent max width for all images */
+            max-height: 80px; /* Set a consistent max height for all images */
+            object-fit: contain; /* Ensure the image scales while maintaining aspect ratio */
+            display: block;
+            margin: 0 auto; /* Center the image horizontally */
+        }
+
+        .payment-methods .payment-method p {
+            font-size: 14px; /* Adjust font size for the name label */
+            margin-top: 5px;
+        }
+
+        .user-profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-avatar img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .profile-username {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .profile-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Space between the links */
+        }
+
+        .profile-link, .admin-link {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            color: var(--primary-color);
+            text-decoration: none;
+            border: 1px solid var(--primary-color);
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .profile-link i, .admin-link i {
+            margin-right: 5px;
+        }
+
+        .profile-link:hover, .admin-link:hover {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+
+        .profile-link:hover i, .admin-link:hover i {
+            color: #fff;
+        }
+
+        .profile-avatar-unauthorized img{
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+
+
+
+    </style>
+
+<style>
+    .site-footer {
+  background: #0a0a0a;
+  color: #fff;
+  padding: 60px 20px 20px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-col h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  position: relative;
+}
+
+.footer-col h3::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: var(--secondary-color);
+  margin-top: 5px;
+}
+
+.footer-logo {
+  max-width: 180px;
+  margin-bottom: 1rem;
+}
+
+.footer-links,
+.footer-contact {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li,
+.footer-contact li {
+  margin: 0.5rem 0;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--primary-color);
+  padding-left: 5px;
+}
+
+.footer-links i,
+.footer-contact i {
+  color: var(--secondary-color);
+  margin-right: 8px;
+}
+
+.footer-social {
+  margin-top: 1rem;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin-right: 10px;
+  width: 35px;
+  height: 35px;
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 35px;
+  transition: 0.3s;
+}
+
+.footer-social a:hover {
+  background: var(--secondary-color);
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+  border-top: 1px solid #222;
+  margin-top: 40px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+</style>
+
+<style>
+    /* Active state */
+.mobile-menu li.active > a,
+.mobile-menu a.active {
+  color: var(--primary-color) !important;
+  font-weight: 700;
+  /* background: rgba(255,255,255,0.06);
+  border-radius: 10px;
+  padding: 6px 10px;
+  outline: 0;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.08); */
+}
+
+/* Optional subtle glow on dark nav */
+/* .mobile-menu li.active > a {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25), 0 0 0 1px rgba(255,255,255,0.02) inset;
+} */
+
+</style>
+
+
+
+</head>
+
+<body style="background-color: #000000;">
+
+    <header class="header-area header-style-1 header-height-2" style="background-color: #000000; color: #fff;" >
+        <div class="mobile-promotion" style="background-color: var(--primary-color); color: white;">
+            <span style="color: white;">Grand opening, <strong style="color: white;">up to 15%</strong> off all items. Only <strong style="color: white;">3 days</strong> left</span>
+        </div>
+        <div class="header-top header-top-ptb-1 d-none d-lg-block" style="background-color: #000000;">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-3 col-lg-4">
+                        <div class="header-info">
+                            <ul>
+                                <li class="fs-9" style="color: white;"><i class="fas fa-envelope  me-1" style="color: var(--primary-color); font-size: large;"></i><h6 class="text-light"> {{siteMainSettings.main_email}}</h6></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-4" >
+                        <div class="text-center">
+                            <div id="news-flash" class="d-inline-block">
+                                <ul>
+                                    {% for flash in news_flashes %}
+                                        <li style="color: rgb(167, 162, 162);">{{ flash.message }}</li>
+                                    {% empty %}
+                                        <li style="color: rgb(165, 161, 161);">No news flashes available at the moment.</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4" ">
+                        <div class="mobile-social-icon" style="display: flex; justify-content: flex-end; gap: 10px;">
+                            {% for handle in social_handles %}
+                            {% if handle.is_active %}
+                                <a href="{{ handle.url }}" target="_blank">
+                                    <img src="{% static handle.get_icon_path %}" alt="{{ handle.platform }}" />
+                                </a>
+                            {% endif %}
+                            {% empty %}
+                                <p class="text-light">No social media handles available.</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+
+
+        <div class="header-bottom  sticky-bar" style="background-color: #000000; color: #fff;">
+            <div class="container">
+                <div class="header-wrap header-space-between position-relative">
+                    <div class="logo logo-width-1">
+                        {% if siteMainSettings.logo_url %}
+                            <a href="/"><img src="{{ siteMainSettings.logo_url }}" alt="{{ siteMainSettings.site_name }}" /></a>
+                        {% else %}
+                            <a href="/" class="cursive-logo">
+                                {{ siteMainSettings.site_name|default:'YourBrandName' }}
+                            </a>
+                        {% endif %}
+                    </div>
+                    <div class="header-nav d-none d-lg-flex">
+
+
+
+
+
+                        <div class="main-categori-wrap d-none d-lg-block">
+                            <div class="logo logo-width-1 d-block d-lg-none">
+                                {% if siteMainSettings.logo_url %}
+                                    <a href="/"><img src="{{ siteMainSettings.logo_url }}" alt="{{ siteMainSettings.site_name }}" /></a>
+                                {% else %}
+                                    <a href="/" class="cursive-logo">
+                                        {{ siteMainSettings.site_name|default:'YourBrandName' }}
+                                    </a>
+                                {% endif %}
+                            </div>
+                            
+                            
+                        </div>
+
+
+
+
+
+
+
+
+
+                        <div class="main-menu main-menu-padding-1 main-menu-lh-2 d-none d-lg-block font-heading">
+                            <nav>
+                                <ul class="mobile-menu">
+
+                                    <li class="text-light">
+                                        <a  href="{% url 'home:home-page' %}" class="text-light">Home</a>
+
+                                    </li>
+
+                
+
+                                    <li class="text-light">
+                                        <a href="{% url 'aboutus:about-page'  %}" class="text-light">About us</a>
+                                    </li>
+
+                                    <li class="text-light">
+                                        <a href="{% url 'service:service-page' %}" class="text-light">Services </a>
+
+                                    </li>
+
+                                    
+
+                                    <li class="text-light">
+                                        <a href="{% url 'contactus:contact-us' %}" class="text-light">Contact us</a>
+
+                                    </li>
+
+                                    <li class="text-light">
+                                        <a href="{% url 'team:team-page' %}" class="text-light">Our Team </a>
+
+                                    </li>
+                                    
+                                    <li class="text-light">
+                                        <a href="{% url 'blog:blog-page' %}" class="text-light">Blog </a>
+
+                                    </li>
+                                    
+                                    
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="hotline d-none d-lg-flex">
+                        <img src="{% static 'assets/imgs/theme/icons/icon-headphone.svg' %}" alt="hotline" />
+                        <p>{{siteMainSettings.main_contact}}<span>24/7 Support</span></p>
+                    </div>
+                    <div class="header-action-icon-2 d-block d-lg-none">
+                        <div class="burger-icon burger-icon-white">
+                            <span class="burger-icon-top" style="background-color: #fff !important;"></span>
+                            <span class="burger-icon-mid" style="background-color: #fff  !important;"></span>
+                            <span class="burger-icon-bottom" style="background-color: #fff !important; "></span>
+                        </div>
+                    </div>
+                    <div class="header-action-right d-block d-lg-none">
+                        
+                        <button class="btn btn-sm btn-primary">Get App</button>
+                    </div>
+                </div>
+                {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-{{message.tags}}">
+                    <strong>{{ message }}</strong>
+                </div>
+                {% endfor %}
+                {% endif %}
+                <script>
+                    setTimeout(() => {
+                        $(".alert").alert("close");
+                    }, 3000)
+                </script>
+            </div>
+        </div>
+    </header>
+    <div class="mobile-header-active mobile-header-wrapper-style text-light" style="background-color: #000000;">
+        <div class="mobile-header-wrapper-inner">
+            <div class="mobile-header-top" style="background-color: #000000;">
+                <div class="mobile-header-logo">
+                    {% if siteMainSettings.logo_url %}
+                    <a href="/"><img src="{{ siteMainSettings.logo_url }}" alt="{{ siteMainSettings.site_name }}" /></a>
+                    {% else %}
+                        <a href="/" class="cursive-logo">
+                            {{ siteMainSettings.site_name|default:'YourBrandName' }}
+                        </a>
+                    {% endif %}
+                </div>
+
+                
+
+                <div class="mobile-menu-close close-style-wrap close-style-position-inherit">
+                    <button class="close-style search-close">
+                        <i class="icon-top"></i>
+                        <i class="icon-bottom"></i>
+                    </button>
+                </div>
+            </div>
+
+        
+            
+
+
+            <div class="mobile-header-content-area">
+                
+                <div class="mobile-menu-wrap mobile-header-border">
+                    <!-- mobile menu start -->
+                    <nav>
+                        <ul class="mobile-menu font-heading">
+                            <li class="text-light">
+                                <a class="active" href="{% url 'home:home-page' %}" class="text-light">Home</a>
+
+                            </li>
+
+        
+
+                            <li class="text-light">
+                                <a href="{% url 'aboutus:about-page'  %}" class="text-light">About us</a>
+                            </li>
+
+                            <li class="text-light">
+                                <a href="{% url 'service:service-page' %}" class="text-light">Services </a>
+
+                            </li>
+
+                            
+
+                            <li class="text-light">
+                                <a href="{% url 'contactus:contact-us' %}" class="text-light">Contact us</a>
+
+                            </li>
+
+                            <li class="text-light">
+                                <a href="{% url 'team:team-page' %}" class="text-light">Our Team </a>
+
+                            </li>
+                            <li class="text-light">
+                                <a href="{% url 'blog:blog-page' %}" class="text-light">Blog </a>
+                            </li>
+                            
+                        </ul>
+                    </nav>
+                    <!-- mobile menu end -->
+                </div>
+                <div class="mobile-header-info-wrap">
+                    
+                    <div class="single-mobile-header-info">
+                        <a href="https://wa.me/+255692946575"><i class="fi-rs-headphones"></i>0692946575 </a>
+                    </div>
+                </div>
+                <div class="mobile-social-icon mb-50">
+                    {% for handle in social_handles %}
+                            {% if handle.is_active %}
+                                <a href="{{ handle.url }}" target="_blank">
+                                    <img src="{% static handle.get_icon_path %}" alt="{{ handle.platform }}" />
+                                </a>
+                            {% endif %}
+                        {% empty %}
+                            <p class="text-light">No social media handles available.</p>
+                        {% endfor %}
+                </div>
+                <div class="site-copyright">
+                    <p class="text-brand mb-0">
+                        &copy; 2024 
+                        {% if siteMainSettings.site_name %}
+                            {{ siteMainSettings.site_name }} .All rights reserved
+                        {% else %}
+                            All rights reserved
+                        {% endif %}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End header-->
+
+    {% block content %}
+
+
+
+    {% endblock content %}
+
+    
+
+    <footer itemscope="itemscope" itemtype="https://schema.org/WPFooter" class="site-footer mt-6">
+        <div class="footer-container">
+          
+          <!-- Logo + About -->
+          <div class="footer-col">
+            <img src="https://gnmtrading.co.tz/wp-content/uploads/2023/02/GNM-CARGO-WEB-LOGO-2-1536x429.png" alt="GNM Trading Logo" class="footer-logo">
+            <p>
+              Trusted logistics & shipping solutions from China to East Africa. 
+              We make cargo shipping simple, affordable, and reliable.
+            </p>
+          </div>
+      
+          <!-- Quick Links -->
+          <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="/about-us"><i class="fas fa-angle-right"></i> About Us</a></li>
+              <li><a href="/services"><i class="fas fa-angle-right"></i> Services</a></li>
+              <li><a href="/testimonials"><i class="fas fa-angle-right"></i> Testimonials</a></li>
+              <li><a href="/contact"><i class="fas fa-angle-right"></i> Contact</a></li>
+            </ul>
+          </div>
+      
+          <!-- Services -->
+          <div class="footer-col">
+            <h3>Our Services</h3>
+            <ul class="footer-links">
+              <li><a href="#"><i class="fas fa-ship"></i> Sea Freight</a></li>
+              <li><a href="#"><i class="fas fa-truck"></i> Delivery Order</a></li>
+              <li><a href="#"><i class="fas fa-warehouse"></i> Warehousing</a></li>
+              <li><a href="#"><i class="fas fa-box"></i> Retail Shipping</a></li>
+            </ul>
+          </div>
+      
+          <!-- Contact Info -->
+          <div class="footer-col">
+            <h3>Contact Us</h3>
+            <ul class="footer-contact">
+              <li><i class="fas fa-map-marker-alt"></i> Dar es Salaam, Tanzania</li>
+              <li><i class="fas fa-phone"></i> {{support_normal_call}</li>
+              <li><i class="fas fa-envelope"></i> info@gnmtrading.co.tz</li>
+            </ul>
+            <div class="footer-social">
+                {% for handle in social_handles %}
+                {% if handle.is_active %}
+                    <a href="{{ handle.url }}" target="_blank">
+                        <img src="{% static handle.get_icon_path %}" alt="{{ handle.platform }}" />
+                    </a>
+                {% endif %}
+                {% empty %}
+                    <p class="text-light">No social media handles available.</p>
+                {% endfor %}
+            </div>
+          </div>
+          
+      
+        </div>
+      
+        <div class="footer-bottom">
+          <p>&copy; 2025 GNM Trading. All rights reserved.</p>
+        </div>
+      </footer>
+      
+    
+    
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/{{support_whatsapp}}" class="whatsapp-button" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const currentPath = window.location.pathname; // Get the current URL path
+        const navItems = document.querySelectorAll('.bottom-nav .nav-item');
+        
+        // console.log('Current Path:', currentPath); // Debugging output to verify path
+        
+        navItems.forEach(function(item) {
+            const linkPath = item.getAttribute('data-path');
+            
+            // console.log('Link Path:', linkPath); // Debugging output to verify data-path
+            
+            if (currentPath === linkPath) {
+                item.classList.add('active');
+            }
+        });
+    });
+
+
+    </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const menu = document.querySelector(".mobile-menu");
+      if (!menu) return;
+    
+      const links = menu.querySelectorAll("a[href]");
+    
+      // Normalize helper (removes trailing slash, lowercases, resolves absolute URLs)
+      const normalizePath = (p) => {
+        try {
+          p = new URL(p, window.location.origin).pathname;
+        } catch (e) {
+          // relative path fallback
+        }
+        if (!p) p = "/";
+        // force leading slash
+        if (p[0] !== "/") p = "/" + p;
+        // remove trailing slash except root
+        if (p.length > 1 && p.endsWith("/")) p = p.slice(0, -1);
+        return p.toLowerCase();
+      };
+    
+      const current = normalizePath(window.location.pathname);
+    
+      // Clear any pre-set active
+      menu.querySelectorAll(".active").forEach(el => el.classList.remove("active"));
+    
+      // Set active by URL
+      let bestMatch = null;
+      let bestLen = -1;
+    
+      links.forEach(link => {
+        const hrefAttr = link.getAttribute("href");
+        if (!hrefAttr || hrefAttr === "#" || hrefAttr.startsWith("javascript:")) return;
+    
+        const linkPath = normalizePath(hrefAttr);
+    
+        // Exact match or prefix match (but ignore "/" as prefix for everything)
+        const isExact = linkPath === current;
+        const isPrefix = linkPath !== "/" && current.startsWith(linkPath + "");
+    
+        if (isExact || isPrefix) {
+          // choose the longest matching path (most specific)
+          const len = linkPath.length;
+          if (len > bestLen) {
+            bestLen = len;
+            bestMatch = link;
+          }
+        }
+      });
+    
+      if (bestMatch) {
+        bestMatch.classList.add("active");
+        const li = bestMatch.closest("li");
+        if (li) li.classList.add("active");
+        bestMatch.setAttribute("aria-current", "page");
+      }
+    
+      // Optional: keep active instantly on click (useful if same page updates without full reload)
+      links.forEach(link => {
+        link.addEventListener("click", () => {
+          links.forEach(l => {
+            l.classList.remove("active");
+            const li = l.closest("li");
+            if (li) li.classList.remove("active");
+          });
+          link.classList.add("active");
+          const li = link.closest("li");
+          if (li) li.classList.add("active");
+        });
+      });
+    });
+    </script>
+    
+    
+
+   
+    <script data-cfasync="false"
+        src="{% static '/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/modernizr-3.6.0.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/jquery-migrate-3.3.0.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/slick.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/jquery.syotimer.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/wow.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/slider-range.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/perfect-scrollbar.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/magnific-popup.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/select2.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/waypoints.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/counterup.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/jquery.countdown.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/images-loaded.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/isotope.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/scrollup.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/jquery.vticker-min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/jquery.theia.sticky.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/jquery.elevatezoom.js' %}"></script>
+    <!-- Template  JS -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+    <script src="{% static 'assets/js/shop.js' %}"></script>
+    <script src="{% static 'assets/js/function.js' %}"></script>
+</body>
+
+</html>

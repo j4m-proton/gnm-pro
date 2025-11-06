@@ -1,0 +1,489 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<style>
+    .services-section {
+        background: linear-gradient(135deg, #000000, #111111);
+        color: #fff;
+        padding: 5rem 1rem;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+    }
+
+    .text-primary {
+        color: var(--primary-color) !important;
+    }
+
+    .services-section::before {
+        content: "";
+        position: absolute;
+        top: -50px;
+        left: -50px;
+        width: 300px;
+        height: 300px;
+        background: var(--primary-color);
+        opacity: 0.1;
+        filter: blur(120px);
+        border-radius: 50%;
+        z-index: -1;
+    }
+
+    .services-section::after {
+        content: "";
+        position: absolute;
+        bottom: -50px;
+        right: -50px;
+        width: 300px;
+        height: 300px;
+        background: var(--secondary-color);
+        opacity: 0.1;
+        filter: blur(120px);
+        border-radius: 50%;
+        z-index: -1;
+    }
+
+    .services-header {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .icon-box {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--primary-color);
+        font-size: 28px;
+        margin-bottom: 1rem;
+        box-shadow: 0 0 15px var(--primary-color);
+    }
+
+    .small-title {
+        font-size: 1rem;
+        color: var(--secondary-color);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 0.5rem;
+    }
+
+    .main-title {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        color: var(--primary-color);
+        ;
+        line-height: 1.3;
+    }
+
+    .description {
+        font-size: 1rem;
+        color: #bbb;
+        line-height: 1.6;
+    }
+</style>
+
+<style>
+    .services-grid {
+        background: #000;
+        padding: 5rem 2rem;
+    }
+
+    .services-grid .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+
+    .service-card {
+        background: rgba(255, 255, 255, 0.02);
+        border-radius: 1rem;
+        padding: 2rem 1.5rem;
+        text-align: center;
+        color: #fff;
+        position: relative;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .service-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 0 25px var(--primary-color), 0 0 50px var(--secondary-color);
+    }
+
+    .service-card .icon-box {
+        width: 70px;
+        height: 70px;
+        margin: 0 auto 1rem auto;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        color: #fff;
+        font-size: 28px;
+        box-shadow: 0 0 20px var(--primary-color);
+    }
+
+    .service-card h3 {
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    .service-card p {
+        font-size: 0.95rem;
+        color: #bbb;
+        line-height: 1.6;
+    }
+</style>
+
+<style>
+    .hardworking-section {
+        background: #000;
+        padding: 5rem 2rem;
+        color: #fff;
+    }
+
+    .hardworking-section .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .title-box {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .title-box .icon {
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        padding: 12px;
+        border-radius: 50%;
+        font-size: 20px;
+        color: #fff;
+        box-shadow: 0 0 15px var(--primary-color);
+    }
+
+    .title-box h5 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: var(--primary-color);
+    }
+
+    .hardworking-left h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+    }
+
+    .hardworking-left p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #bbb;
+        margin-bottom: 2rem;
+    }
+
+    /* .features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+} */
+
+    .feature {
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .feature i {
+        font-size: 28px;
+        color: var(--secondary-color);
+        background: rgba(255, 255, 255, 0.05);
+        padding: 15px;
+        border-radius: 12px;
+        box-shadow: 0 0 15px var(--secondary-color);
+    }
+
+    .feature h4 {
+        font-size: 1.1rem;
+        margin-bottom: 0.4rem;
+        color: #fff;
+    }
+
+    .feature p {
+        font-size: 0.9rem;
+        color: #aaa;
+    }
+
+    .hardworking-right img {
+        width: 100%;
+        border-radius: 1rem;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+        transition: transform 0.4s ease;
+        box-shadow: 0 0 25px var(--primary-color), 0 0 50px var(--secondary-color);
+    }
+
+    .hardworking-right img:hover {
+        transform: scale(1.05);
+
+    }
+</style>
+
+
+
+<style>
+    .testimonial-section {
+        background: #0a0a0a;
+        padding: 5rem 2rem;
+        color: #fff;
+        border-radius: 4em;
+    }
+
+    .testimonial-section .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 3rem;
+        align-items: center;
+    }
+
+    /* Left Column */
+    .title-box {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .title-box .icon {
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        padding: 12px;
+        border-radius: 50%;
+        color: #fff;
+        font-size: 20px;
+        box-shadow: 0 0 15px var(--primary-color);
+    }
+
+    .testimonial-left h2 {
+        font-size: 2rem;
+        margin: 1rem 0;
+        font-weight: 700;
+    }
+
+    .testimonial-left p {
+        color: #bbb;
+        line-height: 1.6;
+    }
+
+    /* Right Column - Slider */
+    .testimonial-item {
+        background: #111;
+        padding: 2rem;
+        border-radius: 1rem;
+        position: relative;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .profile {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .profile img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 2px solid var(--primary-color);
+    }
+
+    .profile strong {
+        font-size: 1rem;
+        color: var(--primary-color);
+    }
+
+    .profile p {
+        font-size: 0.85rem;
+        color: #aaa;
+    }
+
+    .quote-icon {
+        font-size: 24px;
+        color: var(--secondary-color);
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+
+    .comment {
+        font-size: 1rem;
+        color: #ddd;
+        line-height: 1.5;
+    }
+
+    /* Swiper nav buttons */
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: var(--primary-color);
+    }
+
+    .swiper-pagination-bullet {
+        background: var(--secondary-color);
+    }
+</style>
+
+<div class="container">
+    <section class="services-section">
+        <div class="container">
+            {% if servicetop %}
+            <div class="services-header text-center">
+                <div class="icon-box mb-3">
+                    <i class="fas fa-ship"></i>
+                </div>
+                <h5 class="small-title">{{ servicetop.small_title }}</h5>
+                <h2 class="main-title">{{ servicetop.main_title }}</h2>
+                <p class="description">
+                    {{ servicetop.description }}
+                </p>
+            </div>
+            {% else %}
+            <p class="text-muted">Services section is not configured yet.</p>
+            {% endif %}
+        </div>
+    </section>
+
+
+
+    <section class="services-grid">
+        <div class="container">
+            {% for s in services %}
+            <a href="{% url 'service:Services-Details' s.id %}" style="text-decoration: none;">
+                <div class="service-card">
+                    <div class="icon-box"><i class="fas fa-ship"></i></div>
+                    <h3>{{s.title}}</h3>
+                    <p>{{s.category.description}}</p>
+                </div>
+            </a>
+            {% endfor %}
+
+        </div>
+    </section>
+
+
+
+    <section class="hardworking-section">
+        <div class="container">
+            <div class="hardworking-left">
+                <div class="title-box">
+                    <div class="icon"><i class="fas fa-ship"></i></div>
+                    <h5 class="text-light">{{ hardworking.small_title }}</h5>
+                </div>
+                <h2 class="text-primary">{{ hardworking.main_title }}</h2>
+                <p>{{ hardworking.description }}</p>
+
+                <div class="row features">
+                    {% for feature in hardworking.features.all %}
+                    <div class="col-md-6 feature">
+                        <i class="{{ feature.icon_class }}"></i>
+                        <div>
+                            <h4>{{ feature.title }}</h4>
+                            <p>{{ feature.description }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="hardworking-right">
+                {% if hardworking.image %}
+                <img src="{{ hardworking.image.url }}" alt="Hardworking Section">
+                {% endif %}
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonial-section mb-4">
+        <div class="container">
+            <div class="testimonial-left">
+                <div class="title-box">
+                    <div class="icon"><i class="fas fa-ship"></i></div>
+                    <h5>{{ testimonial_content.small_title }}</h5>
+                </div>
+                <h2>{{ testimonial_content.main_title }}</h2>
+                <p>{{ testimonial_content.description }}</p>
+            </div>
+
+            <div class="testimonial-right">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        {% for t in testimonials %}
+                        <div class="swiper-slide testimonial-item">
+                            <div class="profile">
+                                {% if t.avatar %}
+                                <img src="{{ t.avatar.url }}" alt="{{ t.name }}">
+                                {% else %}
+                                <img src="https://gnmtrading.co.tz/wp-content/uploads/2023/02/user-300x300.png"
+                                    alt="{{ t.name }}">
+                                {% endif %}
+                                <div>
+                                    <strong>{{ t.name }}</strong>
+                                    <p>{{ t.role }}</p>
+                                </div>
+                            </div>
+                            <i class="fas fa-quote-left quote-icon"></i>
+                            <p class="comment">{{ t.quote }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <!-- Pagination & Navigation -->
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+</div>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+
+{% endblock content %}

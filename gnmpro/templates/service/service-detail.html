@@ -1,0 +1,109 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% load humanize %}
+{% block content %}
+<style>
+    h1, h2, h3, h4 {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Section card */
+.section-card {
+    background: linear-gradient(145deg, rgba(20,20,20,0.95), rgba(0,0,0,0.95));
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.6), 
+                0 0 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7),
+                0 0 20px var(--primary-color);
+}
+
+/* Section headings */
+.section-heading {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 0.75rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+/* Sub-sections */
+.section-card h4 {
+    color: #fff;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Paragraphs */
+.section-card p {
+    color: #bbb;
+    margin-bottom: 1rem;
+}
+
+/* Media (images & videos) */
+.section-media {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.section-media img,
+.section-media iframe {
+    width: 100%;
+    border-radius: 0.75rem;
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-media img:hover,
+.section-media iframe:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.8),
+                0 0 15px var(--secondary-color);
+}
+
+</style>
+<div class="container py-3">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <h1 class="mb-2 text-center"># {{ service.title }}</h1>
+            {% for detail in details %}
+                <div class="section-card">
+                    <h3 class="section-heading">{{ detail.title }}</h3>
+                    {% for section in detail.sections.all %}
+                        <div class="mb-4">
+                            <h4>{{ section.heading }}</h4>
+                            <p>{{ section.content|linebreaks }}</p>
+
+                            <div class="section-media">
+                                {% for media in section.medias.all %}
+                                    {% if media.image %}
+                                        <img src="{{ media.image.url }}" alt="{{ media.caption }}">
+                                    {% endif %}
+                                    {% if media.video_url %}
+                                        <iframe src="" 
+                                                frameborder="0" allowfullscreen></iframe>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+</div>
+{% endblock content %}
