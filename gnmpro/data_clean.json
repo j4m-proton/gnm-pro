@@ -1,0 +1,860 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2025-10-28T09:02:41.127Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "1",
+    "object_repr": "gnm cargo THEME",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2025-10-28T09:19:08.315Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "East Africa Logistics Solutions Fast, reliable, and secure shipping across the globe. Get a Quote",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2025-10-28T09:20:02.805Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "East Africa Logistics Solutions",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Headline\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2025-10-28T09:32:45.354Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "GNM-Cargo",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2025-10-28T10:52:07.114Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Instagram",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2025-10-28T11:12:22.014Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "1",
+    "object_repr": "Quick Transport and Logistics Solutions",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2025-10-28T11:45:36.434Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "1",
+    "object_repr": "#1 Place To Manage All Of Your Shipments",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"fact item\", \"object\": \"shipments (878)\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2025-10-28T12:07:15.937Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "1",
+    "object_repr": "Ocean Freight",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2025-10-28T12:09:43.109Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "1",
+    "object_repr": "Ocean Freight",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2025-11-05T08:41:13.604Z",
+    "user": 4,
+    "content_type": 22,
+    "object_id": "1",
+    "object_repr": "We Are Trusted Logistics Company Since 2010",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"home feature\", \"object\": \"East Africa\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2025-11-05T08:50:20.303Z",
+    "user": 4,
+    "content_type": 22,
+    "object_id": "1",
+    "object_repr": "We Are Trusted Logistics Company Since 2010",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Background image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2025-11-06T05:38:58.548Z",
+    "user": 4,
+    "content_type": 24,
+    "object_id": "1",
+    "object_repr": "Why Choose Us",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"why choose us feature\", \"object\": \"On-Time Shipping (Why Choose Us)\"}}, {\"added\": {\"name\": \"why choose us feature\", \"object\": \"Affordable Price (Why Choose Us)\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2025-11-06T05:39:44.020Z",
+    "user": 4,
+    "content_type": 24,
+    "object_id": "1",
+    "object_repr": "Trusted By More Than 150+ Partners In East-Africa",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Subtitle\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2025-11-06T06:05:35.435Z",
+    "user": 4,
+    "content_type": 29,
+    "object_id": "1",
+    "object_repr": "Request A Free Quote!",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2025-11-06T06:42:50.697Z",
+    "user": 4,
+    "content_type": 27,
+    "object_id": "1",
+    "object_repr": "Vunja Bei – Vunja bei group",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2025-11-06T06:44:49.256Z",
+    "user": 4,
+    "content_type": 27,
+    "object_id": "1",
+    "object_repr": "Vunja Bei – Vunja bei group",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Avatar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2025-11-06T06:49:20.978Z",
+    "user": 4,
+    "content_type": 31,
+    "object_id": "1",
+    "object_repr": "Mr. Geofrey Mbilinyi",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2025-11-06T07:08:47.932Z",
+    "user": 4,
+    "content_type": 33,
+    "object_id": "1",
+    "object_repr": "Driven by Trust. Powered by Innovation.",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"About Feature\", \"object\": \"On-Time Shipping (About Us)\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2025-11-06T07:45:05.822Z",
+    "user": 4,
+    "content_type": 37,
+    "object_id": "1",
+    "object_repr": "Experienced in East-Africa Logistic Services",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"about feature item\", \"object\": \"Customer Support\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2025-11-06T07:48:28.681Z",
+    "user": 4,
+    "content_type": 36,
+    "object_id": "1",
+    "object_repr": "Testimonial by Vunja bei",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2025-11-06T08:00:10.555Z",
+    "user": 4,
+    "content_type": 39,
+    "object_id": "1",
+    "object_repr": "Skillful and Professional Workers Doing The Job",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"professional skill\", \"object\": \"Communication Skill - 97%\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2025-11-06T08:15:43.509Z",
+    "user": 4,
+    "content_type": 30,
+    "object_id": "1",
+    "object_repr": "Mr. Geofrey Mbilinyi",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2025-11-06T08:18:31.959Z",
+    "user": 4,
+    "content_type": 30,
+    "object_id": "2",
+    "object_repr": "Mr. Clinton Mbilinyi",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2025-11-06T08:46:28.369Z",
+    "user": 4,
+    "content_type": 40,
+    "object_id": "1",
+    "object_repr": "Our Services",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2025-11-06T08:47:30.842Z",
+    "user": 4,
+    "content_type": 40,
+    "object_id": "1",
+    "object_repr": "Our Services",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2025-11-06T09:09:50.938Z",
+    "user": 4,
+    "content_type": 42,
+    "object_id": "1",
+    "object_repr": "Providing Excellent and Quality Customer Services",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"Hardworking Feature\", \"object\": \"Continuous Hardwork (HARDWORKING INDIVIDUALS)\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2025-11-06T09:21:05.541Z",
+    "user": 4,
+    "content_type": 43,
+    "object_id": "1",
+    "object_repr": "More Than 40+ Satisfied Client Testimonial",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2025-11-06T13:43:00.723Z",
+    "user": 4,
+    "content_type": 45,
+    "object_id": "1",
+    "object_repr": "china to tz",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2025-11-06T13:44:19.635Z",
+    "user": 4,
+    "content_type": 46,
+    "object_id": "1",
+    "object_repr": "price  ya  contenas",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$dYkvh6m5WAagUzhtOx1teq$YoVaggpTIK8V/GGLwliUQtfNFnNy8vwodhrQSlqpfIg=",
+    "last_login": "2025-10-28T05:25:14.925Z",
+    "is_superuser": true,
+    "username": "melek-gnm",
+    "first_name": "",
+    "last_name": "",
+    "email": "melekgnm@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-10-28T05:23:10.115Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$M7MLYd1drc7QgviSCTleSv$qnQGtBTaTQiqr0++24xErfxiQkVsH/jvfZURio9zkAg=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "melek",
+    "first_name": "",
+    "last_name": "",
+    "email": "melek@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-11-05T08:25:08.882Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$pxYzaiUVpgdPqZAjz3fyKC$JYzkSmuuQJi+/VpYoeqv/hFcCkz3zGrK/9O8jHdSTyA=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "ali",
+    "first_name": "",
+    "last_name": "",
+    "email": "ali@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-11-05T08:28:02.736Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$1b1biVhnaZ3W5KuguUw5ab$9KmnJzMhViOfPWWWtaVH1P7tNMJy5MFZdBhzOrxYlPw=",
+    "last_login": "2025-11-05T08:37:52.414Z",
+    "is_superuser": true,
+    "username": "fatuma",
+    "first_name": "",
+    "last_name": "",
+    "email": "fatuma@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-11-05T08:35:02.714Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "3c8ntdn0i8q30goj95x1c8mi3qfrg4p1",
+  "fields": {
+    "session_data": ".eJxVjDEOgzAMAP_iuYpMHJyGsTtviBLHFNoKJAJT1b9XSAztene6N8S0b2Pcq65xKtCBg8svy0meOh-iPNJ8X4ws87ZO2RyJOW01_VL0dTvbv8GY6ggdiHeC6MmRoG9CIclsxQ2CVsW3zMEK0pBZhK_O8sChVeSgDfkGSeHzBc0PNxI:1vGZ1c:8p8hFuBOOWpEY4Z0ieKwXPnm2E1NjvD945nFaVwu0dU",
+    "expire_date": "2025-11-19T08:37:52.655Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "pf6v5ld2g1upm9281nfyy273q0vpay7a",
+  "fields": {
+    "session_data": ".eJxVjDEOgzAMAP_iuYpMHJyGsTtviBLHFNoKJAJT1b9XSAztene6N8S0b2Pcq65xKtCBg8svy0meOh-iPNJ8X4ws87ZO2RyJOW01_VL0dTvbv8GY6ggdiHeC6MmRoG9CIclsxQ2CVsW3zMEK0pBZhK_O8sChVeSgDfkGSeHzBc0PNxI:1vGZ1c:8p8hFuBOOWpEY4Z0ieKwXPnm2E1NjvD945nFaVwu0dU",
+    "expire_date": "2025-11-19T08:37:52.177Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "zgcxiqvfrq85f00blbmtgf4usnfg4did",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQAP-yZ0OAQtn26N03EHbZStXQpLQn499Nkx70OjOZN8S0byXuTdY4ZxjBwOWXUeKn1EPkR6r3RfFSt3UmdSTqtE3dliyv69n-DUpqBUaQzgdDAWVCDBnT4Dxrn6asvR4ILQk5ZOeYxZlMOthg0QTXc8e90QyfL-ORN6Y:1vDcCp:lOOHVNgPri8khvYWjJdY_rrVybNdty5CTwgVZkPda3o",
+    "expire_date": "2025-11-11T05:25:15.172Z"
+  }
+},
+{
+  "model": "home.heroslide",
+  "pk": 1,
+  "fields": {
+    "headline": "East Africa Logistics Solutions",
+    "subheadline": "Fast, reliable, and secure shipping across the globe. Get a Quote",
+    "cta_text": "Explore more",
+    "cta_url": "",
+    "image": "hero/carousel-2.jpg",
+    "overlay_opacity": 0.5,
+    "order": 0
+  }
+},
+{
+  "model": "home.aboutsection",
+  "pk": 1,
+  "fields": {
+    "heading": "Quick Transport and Logistics Solutions",
+    "subheading": "Reliable and efficient transport and logistics services across East Africa, ensuring your shipments arrive on time.",
+    "description": "Reliable and efficient transport and logistics services across East Africa, ensuring your shipments arrive on time.",
+    "button_text": "Explore More",
+    "button_url": "",
+    "background_image": "about/GNM-CARGO_A550a9787-1536x1024.jpg",
+    "features": []
+  }
+},
+{
+  "model": "home.factsection",
+  "pk": 1,
+  "fields": {
+    "heading": "#1 Place To Manage All Of Your Shipments",
+    "subheading": "We are the leading platform for managing every shipment efficiently. Track, organize, and control all deliveries with ease. Ensure timely, safe, and reliable shipping for all your goods",
+    "call_text": "Call for any query!",
+    "overlay_color": "#000000"
+  }
+},
+{
+  "model": "home.factitem",
+  "pk": 1,
+  "fields": {
+    "section": 1,
+    "icon_class": "fas fa-ship",
+    "number": 878,
+    "label": "shipments",
+    "order": 1
+  }
+},
+{
+  "model": "home.homefeaturesection",
+  "pk": 1,
+  "fields": {
+    "heading": "We Are Trusted Logistics Company Since 2010",
+    "subheading": "Our Features",
+    "background_image": "features_bg/carousel-1.jpg",
+    "video_url": "https://youtu.be/wspVEP3tAGE"
+  }
+},
+{
+  "model": "home.homefeature",
+  "pk": 1,
+  "fields": {
+    "section": 1,
+    "title": "East Africa",
+    "description": "we cover east african contries , Tanzania ,Kenaya and Uganda",
+    "icon": "fas fa-globe-africa",
+    "order": 1
+  }
+},
+{
+  "model": "home.whychooseus",
+  "pk": 1,
+  "fields": {
+    "title": "Trusted By More Than 150+ Partners In East-Africa",
+    "subtitle": "Why Choose Us",
+    "description": "GNM Cargo commenced business in 2010 and has very strong presence in China for over 10 years. Ever since has been expanding its operations to include Kenya and Uganda, establishing specialized subsidiaries to serve its customers better and effectively",
+    "image": "why_choose_us/Untitled-1-1024x724.png"
+  }
+},
+{
+  "model": "home.whychooseusfeature",
+  "pk": 1,
+  "fields": {
+    "section": 1,
+    "icon_class": "fas fa-stopwatch",
+    "title": "On-Time Shipping",
+    "description": "Within the time frame"
+  }
+},
+{
+  "model": "home.whychooseusfeature",
+  "pk": 2,
+  "fields": {
+    "section": 1,
+    "icon_class": "fas fa-wallet",
+    "title": "Affordable Price",
+    "description": "Reasonably priced"
+  }
+},
+{
+  "model": "home.quotesection",
+  "pk": 1,
+  "fields": {
+    "heading_top": "Get A Quote",
+    "heading_main": "Request A Free Quote!",
+    "description": "GNM Cargo commenced business in 2010 and has very strong presence in China for over 10 years. Ever since has been expanding its operations to include Kenya and Uganda, establishing specialized subsidiaries to serve its customers better and effectively",
+    "call_text": "Call for any query!",
+    "background_image": ""
+  }
+},
+{
+  "model": "home.quote",
+  "pk": 1,
+  "fields": {
+    "name": "andrea ihone",
+    "email": "azizimfinanga1@gmail.com",
+    "phone": "0692946575",
+    "service": 1,
+    "notes": "mmmmmmmmmmmmmm",
+    "created": "2025-11-06T06:22:18.141Z"
+  }
+},
+{
+  "model": "home.testimonial",
+  "pk": 1,
+  "fields": {
+    "name": "Vunja Bei",
+    "role": "Business man",
+    "company": "Vunja bei group",
+    "rating": 5,
+    "quote": "My number one trusted cargo shipping company, great service!",
+    "avatar": "testimonials/fred_vunjabei_83490711_188652865757933_1181001472767539864_n.webp",
+    "order": 1
+  }
+},
+{
+  "model": "aboutus.aboutsection",
+  "pk": 1,
+  "fields": {
+    "subtitle": "About Us",
+    "title": "Driven by Trust. Powered by Innovation.",
+    "description": "GNM Cargo commenced business in 2010 and has maintained a strong presence in China for over 15 years, expanding operations across East Africa—Kenya and Uganda—through strategic subsidiaries offering seamless logistics solutions.",
+    "image": "about/GNM-CARGO_A550a9768-scaled.jpg",
+    "background_overlay": true
+  }
+},
+{
+  "model": "aboutus.aboutfeature",
+  "pk": 1,
+  "fields": {
+    "section": 1,
+    "icon_class": "fas fa-stopwatch",
+    "title": "On-Time Shipping",
+    "description": "Within the time frame"
+  }
+},
+{
+  "model": "aboutus.aboutexperiencesection",
+  "pk": 1,
+  "fields": {
+    "icon_class": "fas fa-ship",
+    "small_title": "Experience",
+    "heading": "Experienced in East-Africa Logistic Services",
+    "description": "GNM Cargo commenced business in 2010 and has very strong presence in China for over 15 years. Ever since has been expanding its operations to include Kenya and Uganda. And by doing so, established specialized subsidiaries to serve its customers better and effectively. In 2017 we saw the need to establish Kikarara Co. Ltd, Madiluu Logistics Co. Limited and SGS Cargo which provide cargo consolidation and de-consolidation, warehousing services and clearing & forwarding services.",
+    "image": "about_experience/GNM-CARGO_B550a9940-scaled-q2wuts8yjwnw16ehi86v57nrmijfr9df1xvqmlr5s0.jpg"
+  }
+},
+{
+  "model": "aboutus.aboutfeatureitem",
+  "pk": 1,
+  "fields": {
+    "section": 1,
+    "icon_class": "fas fa-check-circle",
+    "text": "Customer Support"
+  }
+},
+{
+  "model": "aboutus.abouttestimonial",
+  "pk": 1,
+  "fields": {
+    "section": 1,
+    "quote_icon": "fas fa-quote-left",
+    "quote": "My number one trusted cargo shipping company, great service!",
+    "author": "Vunja bei"
+  }
+},
+{
+  "model": "aboutus.professionalismsection",
+  "pk": 1,
+  "fields": {
+    "icon_class": "fas fa-ship",
+    "small_title": "Professionalism",
+    "heading": "Skillful and Professional Workers Doing The Job",
+    "description": "Here all the duties from receiving goods, baling, consolidation, de-consolidation, declaration to delivery by the ship is done with great care and expertise.",
+    "image": "professionalism/GNM-CARGO_A550a9885-1-scaled.jpg"
+  }
+},
+{
+  "model": "aboutus.professionalskill",
+  "pk": 1,
+  "fields": {
+    "section": 1,
+    "skill_title": "Communication Skill",
+    "skill_value": 97
+  }
+},
+{
+  "model": "service.servicessection",
+  "pk": 1,
+  "fields": {
+    "icon_class": "fas fa-ship",
+    "small_title": "Our Services",
+    "main_title": "We Provide The Best Logistic Services For Your Needs",
+    "description": "We offer cargo consolidation and de-consolidation, Cargo Sourcing, Door-to-door cargo delivery services across East Africa and Southern Africa. We provide best and affordable services in clearing and forwarding, to both Full Container Shipping Services (FCL) and Loose Cargo Shipping Services (LCL) to our customers."
+  }
+},
+{
+  "model": "service.servicecategory",
+  "pk": 1,
+  "fields": {
+    "name": "Ocean Freight",
+    "slug": "ocean-freight",
+    "description": "We are the leading platform for managing every shipment efficiently. Track, organize",
+    "order": 1,
+    "happy_client": 244,
+    "complete_shipment": 8976,
+    "customer_reviews": 89
+  }
+},
+{
+  "model": "service.service",
+  "pk": 1,
+  "fields": {
+    "category": 1,
+    "title": "Ocean Freight",
+    "slug": "ocean-freight",
+    "excerpt": "Ocean Freight",
+    "content": "Ocean Freight",
+    "icon_class": "fa fas-ship",
+    "image": "services/carousel-1.jpg",
+    "brochure": ""
+  }
+},
+{
+  "model": "service.hardworkingsection",
+  "pk": 1,
+  "fields": {
+    "icon_class": "fas fa-ship",
+    "small_title": "HARDWORKING INDIVIDUALS",
+    "main_title": "Providing Excellent and Quality Customer Services",
+    "description": "All activities and operations are performed with high commitment and integrity while putting customers’ needs forward. Teamwork, reliability, innovativeness and professionalism make us one of the best in the industry.",
+    "image": "hardworking/GNM-CARGO_A550a9700-scaled.jpg"
+  }
+},
+{
+  "model": "service.hardworkingfeature",
+  "pk": 1,
+  "fields": {
+    "section": 1,
+    "icon_class": "fas fa-people-carry",
+    "title": "Continuous Hardwork",
+    "description": "Strategic plan and consistent efforts is what make us the best",
+    "order": 1
+  }
+},
+{
+  "model": "service.testimonialsectioncontent",
+  "pk": 1,
+  "fields": {
+    "small_title": "Client Testimonial",
+    "main_title": "More Than 40+ Satisfied Client Testimonial",
+    "description": "Endorsements from more than 40 customers across East Africa and China vouching the quality and value of our services."
+  }
+},
+{
+  "model": "contactus.sitesocialhandle",
+  "pk": 1,
+  "fields": {
+    "platform": "instagram",
+    "url": "https://www.instagram.com/a.m.j.4.m/",
+    "is_active": true
+  }
+},
+{
+  "model": "team.headteam",
+  "pk": 1,
+  "fields": {
+    "name": "Mr. Geofrey Mbilinyi",
+    "role": "Managing Director",
+    "bio": "Managing Director",
+    "photo": "team/GNM-CARGO_A550a9762-scaled.jpg",
+    "email": "mbilinyi1@gmail.com",
+    "phone": "0692943212",
+    "order": 1,
+    "linkedin": "https://www.instagram.com/safirisha_nasi/?hl=en",
+    "twitter": "https://www.instagram.com/safirisha_nasi/?hl=en",
+    "instagram": "https://www.instagram.com/safirisha_nasi/?hl=en",
+    "facebook": "https://www.instagram.com/safirisha_nasi/?hl=en"
+  }
+},
+{
+  "model": "team.headteam",
+  "pk": 2,
+  "fields": {
+    "name": "Mr. Clinton Mbilinyi",
+    "role": "General Manager",
+    "bio": "General Manager",
+    "photo": "team/GNM-CARGO_A550a9745-scaled.jpg",
+    "email": "mbilinyi1@gmail.com",
+    "phone": "0692946575",
+    "order": 2,
+    "linkedin": "https://www.instagram.com/safirisha_nasi/?hl=en",
+    "twitter": "https://www.instagram.com/safirisha_nasi/?hl=en",
+    "instagram": "https://www.instagram.com/safirisha_nasi/?hl=en",
+    "facebook": "https://www.instagram.com/safirisha_nasi/?hl=en"
+  }
+},
+{
+  "model": "team.midletopteam",
+  "pk": 1,
+  "fields": {
+    "name": "Mr. Geofrey Mbilinyi",
+    "role": "Managing Director",
+    "bio": "Managing Director",
+    "photo": "team/ceo_gnm_trading.jpg",
+    "email": "mbilinyi1@gmail.com",
+    "phone": "0692941232",
+    "order": 1,
+    "linkedin": "https://www.instagram.com/safirisha_nasi/?hl=en",
+    "twitter": "https://www.instagram.com/safirisha_nasi/?hl=en",
+    "instagram": "https://www.instagram.com/safirisha_nasi/?hl=en",
+    "facebook": "https://www.instagram.com/safirisha_nasi/?hl=en"
+  }
+},
+{
+  "model": "blog.blogcategory",
+  "pk": 1,
+  "fields": {
+    "name": "china to tz",
+    "slug": "china-to-tz",
+    "description": "china to tz",
+    "created_at": "2025-11-06T13:43:00.445Z"
+  }
+},
+{
+  "model": "blog.blogpost",
+  "pk": 1,
+  "fields": {
+    "category": 1,
+    "title": "price  ya  contenas",
+    "description": "price  ya  contenas",
+    "slug": "price-ya-contenas",
+    "cover_image": "blog_covers/GNM-CARGO_A550a9700-scaled.jpg",
+    "author": 4,
+    "time_to_read": 7,
+    "views": 2,
+    "likes": 0,
+    "isPinned": true,
+    "created_at": "2025-11-06T13:44:19.628Z",
+    "updated_at": "2025-11-06T13:46:53.193Z"
+  }
+},
+{
+  "model": "sitesetting.sitemainsettings",
+  "pk": 1,
+  "fields": {
+    "site_name": "GNM-Cargo",
+    "another_name": "GNM-Cargo",
+    "slogan": "most trusted Logistic company in East Africa",
+    "logo": "site_logos/GNM-CARGO-WEB-LOGO-2-1536x429.png",
+    "working_hours": "Monday to Friday (06am - 23pm), Saturday(06am - 12pm)",
+    "main_location": "57HF+585, Msimbazi St, Dar es Salaam",
+    "main_email": "info@gnmtrading.co.tz",
+    "main_contact": "0677-066-551"
+  }
+},
+{
+  "model": "sitesetting.sitetheme",
+  "pk": 1,
+  "fields": {
+    "name": "gnm cargo THEME",
+    "primarycolor": "#f8dd10",
+    "secondarycolor": "#d12053",
+    "is_default_theme": true
+  }
+}
+]

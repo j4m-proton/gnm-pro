@@ -1,0 +1,2884 @@
+[
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2025-10-28T09:02:41.127Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "1",
+      "object_repr": "gnm cargo THEME",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2025-10-28T09:19:08.315Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "1",
+      "object_repr": "East Africa Logistics Solutions Fast, reliable, and secure shipping across the globe. Get a Quote",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2025-10-28T09:20:02.805Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "1",
+      "object_repr": "East Africa Logistics Solutions",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Headline\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2025-10-28T09:32:45.354Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "1",
+      "object_repr": "GNM-Cargo",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2025-10-28T10:52:07.114Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "1",
+      "object_repr": "Instagram",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2025-10-28T11:12:22.014Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "1",
+      "object_repr": "Quick Transport and Logistics Solutions",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2025-10-28T11:45:36.434Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "1",
+      "object_repr": "#1 Place To Manage All Of Your Shipments",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"fact item\", \"object\": \"shipments (878)\"}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2025-10-28T12:07:15.937Z",
+      "user": 1,
+      "content_type": 19,
+      "object_id": "1",
+      "object_repr": "Ocean Freight",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+      "action_time": "2025-10-28T12:09:43.109Z",
+      "user": 1,
+      "content_type": 17,
+      "object_id": "1",
+      "object_repr": "Ocean Freight",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+      "action_time": "2025-11-05T08:41:13.604Z",
+      "user": 4,
+      "content_type": 22,
+      "object_id": "1",
+      "object_repr": "We Are Trusted Logistics Company Since 2010",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"home feature\", \"object\": \"East Africa\"}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+      "action_time": "2025-11-05T08:50:20.303Z",
+      "user": 4,
+      "content_type": 22,
+      "object_id": "1",
+      "object_repr": "We Are Trusted Logistics Company Since 2010",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Background image\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+      "action_time": "2025-11-06T05:38:58.548Z",
+      "user": 4,
+      "content_type": 24,
+      "object_id": "1",
+      "object_repr": "Why Choose Us",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"why choose us feature\", \"object\": \"On-Time Shipping (Why Choose Us)\"}}, {\"added\": {\"name\": \"why choose us feature\", \"object\": \"Affordable Price (Why Choose Us)\"}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+      "action_time": "2025-11-06T05:39:44.020Z",
+      "user": 4,
+      "content_type": 24,
+      "object_id": "1",
+      "object_repr": "Trusted By More Than 150+ Partners In East-Africa",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Subtitle\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+      "action_time": "2025-11-06T06:05:35.435Z",
+      "user": 4,
+      "content_type": 29,
+      "object_id": "1",
+      "object_repr": "Request A Free Quote!",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+      "action_time": "2025-11-06T06:42:50.697Z",
+      "user": 4,
+      "content_type": 27,
+      "object_id": "1",
+      "object_repr": "Vunja Bei  Vunja bei group",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+      "action_time": "2025-11-06T06:44:49.256Z",
+      "user": 4,
+      "content_type": 27,
+      "object_id": "1",
+      "object_repr": "Vunja Bei  Vunja bei group",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Avatar\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+      "action_time": "2025-11-06T06:49:20.978Z",
+      "user": 4,
+      "content_type": 31,
+      "object_id": "1",
+      "object_repr": "Mr. Geofrey Mbilinyi",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+      "action_time": "2025-11-06T07:08:47.932Z",
+      "user": 4,
+      "content_type": 33,
+      "object_id": "1",
+      "object_repr": "Driven by Trust. Powered by Innovation.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"About Feature\", \"object\": \"On-Time Shipping (About Us)\"}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+      "action_time": "2025-11-06T07:45:05.822Z",
+      "user": 4,
+      "content_type": 37,
+      "object_id": "1",
+      "object_repr": "Experienced in East-Africa Logistic Services",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"about feature item\", \"object\": \"Customer Support\"}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+      "action_time": "2025-11-06T07:48:28.681Z",
+      "user": 4,
+      "content_type": 36,
+      "object_id": "1",
+      "object_repr": "Testimonial by Vunja bei",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+      "action_time": "2025-11-06T08:00:10.555Z",
+      "user": 4,
+      "content_type": 39,
+      "object_id": "1",
+      "object_repr": "Skillful and Professional Workers Doing The Job",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"professional skill\", \"object\": \"Communication Skill - 97%\"}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+      "action_time": "2025-11-06T08:15:43.509Z",
+      "user": 4,
+      "content_type": 30,
+      "object_id": "1",
+      "object_repr": "Mr. Geofrey Mbilinyi",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+      "action_time": "2025-11-06T08:18:31.959Z",
+      "user": 4,
+      "content_type": 30,
+      "object_id": "2",
+      "object_repr": "Mr. Clinton Mbilinyi",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+      "action_time": "2025-11-06T08:46:28.369Z",
+      "user": 4,
+      "content_type": 40,
+      "object_id": "1",
+      "object_repr": "Our Services",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+      "action_time": "2025-11-06T08:47:30.842Z",
+      "user": 4,
+      "content_type": 40,
+      "object_id": "1",
+      "object_repr": "Our Services",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+      "action_time": "2025-11-06T09:09:50.938Z",
+      "user": 4,
+      "content_type": 42,
+      "object_id": "1",
+      "object_repr": "Providing Excellent and Quality Customer Services",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"Hardworking Feature\", \"object\": \"Continuous Hardwork (HARDWORKING INDIVIDUALS)\"}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+      "action_time": "2025-11-06T09:21:05.541Z",
+      "user": 4,
+      "content_type": 43,
+      "object_id": "1",
+      "object_repr": "More Than 40+ Satisfied Client Testimonial",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+      "action_time": "2025-11-06T13:43:00.723Z",
+      "user": 4,
+      "content_type": 45,
+      "object_id": "1",
+      "object_repr": "china to tz",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+      "action_time": "2025-11-06T13:44:19.635Z",
+      "user": 4,
+      "content_type": 46,
+      "object_id": "1",
+      "object_repr": "price  ya  contenas",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 4,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 4,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 4,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 4,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 5,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 5,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 5,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 5,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 6,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 6,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 6,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 6,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add hero slide",
+      "content_type": 7,
+      "codename": "add_heroslide"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change hero slide",
+      "content_type": 7,
+      "codename": "change_heroslide"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete hero slide",
+      "content_type": 7,
+      "codename": "delete_heroslide"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view hero slide",
+      "content_type": 7,
+      "codename": "view_heroslide"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add office location",
+      "content_type": 8,
+      "codename": "add_officelocation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change office location",
+      "content_type": 8,
+      "codename": "change_officelocation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete office location",
+      "content_type": 8,
+      "codename": "delete_officelocation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view office location",
+      "content_type": 8,
+      "codename": "view_officelocation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add site social handle",
+      "content_type": 9,
+      "codename": "add_sitesocialhandle"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change site social handle",
+      "content_type": 9,
+      "codename": "change_sitesocialhandle"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete site social handle",
+      "content_type": 9,
+      "codename": "delete_sitesocialhandle"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view site social handle",
+      "content_type": 9,
+      "codename": "view_sitesocialhandle"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add site support contact",
+      "content_type": 10,
+      "codename": "add_sitesupportcontact"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change site support contact",
+      "content_type": 10,
+      "codename": "change_sitesupportcontact"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete site support contact",
+      "content_type": 10,
+      "codename": "delete_sitesupportcontact"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view site support contact",
+      "content_type": 10,
+      "codename": "view_sitesupportcontact"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "name": "Can add site main settings",
+      "content_type": 11,
+      "codename": "add_sitemainsettings"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "name": "Can change site main settings",
+      "content_type": 11,
+      "codename": "change_sitemainsettings"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "name": "Can delete site main settings",
+      "content_type": 11,
+      "codename": "delete_sitemainsettings"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "name": "Can view site main settings",
+      "content_type": 11,
+      "codename": "view_sitemainsettings"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+      "name": "Can add site theme",
+      "content_type": 12,
+      "codename": "add_sitetheme"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+      "name": "Can change site theme",
+      "content_type": 12,
+      "codename": "change_sitetheme"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+      "name": "Can delete site theme",
+      "content_type": 12,
+      "codename": "delete_sitetheme"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+      "name": "Can view site theme",
+      "content_type": 12,
+      "codename": "view_sitetheme"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+      "name": "Can add About Feature",
+      "content_type": 13,
+      "codename": "add_aboutfeature"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+      "name": "Can change About Feature",
+      "content_type": 13,
+      "codename": "change_aboutfeature"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+      "name": "Can delete About Feature",
+      "content_type": 13,
+      "codename": "delete_aboutfeature"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+      "name": "Can view About Feature",
+      "content_type": 13,
+      "codename": "view_aboutfeature"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+      "name": "Can add about section",
+      "content_type": 14,
+      "codename": "add_aboutsection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+      "name": "Can change about section",
+      "content_type": 14,
+      "codename": "change_aboutsection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+      "name": "Can delete about section",
+      "content_type": 14,
+      "codename": "delete_aboutsection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+      "name": "Can view about section",
+      "content_type": 14,
+      "codename": "view_aboutsection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+      "name": "Can add fact section",
+      "content_type": 15,
+      "codename": "add_factsection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+      "name": "Can change fact section",
+      "content_type": 15,
+      "codename": "change_factsection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+      "name": "Can delete fact section",
+      "content_type": 15,
+      "codename": "delete_factsection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+      "name": "Can view fact section",
+      "content_type": 15,
+      "codename": "view_factsection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+      "name": "Can add fact item",
+      "content_type": 16,
+      "codename": "add_factitem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+      "name": "Can change fact item",
+      "content_type": 16,
+      "codename": "change_factitem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+      "name": "Can delete fact item",
+      "content_type": 16,
+      "codename": "delete_factitem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+      "name": "Can view fact item",
+      "content_type": 16,
+      "codename": "view_factitem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 65,
+    "fields": {
+      "name": "Can add service",
+      "content_type": 17,
+      "codename": "add_service"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 66,
+    "fields": {
+      "name": "Can change service",
+      "content_type": 17,
+      "codename": "change_service"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 67,
+    "fields": {
+      "name": "Can delete service",
+      "content_type": 17,
+      "codename": "delete_service"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 68,
+    "fields": {
+      "name": "Can view service",
+      "content_type": 17,
+      "codename": "view_service"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 69,
+    "fields": {
+      "name": "Can add service detail media",
+      "content_type": 18,
+      "codename": "add_servicedetailmedia"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 70,
+    "fields": {
+      "name": "Can change service detail media",
+      "content_type": 18,
+      "codename": "change_servicedetailmedia"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 71,
+    "fields": {
+      "name": "Can delete service detail media",
+      "content_type": 18,
+      "codename": "delete_servicedetailmedia"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 72,
+    "fields": {
+      "name": "Can view service detail media",
+      "content_type": 18,
+      "codename": "view_servicedetailmedia"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 73,
+    "fields": {
+      "name": "Can add service category",
+      "content_type": 19,
+      "codename": "add_servicecategory"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 74,
+    "fields": {
+      "name": "Can change service category",
+      "content_type": 19,
+      "codename": "change_servicecategory"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 75,
+    "fields": {
+      "name": "Can delete service category",
+      "content_type": 19,
+      "codename": "delete_servicecategory"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 76,
+    "fields": {
+      "name": "Can view service category",
+      "content_type": 19,
+      "codename": "view_servicecategory"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 77,
+    "fields": {
+      "name": "Can add service detail",
+      "content_type": 20,
+      "codename": "add_servicedetail"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 78,
+    "fields": {
+      "name": "Can change service detail",
+      "content_type": 20,
+      "codename": "change_servicedetail"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 79,
+    "fields": {
+      "name": "Can delete service detail",
+      "content_type": 20,
+      "codename": "delete_servicedetail"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 80,
+    "fields": {
+      "name": "Can view service detail",
+      "content_type": 20,
+      "codename": "view_servicedetail"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 81,
+    "fields": {
+      "name": "Can add service detail section",
+      "content_type": 21,
+      "codename": "add_servicedetailsection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 82,
+    "fields": {
+      "name": "Can change service detail section",
+      "content_type": 21,
+      "codename": "change_servicedetailsection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 83,
+    "fields": {
+      "name": "Can delete service detail section",
+      "content_type": 21,
+      "codename": "delete_servicedetailsection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 84,
+    "fields": {
+      "name": "Can view service detail section",
+      "content_type": 21,
+      "codename": "view_servicedetailsection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 85,
+    "fields": {
+      "name": "Can add home feature section",
+      "content_type": 22,
+      "codename": "add_homefeaturesection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 86,
+    "fields": {
+      "name": "Can change home feature section",
+      "content_type": 22,
+      "codename": "change_homefeaturesection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 87,
+    "fields": {
+      "name": "Can delete home feature section",
+      "content_type": 22,
+      "codename": "delete_homefeaturesection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 88,
+    "fields": {
+      "name": "Can view home feature section",
+      "content_type": 22,
+      "codename": "view_homefeaturesection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 89,
+    "fields": {
+      "name": "Can add home feature",
+      "content_type": 23,
+      "codename": "add_homefeature"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 90,
+    "fields": {
+      "name": "Can change home feature",
+      "content_type": 23,
+      "codename": "change_homefeature"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 91,
+    "fields": {
+      "name": "Can delete home feature",
+      "content_type": 23,
+      "codename": "delete_homefeature"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 92,
+    "fields": {
+      "name": "Can view home feature",
+      "content_type": 23,
+      "codename": "view_homefeature"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 93,
+    "fields": {
+      "name": "Can add why choose us",
+      "content_type": 24,
+      "codename": "add_whychooseus"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 94,
+    "fields": {
+      "name": "Can change why choose us",
+      "content_type": 24,
+      "codename": "change_whychooseus"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 95,
+    "fields": {
+      "name": "Can delete why choose us",
+      "content_type": 24,
+      "codename": "delete_whychooseus"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 96,
+    "fields": {
+      "name": "Can view why choose us",
+      "content_type": 24,
+      "codename": "view_whychooseus"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 97,
+    "fields": {
+      "name": "Can add why choose us feature",
+      "content_type": 25,
+      "codename": "add_whychooseusfeature"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 98,
+    "fields": {
+      "name": "Can change why choose us feature",
+      "content_type": 25,
+      "codename": "change_whychooseusfeature"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 99,
+    "fields": {
+      "name": "Can delete why choose us feature",
+      "content_type": 25,
+      "codename": "delete_whychooseusfeature"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 100,
+    "fields": {
+      "name": "Can view why choose us feature",
+      "content_type": 25,
+      "codename": "view_whychooseusfeature"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 101,
+    "fields": {
+      "name": "Can add partner",
+      "content_type": 26,
+      "codename": "add_partner"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 102,
+    "fields": {
+      "name": "Can change partner",
+      "content_type": 26,
+      "codename": "change_partner"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 103,
+    "fields": {
+      "name": "Can delete partner",
+      "content_type": 26,
+      "codename": "delete_partner"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 104,
+    "fields": {
+      "name": "Can view partner",
+      "content_type": 26,
+      "codename": "view_partner"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 105,
+    "fields": {
+      "name": "Can add testimonial",
+      "content_type": 27,
+      "codename": "add_testimonial"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 106,
+    "fields": {
+      "name": "Can change testimonial",
+      "content_type": 27,
+      "codename": "change_testimonial"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 107,
+    "fields": {
+      "name": "Can delete testimonial",
+      "content_type": 27,
+      "codename": "delete_testimonial"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 108,
+    "fields": {
+      "name": "Can view testimonial",
+      "content_type": 27,
+      "codename": "view_testimonial"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 109,
+    "fields": {
+      "name": "Can add quote",
+      "content_type": 28,
+      "codename": "add_quote"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 110,
+    "fields": {
+      "name": "Can change quote",
+      "content_type": 28,
+      "codename": "change_quote"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 111,
+    "fields": {
+      "name": "Can delete quote",
+      "content_type": 28,
+      "codename": "delete_quote"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 112,
+    "fields": {
+      "name": "Can view quote",
+      "content_type": 28,
+      "codename": "view_quote"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 113,
+    "fields": {
+      "name": "Can add Quote Section",
+      "content_type": 29,
+      "codename": "add_quotesection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 114,
+    "fields": {
+      "name": "Can change Quote Section",
+      "content_type": 29,
+      "codename": "change_quotesection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 115,
+    "fields": {
+      "name": "Can delete Quote Section",
+      "content_type": 29,
+      "codename": "delete_quotesection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 116,
+    "fields": {
+      "name": "Can view Quote Section",
+      "content_type": 29,
+      "codename": "view_quotesection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 117,
+    "fields": {
+      "name": "Can add head team",
+      "content_type": 30,
+      "codename": "add_headteam"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 118,
+    "fields": {
+      "name": "Can change head team",
+      "content_type": 30,
+      "codename": "change_headteam"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 119,
+    "fields": {
+      "name": "Can delete head team",
+      "content_type": 30,
+      "codename": "delete_headteam"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 120,
+    "fields": {
+      "name": "Can view head team",
+      "content_type": 30,
+      "codename": "view_headteam"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 121,
+    "fields": {
+      "name": "Can add midle top team",
+      "content_type": 31,
+      "codename": "add_midletopteam"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 122,
+    "fields": {
+      "name": "Can change midle top team",
+      "content_type": 31,
+      "codename": "change_midletopteam"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 123,
+    "fields": {
+      "name": "Can delete midle top team",
+      "content_type": 31,
+      "codename": "delete_midletopteam"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 124,
+    "fields": {
+      "name": "Can view midle top team",
+      "content_type": 31,
+      "codename": "view_midletopteam"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 125,
+    "fields": {
+      "name": "Can add team member",
+      "content_type": 32,
+      "codename": "add_teammember"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 126,
+    "fields": {
+      "name": "Can change team member",
+      "content_type": 32,
+      "codename": "change_teammember"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 127,
+    "fields": {
+      "name": "Can delete team member",
+      "content_type": 32,
+      "codename": "delete_teammember"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 128,
+    "fields": {
+      "name": "Can view team member",
+      "content_type": 32,
+      "codename": "view_teammember"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 129,
+    "fields": {
+      "name": "Can add About Section",
+      "content_type": 33,
+      "codename": "add_aboutsection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 130,
+    "fields": {
+      "name": "Can change About Section",
+      "content_type": 33,
+      "codename": "change_aboutsection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 131,
+    "fields": {
+      "name": "Can delete About Section",
+      "content_type": 33,
+      "codename": "delete_aboutsection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 132,
+    "fields": {
+      "name": "Can view About Section",
+      "content_type": 33,
+      "codename": "view_aboutsection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 133,
+    "fields": {
+      "name": "Can add About Feature",
+      "content_type": 34,
+      "codename": "add_aboutfeature"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 134,
+    "fields": {
+      "name": "Can change About Feature",
+      "content_type": 34,
+      "codename": "change_aboutfeature"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 135,
+    "fields": {
+      "name": "Can delete About Feature",
+      "content_type": 34,
+      "codename": "delete_aboutfeature"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 136,
+    "fields": {
+      "name": "Can view About Feature",
+      "content_type": 34,
+      "codename": "view_aboutfeature"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 137,
+    "fields": {
+      "name": "Can add about feature item",
+      "content_type": 35,
+      "codename": "add_aboutfeatureitem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 138,
+    "fields": {
+      "name": "Can change about feature item",
+      "content_type": 35,
+      "codename": "change_aboutfeatureitem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 139,
+    "fields": {
+      "name": "Can delete about feature item",
+      "content_type": 35,
+      "codename": "delete_aboutfeatureitem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 140,
+    "fields": {
+      "name": "Can view about feature item",
+      "content_type": 35,
+      "codename": "view_aboutfeatureitem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 141,
+    "fields": {
+      "name": "Can add about testimonial",
+      "content_type": 36,
+      "codename": "add_abouttestimonial"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 142,
+    "fields": {
+      "name": "Can change about testimonial",
+      "content_type": 36,
+      "codename": "change_abouttestimonial"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 143,
+    "fields": {
+      "name": "Can delete about testimonial",
+      "content_type": 36,
+      "codename": "delete_abouttestimonial"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 144,
+    "fields": {
+      "name": "Can view about testimonial",
+      "content_type": 36,
+      "codename": "view_abouttestimonial"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 145,
+    "fields": {
+      "name": "Can add About Experience Section",
+      "content_type": 37,
+      "codename": "add_aboutexperiencesection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 146,
+    "fields": {
+      "name": "Can change About Experience Section",
+      "content_type": 37,
+      "codename": "change_aboutexperiencesection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 147,
+    "fields": {
+      "name": "Can delete About Experience Section",
+      "content_type": 37,
+      "codename": "delete_aboutexperiencesection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 148,
+    "fields": {
+      "name": "Can view About Experience Section",
+      "content_type": 37,
+      "codename": "view_aboutexperiencesection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 149,
+    "fields": {
+      "name": "Can add professional skill",
+      "content_type": 38,
+      "codename": "add_professionalskill"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 150,
+    "fields": {
+      "name": "Can change professional skill",
+      "content_type": 38,
+      "codename": "change_professionalskill"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 151,
+    "fields": {
+      "name": "Can delete professional skill",
+      "content_type": 38,
+      "codename": "delete_professionalskill"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 152,
+    "fields": {
+      "name": "Can view professional skill",
+      "content_type": 38,
+      "codename": "view_professionalskill"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 153,
+    "fields": {
+      "name": "Can add Professionalism Section",
+      "content_type": 39,
+      "codename": "add_professionalismsection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 154,
+    "fields": {
+      "name": "Can change Professionalism Section",
+      "content_type": 39,
+      "codename": "change_professionalismsection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 155,
+    "fields": {
+      "name": "Can delete Professionalism Section",
+      "content_type": 39,
+      "codename": "delete_professionalismsection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 156,
+    "fields": {
+      "name": "Can view Professionalism Section",
+      "content_type": 39,
+      "codename": "view_professionalismsection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 157,
+    "fields": {
+      "name": "Can add Services Section",
+      "content_type": 40,
+      "codename": "add_servicessection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 158,
+    "fields": {
+      "name": "Can change Services Section",
+      "content_type": 40,
+      "codename": "change_servicessection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 159,
+    "fields": {
+      "name": "Can delete Services Section",
+      "content_type": 40,
+      "codename": "delete_servicessection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 160,
+    "fields": {
+      "name": "Can view Services Section",
+      "content_type": 40,
+      "codename": "view_servicessection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 161,
+    "fields": {
+      "name": "Can add Hardworking Feature",
+      "content_type": 41,
+      "codename": "add_hardworkingfeature"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 162,
+    "fields": {
+      "name": "Can change Hardworking Feature",
+      "content_type": 41,
+      "codename": "change_hardworkingfeature"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 163,
+    "fields": {
+      "name": "Can delete Hardworking Feature",
+      "content_type": 41,
+      "codename": "delete_hardworkingfeature"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 164,
+    "fields": {
+      "name": "Can view Hardworking Feature",
+      "content_type": 41,
+      "codename": "view_hardworkingfeature"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 165,
+    "fields": {
+      "name": "Can add Hardworking Section",
+      "content_type": 42,
+      "codename": "add_hardworkingsection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 166,
+    "fields": {
+      "name": "Can change Hardworking Section",
+      "content_type": 42,
+      "codename": "change_hardworkingsection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 167,
+    "fields": {
+      "name": "Can delete Hardworking Section",
+      "content_type": 42,
+      "codename": "delete_hardworkingsection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 168,
+    "fields": {
+      "name": "Can view Hardworking Section",
+      "content_type": 42,
+      "codename": "view_hardworkingsection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 169,
+    "fields": {
+      "name": "Can add Testimonial Section Content",
+      "content_type": 43,
+      "codename": "add_testimonialsectioncontent"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 170,
+    "fields": {
+      "name": "Can change Testimonial Section Content",
+      "content_type": 43,
+      "codename": "change_testimonialsectioncontent"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 171,
+    "fields": {
+      "name": "Can delete Testimonial Section Content",
+      "content_type": 43,
+      "codename": "delete_testimonialsectioncontent"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 172,
+    "fields": {
+      "name": "Can view Testimonial Section Content",
+      "content_type": 43,
+      "codename": "view_testimonialsectioncontent"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 173,
+    "fields": {
+      "name": "Can add blog section",
+      "content_type": 44,
+      "codename": "add_blogsection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 174,
+    "fields": {
+      "name": "Can change blog section",
+      "content_type": 44,
+      "codename": "change_blogsection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 175,
+    "fields": {
+      "name": "Can delete blog section",
+      "content_type": 44,
+      "codename": "delete_blogsection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 176,
+    "fields": {
+      "name": "Can view blog section",
+      "content_type": 44,
+      "codename": "view_blogsection"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 177,
+    "fields": {
+      "name": "Can add Blog Category",
+      "content_type": 45,
+      "codename": "add_blogcategory"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 178,
+    "fields": {
+      "name": "Can change Blog Category",
+      "content_type": 45,
+      "codename": "change_blogcategory"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 179,
+    "fields": {
+      "name": "Can delete Blog Category",
+      "content_type": 45,
+      "codename": "delete_blogcategory"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 180,
+    "fields": {
+      "name": "Can view Blog Category",
+      "content_type": 45,
+      "codename": "view_blogcategory"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 181,
+    "fields": {
+      "name": "Can add blog post",
+      "content_type": 46,
+      "codename": "add_blogpost"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 182,
+    "fields": {
+      "name": "Can change blog post",
+      "content_type": 46,
+      "codename": "change_blogpost"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 183,
+    "fields": {
+      "name": "Can delete blog post",
+      "content_type": 46,
+      "codename": "delete_blogpost"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 184,
+    "fields": {
+      "name": "Can view blog post",
+      "content_type": 46,
+      "codename": "view_blogpost"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$dYkvh6m5WAagUzhtOx1teq$YoVaggpTIK8V/GGLwliUQtfNFnNy8vwodhrQSlqpfIg=",
+      "last_login": "2025-10-28T05:25:14.925Z",
+      "is_superuser": true,
+      "username": "melek-gnm",
+      "first_name": "",
+      "last_name": "",
+      "email": "melekgnm@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2025-10-28T05:23:10.115Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$M7MLYd1drc7QgviSCTleSv$qnQGtBTaTQiqr0++24xErfxiQkVsH/jvfZURio9zkAg=",
+      "last_login": null,
+      "is_superuser": true,
+      "username": "melek",
+      "first_name": "",
+      "last_name": "",
+      "email": "melek@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2025-11-05T08:25:08.882Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$pxYzaiUVpgdPqZAjz3fyKC$JYzkSmuuQJi+/VpYoeqv/hFcCkz3zGrK/9O8jHdSTyA=",
+      "last_login": null,
+      "is_superuser": true,
+      "username": "ali",
+      "first_name": "",
+      "last_name": "",
+      "email": "ali@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2025-11-05T08:28:02.736Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$1b1biVhnaZ3W5KuguUw5ab$9KmnJzMhViOfPWWWtaVH1P7tNMJy5MFZdBhzOrxYlPw=",
+      "last_login": "2025-11-05T08:37:52.414Z",
+      "is_superuser": true,
+      "username": "fatuma",
+      "first_name": "",
+      "last_name": "",
+      "email": "fatuma@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2025-11-05T08:35:02.714Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+      "app_label": "auth",
+      "model": "user"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+      "app_label": "home",
+      "model": "heroslide"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+      "app_label": "contactus",
+      "model": "officelocation"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+      "app_label": "contactus",
+      "model": "sitesocialhandle"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+      "app_label": "contactus",
+      "model": "sitesupportcontact"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+      "app_label": "sitesetting",
+      "model": "sitemainsettings"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+      "app_label": "sitesetting",
+      "model": "sitetheme"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": {
+      "app_label": "home",
+      "model": "aboutfeature"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": {
+      "app_label": "home",
+      "model": "aboutsection"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": {
+      "app_label": "home",
+      "model": "factsection"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 16,
+    "fields": {
+      "app_label": "home",
+      "model": "factitem"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 17,
+    "fields": {
+      "app_label": "service",
+      "model": "service"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 18,
+    "fields": {
+      "app_label": "service",
+      "model": "servicedetailmedia"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 19,
+    "fields": {
+      "app_label": "service",
+      "model": "servicecategory"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 20,
+    "fields": {
+      "app_label": "service",
+      "model": "servicedetail"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 21,
+    "fields": {
+      "app_label": "service",
+      "model": "servicedetailsection"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 22,
+    "fields": {
+      "app_label": "home",
+      "model": "homefeaturesection"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 23,
+    "fields": {
+      "app_label": "home",
+      "model": "homefeature"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 24,
+    "fields": {
+      "app_label": "home",
+      "model": "whychooseus"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 25,
+    "fields": {
+      "app_label": "home",
+      "model": "whychooseusfeature"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 26,
+    "fields": {
+      "app_label": "home",
+      "model": "partner"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 27,
+    "fields": {
+      "app_label": "home",
+      "model": "testimonial"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 28,
+    "fields": {
+      "app_label": "home",
+      "model": "quote"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 29,
+    "fields": {
+      "app_label": "home",
+      "model": "quotesection"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 30,
+    "fields": {
+      "app_label": "team",
+      "model": "headteam"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 31,
+    "fields": {
+      "app_label": "team",
+      "model": "midletopteam"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 32,
+    "fields": {
+      "app_label": "team",
+      "model": "teammember"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 33,
+    "fields": {
+      "app_label": "aboutus",
+      "model": "aboutsection"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 34,
+    "fields": {
+      "app_label": "aboutus",
+      "model": "aboutfeature"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 35,
+    "fields": {
+      "app_label": "aboutus",
+      "model": "aboutfeatureitem"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 36,
+    "fields": {
+      "app_label": "aboutus",
+      "model": "abouttestimonial"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 37,
+    "fields": {
+      "app_label": "aboutus",
+      "model": "aboutexperiencesection"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 38,
+    "fields": {
+      "app_label": "aboutus",
+      "model": "professionalskill"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 39,
+    "fields": {
+      "app_label": "aboutus",
+      "model": "professionalismsection"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 40,
+    "fields": {
+      "app_label": "service",
+      "model": "servicessection"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 41,
+    "fields": {
+      "app_label": "service",
+      "model": "hardworkingfeature"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 42,
+    "fields": {
+      "app_label": "service",
+      "model": "hardworkingsection"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 43,
+    "fields": {
+      "app_label": "service",
+      "model": "testimonialsectioncontent"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 44,
+    "fields": {
+      "app_label": "blog",
+      "model": "blogsection"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 45,
+    "fields": {
+      "app_label": "blog",
+      "model": "blogcategory"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 46,
+    "fields": {
+      "app_label": "blog",
+      "model": "blogpost"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "3c8ntdn0i8q30goj95x1c8mi3qfrg4p1",
+    "fields": {
+      "session_data": ".eJxVjDEOgzAMAP_iuYpMHJyGsTtviBLHFNoKJAJT1b9XSAztene6N8S0b2Pcq65xKtCBg8svy0meOh-iPNJ8X4ws87ZO2RyJOW01_VL0dTvbv8GY6ggdiHeC6MmRoG9CIclsxQ2CVsW3zMEK0pBZhK_O8sChVeSgDfkGSeHzBc0PNxI:1vGZ1c:8p8hFuBOOWpEY4Z0ieKwXPnm2E1NjvD945nFaVwu0dU",
+      "expire_date": "2025-11-19T08:37:52.655Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "pf6v5ld2g1upm9281nfyy273q0vpay7a",
+    "fields": {
+      "session_data": ".eJxVjDEOgzAMAP_iuYpMHJyGsTtviBLHFNoKJAJT1b9XSAztene6N8S0b2Pcq65xKtCBg8svy0meOh-iPNJ8X4ws87ZO2RyJOW01_VL0dTvbv8GY6ggdiHeC6MmRoG9CIclsxQ2CVsW3zMEK0pBZhK_O8sChVeSgDfkGSeHzBc0PNxI:1vGZ1c:8p8hFuBOOWpEY4Z0ieKwXPnm2E1NjvD945nFaVwu0dU",
+      "expire_date": "2025-11-19T08:37:52.177Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "zgcxiqvfrq85f00blbmtgf4usnfg4did",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQAP-yZ0OAQtn26N03EHbZStXQpLQn499Nkx70OjOZN8S0byXuTdY4ZxjBwOWXUeKn1EPkR6r3RfFSt3UmdSTqtE3dliyv69n-DUpqBUaQzgdDAWVCDBnT4Dxrn6asvR4ILQk5ZOeYxZlMOthg0QTXc8e90QyfL-ORN6Y:1vDcCp:lOOHVNgPri8khvYWjJdY_rrVybNdty5CTwgVZkPda3o",
+      "expire_date": "2025-11-11T05:25:15.172Z"
+    }
+  },
+  {
+    "model": "home.heroslide",
+    "pk": 1,
+    "fields": {
+      "headline": "East Africa Logistics Solutions",
+      "subheadline": "Fast, reliable, and secure shipping across the globe. Get a Quote",
+      "cta_text": "Explore more",
+      "cta_url": "",
+      "image": "hero/carousel-2.jpg",
+      "overlay_opacity": 0.5,
+      "order": 0
+    }
+  },
+  {
+    "model": "home.aboutsection",
+    "pk": 1,
+    "fields": {
+      "heading": "Quick Transport and Logistics Solutions",
+      "subheading": "Reliable and efficient transport and logistics services across East Africa, ensuring your shipments arrive on time.",
+      "description": "Reliable and efficient transport and logistics services across East Africa, ensuring your shipments arrive on time.",
+      "button_text": "Explore More",
+      "button_url": "",
+      "background_image": "about/GNM-CARGO_A550a9787-1536x1024.jpg",
+      "features": []
+    }
+  },
+  {
+    "model": "home.factsection",
+    "pk": 1,
+    "fields": {
+      "heading": "#1 Place To Manage All Of Your Shipments",
+      "subheading": "We are the leading platform for managing every shipment efficiently. Track, organize, and control all deliveries with ease. Ensure timely, safe, and reliable shipping for all your goods",
+      "call_text": "Call for any query!",
+      "overlay_color": "#000000"
+    }
+  },
+  {
+    "model": "home.factitem",
+    "pk": 1,
+    "fields": {
+      "section": 1,
+      "icon_class": "fas fa-ship",
+      "number": 878,
+      "label": "shipments",
+      "order": 1
+    }
+  },
+  {
+    "model": "home.homefeaturesection",
+    "pk": 1,
+    "fields": {
+      "heading": "We Are Trusted Logistics Company Since 2010",
+      "subheading": "Our Features",
+      "background_image": "features_bg/carousel-1.jpg",
+      "video_url": "https://youtu.be/wspVEP3tAGE"
+    }
+  },
+  {
+    "model": "home.homefeature",
+    "pk": 1,
+    "fields": {
+      "section": 1,
+      "title": "East Africa",
+      "description": "we cover east african contries , Tanzania ,Kenaya and Uganda",
+      "icon": "fas fa-globe-africa",
+      "order": 1
+    }
+  },
+  {
+    "model": "home.whychooseus",
+    "pk": 1,
+    "fields": {
+      "title": "Trusted By More Than 150+ Partners In East-Africa",
+      "subtitle": "Why Choose Us",
+      "description": "GNM Cargo commenced business in 2010 and has very strong presence in China for over 10 years. Ever since has been expanding its operations to include Kenya and Uganda, establishing specialized subsidiaries to serve its customers better and effectively",
+      "image": "why_choose_us/Untitled-1-1024x724.png"
+    }
+  },
+  {
+    "model": "home.whychooseusfeature",
+    "pk": 1,
+    "fields": {
+      "section": 1,
+      "icon_class": "fas fa-stopwatch",
+      "title": "On-Time Shipping",
+      "description": "Within the time frame"
+    }
+  },
+  {
+    "model": "home.whychooseusfeature",
+    "pk": 2,
+    "fields": {
+      "section": 1,
+      "icon_class": "fas fa-wallet",
+      "title": "Affordable Price",
+      "description": "Reasonably priced"
+    }
+  },
+  {
+    "model": "home.quotesection",
+    "pk": 1,
+    "fields": {
+      "heading_top": "Get A Quote",
+      "heading_main": "Request A Free Quote!",
+      "description": "GNM Cargo commenced business in 2010 and has very strong presence in China for over 10 years. Ever since has been expanding its operations to include Kenya and Uganda, establishing specialized subsidiaries to serve its customers better and effectively",
+      "call_text": "Call for any query!",
+      "background_image": ""
+    }
+  },
+  {
+    "model": "home.quote",
+    "pk": 1,
+    "fields": {
+      "name": "andrea ihone",
+      "email": "azizimfinanga1@gmail.com",
+      "phone": "0692946575",
+      "service": 1,
+      "notes": "mmmmmmmmmmmmmm",
+      "created": "2025-11-06T06:22:18.141Z"
+    }
+  },
+  {
+    "model": "home.testimonial",
+    "pk": 1,
+    "fields": {
+      "name": "Vunja Bei",
+      "role": "Business man",
+      "company": "Vunja bei group",
+      "rating": 5,
+      "quote": "My number one trusted cargo shipping company, great service!",
+      "avatar": "testimonials/fred_vunjabei_83490711_188652865757933_1181001472767539864_n.webp",
+      "order": 1
+    }
+  },
+  {
+    "model": "aboutus.aboutsection",
+    "pk": 1,
+    "fields": {
+      "subtitle": "About Us",
+      "title": "Driven by Trust. Powered by Innovation.",
+      "description": "GNM Cargo commenced business in 2010 and has maintained a strong presence in China for over 15 years, expanding operations across East AfricaKenya and Ugandathrough strategic subsidiaries offering seamless logistics solutions.",
+      "image": "about/GNM-CARGO_A550a9768-scaled.jpg",
+      "background_overlay": true
+    }
+  },
+  {
+    "model": "aboutus.aboutfeature",
+    "pk": 1,
+    "fields": {
+      "section": 1,
+      "icon_class": "fas fa-stopwatch",
+      "title": "On-Time Shipping",
+      "description": "Within the time frame"
+    }
+  },
+  {
+    "model": "aboutus.aboutexperiencesection",
+    "pk": 1,
+    "fields": {
+      "icon_class": "fas fa-ship",
+      "small_title": "Experience",
+      "heading": "Experienced in East-Africa Logistic Services",
+      "description": "GNM Cargo commenced business in 2010 and has very strong presence in China for over 15 years. Ever since has been expanding its operations to include Kenya and Uganda. And by doing so, established specialized subsidiaries to serve its customers better and effectively. In 2017 we saw the need to establish Kikarara Co. Ltd, Madiluu Logistics Co. Limited and SGS Cargo which provide cargo consolidation and de-consolidation, warehousing services and clearing & forwarding services.",
+      "image": "about_experience/GNM-CARGO_B550a9940-scaled-q2wuts8yjwnw16ehi86v57nrmijfr9df1xvqmlr5s0.jpg"
+    }
+  },
+  {
+    "model": "aboutus.aboutfeatureitem",
+    "pk": 1,
+    "fields": {
+      "section": 1,
+      "icon_class": "fas fa-check-circle",
+      "text": "Customer Support"
+    }
+  },
+  {
+    "model": "aboutus.abouttestimonial",
+    "pk": 1,
+    "fields": {
+      "section": 1,
+      "quote_icon": "fas fa-quote-left",
+      "quote": "My number one trusted cargo shipping company, great service!",
+      "author": "Vunja bei"
+    }
+  },
+  {
+    "model": "aboutus.professionalismsection",
+    "pk": 1,
+    "fields": {
+      "icon_class": "fas fa-ship",
+      "small_title": "Professionalism",
+      "heading": "Skillful and Professional Workers Doing The Job",
+      "description": "Here all the duties from receiving goods, baling, consolidation, de-consolidation, declaration to delivery by the ship is done with great care and expertise.",
+      "image": "professionalism/GNM-CARGO_A550a9885-1-scaled.jpg"
+    }
+  },
+  {
+    "model": "aboutus.professionalskill",
+    "pk": 1,
+    "fields": {
+      "section": 1,
+      "skill_title": "Communication Skill",
+      "skill_value": 97
+    }
+  },
+  {
+    "model": "service.servicessection",
+    "pk": 1,
+    "fields": {
+      "icon_class": "fas fa-ship",
+      "small_title": "Our Services",
+      "main_title": "We Provide The Best Logistic Services For Your Needs",
+      "description": "We offer cargo consolidation and de-consolidation, Cargo Sourcing, Door-to-door cargo delivery services across East Africa and Southern Africa. We provide best and affordable services in clearing and forwarding, to both Full Container Shipping Services (FCL) and Loose Cargo Shipping Services (LCL) to our customers."
+    }
+  },
+  {
+    "model": "service.servicecategory",
+    "pk": 1,
+    "fields": {
+      "name": "Ocean Freight",
+      "slug": "ocean-freight",
+      "description": "We are the leading platform for managing every shipment efficiently. Track, organize",
+      "order": 1,
+      "happy_client": 244,
+      "complete_shipment": 8976,
+      "customer_reviews": 89
+    }
+  },
+  {
+    "model": "service.service",
+    "pk": 1,
+    "fields": {
+      "category": 1,
+      "title": "Ocean Freight",
+      "slug": "ocean-freight",
+      "excerpt": "Ocean Freight",
+      "content": "Ocean Freight",
+      "icon_class": "fa fas-ship",
+      "image": "services/carousel-1.jpg",
+      "brochure": ""
+    }
+  },
+  {
+    "model": "service.hardworkingsection",
+    "pk": 1,
+    "fields": {
+      "icon_class": "fas fa-ship",
+      "small_title": "HARDWORKING INDIVIDUALS",
+      "main_title": "Providing Excellent and Quality Customer Services",
+      "description": "All activities and operations are performed with high commitment and integrity while putting customers needs forward. Teamwork, reliability, innovativeness and professionalism make us one of the best in the industry.",
+      "image": "hardworking/GNM-CARGO_A550a9700-scaled.jpg"
+    }
+  },
+  {
+    "model": "service.hardworkingfeature",
+    "pk": 1,
+    "fields": {
+      "section": 1,
+      "icon_class": "fas fa-people-carry",
+      "title": "Continuous Hardwork",
+      "description": "Strategic plan and consistent efforts is what make us the best",
+      "order": 1
+    }
+  },
+  {
+    "model": "service.testimonialsectioncontent",
+    "pk": 1,
+    "fields": {
+      "small_title": "Client Testimonial",
+      "main_title": "More Than 40+ Satisfied Client Testimonial",
+      "description": "Endorsements from more than 40 customers across East Africa and China vouching the quality and value of our services."
+    }
+  },
+  {
+    "model": "contactus.sitesocialhandle",
+    "pk": 1,
+    "fields": {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/a.m.j.4.m/",
+      "is_active": true
+    }
+  },
+  {
+    "model": "team.headteam",
+    "pk": 1,
+    "fields": {
+      "name": "Mr. Geofrey Mbilinyi",
+      "role": "Managing Director",
+      "bio": "Managing Director",
+      "photo": "team/GNM-CARGO_A550a9762-scaled.jpg",
+      "email": "mbilinyi1@gmail.com",
+      "phone": "0692943212",
+      "order": 1,
+      "linkedin": "https://www.instagram.com/safirisha_nasi/?hl=en",
+      "twitter": "https://www.instagram.com/safirisha_nasi/?hl=en",
+      "instagram": "https://www.instagram.com/safirisha_nasi/?hl=en",
+      "facebook": "https://www.instagram.com/safirisha_nasi/?hl=en"
+    }
+  },
+  {
+    "model": "team.headteam",
+    "pk": 2,
+    "fields": {
+      "name": "Mr. Clinton Mbilinyi",
+      "role": "General Manager",
+      "bio": "General Manager",
+      "photo": "team/GNM-CARGO_A550a9745-scaled.jpg",
+      "email": "mbilinyi1@gmail.com",
+      "phone": "0692946575",
+      "order": 2,
+      "linkedin": "https://www.instagram.com/safirisha_nasi/?hl=en",
+      "twitter": "https://www.instagram.com/safirisha_nasi/?hl=en",
+      "instagram": "https://www.instagram.com/safirisha_nasi/?hl=en",
+      "facebook": "https://www.instagram.com/safirisha_nasi/?hl=en"
+    }
+  },
+  {
+    "model": "team.midletopteam",
+    "pk": 1,
+    "fields": {
+      "name": "Mr. Geofrey Mbilinyi",
+      "role": "Managing Director",
+      "bio": "Managing Director",
+      "photo": "team/ceo_gnm_trading.jpg",
+      "email": "mbilinyi1@gmail.com",
+      "phone": "0692941232",
+      "order": 1,
+      "linkedin": "https://www.instagram.com/safirisha_nasi/?hl=en",
+      "twitter": "https://www.instagram.com/safirisha_nasi/?hl=en",
+      "instagram": "https://www.instagram.com/safirisha_nasi/?hl=en",
+      "facebook": "https://www.instagram.com/safirisha_nasi/?hl=en"
+    }
+  },
+  {
+    "model": "blog.blogcategory",
+    "pk": 1,
+    "fields": {
+      "name": "china to tz",
+      "slug": "china-to-tz",
+      "description": "china to tz",
+      "created_at": "2025-11-06T13:43:00.445Z"
+    }
+  },
+  {
+    "model": "blog.blogpost",
+    "pk": 1,
+    "fields": {
+      "category": 1,
+      "title": "price  ya  contenas",
+      "description": "price  ya  contenas",
+      "slug": "price-ya-contenas",
+      "cover_image": "blog_covers/GNM-CARGO_A550a9700-scaled.jpg",
+      "author": 4,
+      "time_to_read": 7,
+      "views": 2,
+      "likes": 0,
+      "isPinned": true,
+      "created_at": "2025-11-06T13:44:19.628Z",
+      "updated_at": "2025-11-06T13:46:53.193Z"
+    }
+  },
+  {
+    "model": "sitesetting.sitemainsettings",
+    "pk": 1,
+    "fields": {
+      "site_name": "GNM-Cargo",
+      "another_name": "GNM-Cargo",
+      "slogan": "most trusted Logistic company in East Africa",
+      "logo": "site_logos/GNM-CARGO-WEB-LOGO-2-1536x429.png",
+      "working_hours": "Monday to Friday (06am - 23pm), Saturday(06am - 12pm)",
+      "main_location": "57HF+585, Msimbazi St, Dar es Salaam",
+      "main_email": "info@gnmtrading.co.tz",
+      "main_contact": "0677-066-551"
+    }
+  },
+  {
+    "model": "sitesetting.sitetheme",
+    "pk": 1,
+    "fields": {
+      "name": "gnm cargo THEME",
+      "primarycolor": "#f8dd10",
+      "secondarycolor": "#d12053",
+      "is_default_theme": true
+    }
+  }
+]

@@ -10,9 +10,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-)0!(%wp2gy=mro2(z!tn)@gkxshz4^7vjz)(v$p@g243qm)fws'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*']   
 
 
 # Application definition
@@ -25,6 +25,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
+    
+    'storages',
     
     'home',
     'aboutus',
@@ -69,10 +71,21 @@ WSGI_APPLICATION = 'gnmpro.wsgi.application'
 
 
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'gnm-pro-db',
+        'USER': 'gnm-pro-db',
+        'PASSWORD': 'gnm-pro-db-2025',
+        'HOST': '159.65.119.18',
+        'PORT': '5432',
     }
 }
 
@@ -123,3 +136,23 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+# DigitalOcean Spaces
+AWS_ACCESS_KEY_ID = 'DO80177H8LUGKRC99Y8G'
+AWS_SECRET_ACCESS_KEY = 'aX/0DFlyYiyczEnAsM7NjtMVuOaVz/Fv3jrzetTllYs'
+AWS_STORAGE_BUCKET_NAME = 'gnmcargostorage'
+AWS_S3_ENDPOINT_URL = 'https://fra1.digitaloceanspaces.com'  # remove bucket name here
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
+}
+
+
+# Static files
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATIC_URL = f'https://{AWS_STORAGE_BUCKET_NAME}.{AWS_S3_ENDPOINT_URL}/static/'
+
+# Media files
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+MEDIA_URL = f'https://{AWS_STORAGE_BUCKET_NAME}.{AWS_S3_ENDPOINT_URL}/'
