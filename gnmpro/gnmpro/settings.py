@@ -155,18 +155,22 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # STATIC_URL = f'https://{AWS_STORAGE_BUCKET_NAME}.{AWS_S3_ENDPOINT_URL}/static/'
 # MEDIA_URL = f'https://{AWS_STORAGE_BUCKET_NAME}.{AWS_S3_ENDPOINT_URL}/media/'
 
+
 # DigitalOcean Spaces
 AWS_ACCESS_KEY_ID = 'DO80177H8LUGKRC99Y8G'
 AWS_SECRET_ACCESS_KEY = 'aX/0DFlyYiyczEnAsM7NjtMVuOaVz/Fv3jrzetTllYs'
 AWS_STORAGE_BUCKET_NAME = 'gnmcargostorage'
+AWS_S3_REGION_NAME = 'fra1'
 AWS_S3_ENDPOINT_URL = 'https://fra1.digitaloceanspaces.com'
-AWS_S3_REGION_NAME = 'fra1'  # Important sometimes for URL signing
-AWS_DEFAULT_ACL = 'public-read'
-AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400'}
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
+}
 
+# Storages
 STATICFILES_STORAGE = 'gnmpro.storages_backends.StaticStorage'
 DEFAULT_FILE_STORAGE = 'gnmpro.storages_backends.MediaStorage'
 
+# URLs
 STATIC_URL = f'https://{AWS_STORAGE_BUCKET_NAME}.fra1.digitaloceanspaces.com/static/'
 MEDIA_URL = f'https://{AWS_STORAGE_BUCKET_NAME}.fra1.digitaloceanspaces.com/media/'
 
