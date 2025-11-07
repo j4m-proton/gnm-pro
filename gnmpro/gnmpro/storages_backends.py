@@ -1,4 +1,4 @@
-# storages_backends.py (create this file in your project folder)
+# gnmpro/storages_backends.py
 from storages.backends.s3boto3 import S3Boto3Storage
 
 class StaticStorage(S3Boto3Storage):
