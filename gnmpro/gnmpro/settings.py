@@ -140,24 +140,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # DigitalOcean Spaces
-# AWS_ACCESS_KEY_ID = 'DO80177H8LUGKRC99Y8G'
-# AWS_SECRET_ACCESS_KEY = 'aX/0DFlyYiyczEnAsM7NjtMVuOaVz/Fv3jrzetTllYs'
-# AWS_STORAGE_BUCKET_NAME = 'gnmcargostorage'
-# AWS_S3_ENDPOINT_URL = 'https://fra1.digitaloceanspaces.com'  # remove bucket name here
-# AWS_S3_OBJECT_PARAMETERS = {
-#     'CacheControl': 'max-age=86400',
-# }
-
-
-# STATICFILES_STORAGE = 'gnmpro.storages_backends.StaticStorage'
-# DEFAULT_FILE_STORAGE = 'gnmpro.storages_backends.MediaStorage'
-
-# STATIC_URL = f'https://{AWS_STORAGE_BUCKET_NAME}.{AWS_S3_ENDPOINT_URL}/static/'
-# MEDIA_URL = f'https://{AWS_STORAGE_BUCKET_NAME}.{AWS_S3_ENDPOINT_URL}/media/'
-
-
-
-# DigitalOcean Spaces
 AWS_ACCESS_KEY_ID = 'DO80177H8LUGKRC99Y8G'
 AWS_SECRET_ACCESS_KEY = 'aX/0DFlyYiyczEnAsM7NjtMVuOaVz/Fv3jrzetTllYs'
 AWS_STORAGE_BUCKET_NAME = 'gnmcargostorage'
@@ -166,13 +148,16 @@ AWS_S3_OBJECT_PARAMETERS = {
     'CacheControl': 'max-age=86400',
 }
 
-# Static files
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-STATIC_URL = f'https://{AWS_STORAGE_BUCKET_NAME}.{AWS_S3_ENDPOINT_URL}/static/'
 
-# Media files
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'gnmpro.storages_backends.StaticStorage'
+DEFAULT_FILE_STORAGE = 'gnmpro.storages_backends.MediaStorage'
+
+STATIC_URL = f'https://{AWS_STORAGE_BUCKET_NAME}.{AWS_S3_ENDPOINT_URL}/static/'
 MEDIA_URL = f'https://{AWS_STORAGE_BUCKET_NAME}.{AWS_S3_ENDPOINT_URL}/'
+
+
+
+
 
 
 
