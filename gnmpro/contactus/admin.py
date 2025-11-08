@@ -1,7 +1,12 @@
 from django.contrib import admin
 from django.utils.html import format_html
-from .models import SiteSocialHandle, OfficeLocation, SiteSupportContact
+from .models import SiteSocialHandle, OfficeLocation, SiteSupportContact,ContactInfo
 
+
+@admin.register(ContactInfo)
+class ContactInfoAdmin(admin.ModelAdmin):
+    list_display = ('title', 'opening_hours')
+    search_fields = ('title',)
 
 # ============================
 # 🌐 Site Social Handles

@@ -1,5 +1,20 @@
 from django.db import models
 
+
+class ContactInfo(models.Model):
+    # General info
+    title = models.CharField(max_length=100, default="We are Here for You")
+    description = models.TextField(
+        default="We would love to hear from you! Use the contact information below to get to us and we’ll be in touch and reach out to you as soon as possible."
+    )
+    image = models.ImageField(upload_to='contact/', null=True, blank=True)
+    
+    # Contact details
+    opening_hours = models.CharField(max_length=255, default="Mon - Fri: 8:30 AM - 4:30 PM, Sat: 9:00 AM - 3:00 PM")
+    
+    def __str__(self):
+        return "Contact Information"
+
 class SiteSocialHandle(models.Model):
     SOCIAL_MEDIA_CHOICES = [
         ('facebook', 'Facebook'),
