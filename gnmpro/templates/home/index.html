@@ -6,47 +6,61 @@
 <!-- Team Members Example -->
 
 
-  <style>
-    :root {
-      
-      --dark: #0d1b2a;
-      --light: #f8f9fa;
-      --primary: {{ primarycolor }};
-      --secondary: {{ secondarycolor }};
-  
+<style>
+  :root {
+
+    --dark: #0d1b2a;
+    --light: #f8f9fa;
+
+    --primary: {
+        {
+        primarycolor
+      }
     }
 
-    body {
-      background-color: #000000 !important;
+    ;
+
+    --secondary: {
+        {
+        secondarycolor
+      }
     }
 
-.carousel {
-  position: relative;
-  overflow: hidden;
-  border-radius: 1rem;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.6); 
-}
+    ;
 
-/* Slides track */
-.carousel-track {
-  display: flex;
-  transition: transform 0.8s ease-in-out;
-}
+  }
 
-/* Each Slide */
-.carousel-slide {
-  min-width: 100%;
-  height: 77vh;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  body {
+    background-color: #000000 !important;
+  }
 
-/* Spotify Overlay */
-/* .carousel-slide::before {
+  .carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  }
+
+  /* Slides track */
+  .carousel-track {
+    display: flex;
+    transition: transform 0.8s ease-in-out;
+  }
+
+  /* Each Slide */
+  .carousel-slide {
+    min-width: 100%;
+    height: 77vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Spotify Overlay */
+  /* .carousel-slide::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -54,783 +68,831 @@
   z-index: 1;
 } */
 
-/* Content inside slide */
-.carousel-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  color: var(--light);
-  max-width: 700px;
-  padding: 2rem;
-}
+  /* Content inside slide */
+  .carousel-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--light);
+    max-width: 700px;
+    padding: 2rem;
+  }
 
-.carousel-content h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--primary);
-  margin-bottom: 1rem;
-}
+  .carousel-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 1rem;
+  }
 
-.carousel-content p {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-  color: #ddd;
-}
+  .carousel-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #ddd;
+  }
 
-/* CTA button */
-.cta-btn {
-  display: inline-block;
-  padding: 0.8rem 2rem;
-  border-radius: 50px;
-  background: var(--primary);
-  color: var(--light);
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-}
-.cta-btn:hover {
-  background: var(--secondary);
-  transform: translateY(-3px);
-}
+  /* CTA button */
+  .cta-btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    background: var(--primary);
+    color: var(--light);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  }
 
-/* Nav Buttons */
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255,255,255,0.1);
-  border: none;
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
-  color: var(--light);
-  cursor: pointer;
-  border-radius: 50%;
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
-  z-index: 3;
-}
-.carousel-btn:hover {
-  background: rgba(255,255,255,0.2);
-}
+  .cta-btn:hover {
+    background: var(--secondary);
+    transform: translateY(-3px);
+  }
 
-.carousel-btn.prev {
-  left: 20px;
-}
-.carousel-btn.next {
-  right: 20px;
-}
+  /* Nav Buttons */
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    color: var(--light);
+    cursor: pointer;
+    border-radius: 50%;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    z-index: 3;
+  }
 
-/* Dots */
-.carousel-dots {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-  z-index: 3;
-}
+  .carousel-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
 
-.carousel-dots button {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: none;
-  background: rgba(255,255,255,0.4);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.carousel-dots button.active {
-  background: var(--primary);
-  transform: scale(1.2);
-}
-  </style>
+  .carousel-btn.prev {
+    left: 20px;
+  }
+
+  .carousel-btn.next {
+    right: 20px;
+  }
+
+  /* Dots */
+  .carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 3;
+  }
+
+  .carousel-dots button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .carousel-dots button.active {
+    background: var(--primary);
+    transform: scale(1.2);
+  }
+</style>
 
 
 <style>
   :root {
-  --primary: {{ primarycolor }};
-  --secondary: {{ secondarycolor }};
-  --dark: #0d1b2a;
-  --light: #f8f9fa;
-}
+    --primary: {
+        {
+        primarycolor
+      }
+    }
 
-/* ---------- Global ---------- */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-  color: var(--dark);
-}
+    ;
 
-section h6 {
-  color: var(--secondary);
-  font-weight: 600;
-  letter-spacing: 2px;
-}
+    --secondary: {
+        {
+        secondarycolor
+      }
+    }
 
-.btn {
-  border-radius: 50px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-.btn-primary {
-  background: var(--primary);
-  border: none;
-}
-.btn-primary:hover {
-  background: var(--secondary);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
+    ;
+    --dark: #0d1b2a;
+    --light: #f8f9fa;
+  }
 
-/* ---------- About ---------- */
-.about-text h1 {
-  color: var(--primary);
-}
-.about-text p {
-  line-height: 1.8;
-}
-.about-text .fa {
-  color: var(--primary);
-  transition: transform 0.3s ease;
-}
-.about-text .fa:hover {
-  transform: scale(1.2) rotate(8deg);
-}
+  /* ---------- Global ---------- */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 700;
+    color: var(--dark);
+  }
 
-/* ---------- Facts ---------- */
-.bg-primary, .bg-secondary, .bg-success {
-  border-radius: 12px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-.bg-primary:hover, 
-.bg-secondary:hover, 
-.bg-success:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-}
-.bg-primary i, .bg-secondary i, .bg-success i {
-  display: block;
-}
+  section h6 {
+    color: var(--secondary);
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
 
-/* ---------- Services ---------- */
-.service-item {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-  transition: all 0.3s ease;
-}
-.service-item img {
-  border-radius: 12px;
-  transition: transform 0.4s ease;
-}
-.service-item:hover img {
-  transform: scale(1.08);
-}
-.service-item:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-}
-.btn-slide {
-  color: var(--primary);
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-.btn-slide:hover {
-  color: var(--secondary);
-}
+  .btn {
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
 
-/* ---------- Features ---------- */
-.feature-text h1 {
-  color: var(--primary);
-}
-.feature-text i {
-  color: var(--primary);
-  transition: transform 0.3s ease;
-}
-.feature-text i:hover {
-  transform: scale(1.2) rotate(-8deg);
-}
+  .btn-primary {
+    background: var(--primary);
+    border: none;
+  }
 
-/* ---------- Pricing ---------- */
-.price-item {
-  background: #fff;
-  border-radius: 16px;
-  border: 1px solid #eee;
-  transition: all 0.3s ease;
-}
-.price-item:hover {
-  transform: translateY(-8px);
-  border-color: var(--primary);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-.price-item h5 {
-  font-weight: 600;
-  color: var(--primary);
-}
-.price-item .btn-slide {
-  color: var(--primary);
-}
+  .btn-primary:hover {
+    background: var(--secondary);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
 
-/* ---------- Quote ---------- */
-.bg-light form .form-control, 
-.bg-light form .form-select, 
-.bg-light form textarea {
-  border-radius: 10px;
-  padding: 12px;
-  transition: border 0.3s ease, box-shadow 0.3s ease;
-}
-.bg-light form .form-control:focus, 
-.bg-light form .form-select:focus, 
-.bg-light form textarea:focus {
-  border: 1px solid var(--primary);
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
-}
+  /* ---------- About ---------- */
+  .about-text h1 {
+    color: var(--primary);
+  }
 
-/* ---------- Team ---------- */
-.team-item {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-  transition: all 0.3s ease;
-}
-.team-item img {
-  border-radius: 12px;
-  transition: transform 0.4s ease;
-}
-.team-item:hover img {
-  transform: scale(1.1);
-}
-.team-item:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-}
-.team-item .btn-slide {
-  color: var(--primary);
-}
-.team-item .btn-slide span a {
-  margin: 0 5px;
-  color: var(--dark);
-  transition: color 0.3s ease;
-}
-.team-item .btn-slide span a:hover {
-  color: var(--primary);
-}
+  .about-text p {
+    line-height: 1.8;
+  }
 
-/* ---------- Testimonial ---------- */
-.testimonial-item {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 6px 25px rgba(0,0,0,0.08);
-  position: relative;
-  transition: transform 0.3s ease;
-}
-.testimonial-item:hover {
-  transform: translateY(-6px);
-}
-.testimonial-item i {
-  color: var(--primary);
-}
-.testimonial-item img {
-  border-radius: 50%;
-  border: 3px solid var(--primary);
-}
-.bg-color{
-  background-color: var(--primary-color) !important;
-}
-.text-primary{
-  color: var(--primary-color) !important;
-}
+  .about-text .fa {
+    color: var(--primary);
+    transition: transform 0.3s ease;
+  }
 
+  .about-text .fa:hover {
+    transform: scale(1.2) rotate(8deg);
+  }
 
+  /* ---------- Facts ---------- */
+  .bg-primary,
+  .bg-secondary,
+  .bg-success {
+    border-radius: 12px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
 
+  .bg-primary:hover,
+  .bg-secondary:hover,
+  .bg-success:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  .bg-primary i,
+  .bg-secondary i,
+  .bg-success i {
+    display: block;
+  }
+
+  /* ---------- Services ---------- */
+  .service-item {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+  }
+
+  .service-item img {
+    border-radius: 12px;
+    transition: transform 0.4s ease;
+  }
+
+  .service-item:hover img {
+    transform: scale(1.08);
+  }
+
+  .service-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  }
+
+  .btn-slide {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .btn-slide:hover {
+    color: var(--secondary);
+  }
+
+  /* ---------- Features ---------- */
+  .feature-text h1 {
+    color: var(--primary);
+  }
+
+  .feature-text i {
+    color: var(--primary);
+    transition: transform 0.3s ease;
+  }
+
+  .feature-text i:hover {
+    transform: scale(1.2) rotate(-8deg);
+  }
+
+  /* ---------- Pricing ---------- */
+  .price-item {
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+  }
+
+  .price-item:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  .price-item h5 {
+    font-weight: 600;
+    color: var(--primary);
+  }
+
+  .price-item .btn-slide {
+    color: var(--primary);
+  }
+
+  /* ---------- Quote ---------- */
+  .bg-light form .form-control,
+  .bg-light form .form-select,
+  .bg-light form textarea {
+    border-radius: 10px;
+    padding: 12px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .bg-light form .form-control:focus,
+  .bg-light form .form-select:focus,
+  .bg-light form textarea:focus {
+    border: 1px solid var(--primary);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* ---------- Team ---------- */
+  .team-item {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+  }
+
+  .team-item img {
+    border-radius: 12px;
+    transition: transform 0.4s ease;
+  }
+
+  .team-item:hover img {
+    transform: scale(1.1);
+  }
+
+  .team-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .team-item .btn-slide {
+    color: var(--primary);
+  }
+
+  .team-item .btn-slide span a {
+    margin: 0 5px;
+    color: var(--dark);
+    transition: color 0.3s ease;
+  }
+
+  .team-item .btn-slide span a:hover {
+    color: var(--primary);
+  }
+
+  /* ---------- Testimonial ---------- */
+  .testimonial-item {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+
+  .testimonial-item:hover {
+    transform: translateY(-6px);
+  }
+
+  .testimonial-item i {
+    color: var(--primary);
+  }
+
+  .testimonial-item img {
+    border-radius: 50%;
+    border: 3px solid var(--primary);
+  }
+
+  .bg-color {
+    background-color: var(--primary-color) !important;
+  }
+
+  .text-primary {
+    color: var(--primary-color) !important;
+  }
 </style>
 
 
 <style>
- /* Card Container */
-.package-card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 1rem;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.6);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-.package-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 12px 35px rgba(0,0,0,0.8);
-  box-shadow: 0 0 25px var(--primary-color), 0 0 50px var(--secondary-color);
-}
+  /* Card Container */
+  .package-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
 
-/* Image */
-.package-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-.package-card:hover img {
-  transform: scale(1.1);
-  
-}
+  .package-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 25px var(--primary-color), 0 0 50px var(--secondary-color);
+  }
 
-/* Dark Gradient Overlay */
-.overlay-gradient {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.95) 100%);
-  z-index: 1;
-}
+  /* Image */
+  .package-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
 
-/* Top Label */
-.overlay-top-text {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  background: rgba(0,0,0,0.6);
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  color: var(--light);
-  z-index: 2;
-  backdrop-filter: blur(6px);
-  border: 1px solid rgba(255,255,255,0.1);
-}
+  .package-card:hover img {
+    transform: scale(1.1);
 
-/* Bottom Content */
-.text-layer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 20px;
-  z-index: 2;
-  color: var(--light);
-}
+  }
 
-.text-layer h4 {
-  font-weight: 700;
-  color: var(--primary);
-}
+  /* Dark Gradient Overlay */
+  .overlay-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.95) 100%);
+    z-index: 1;
+  }
 
-.text-layer p {
-  font-size: 0.95rem;
-  color: #ddd;
-}
+  /* Top Label */
+  .overlay-top-text {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--light);
+    z-index: 2;
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
 
-/* Slide Button */
+  /* Bottom Content */
+  .text-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    z-index: 2;
+    color: var(--light);
+  }
 
+  .text-layer h4 {
+    font-weight: 700;
+    color: var(--primary);
+  }
 
-</style>  
+  .text-layer p {
+    font-size: 0.95rem;
+    color: #ddd;
+  }
+
+  /* Slide Button */
+</style>
 <style>
   .about-card {
-  background: url('https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=1600&q=80')
-              center/cover no-repeat;
-  border-radius: 1rem;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
-}
+    background: url('https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    border-radius: 1rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  }
 
-.about-card .overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(0,0,0,0.95), rgba(0,0,0,0.8));
-  z-index: 1;
-}
+  .about-card .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.8));
+    z-index: 1;
+  }
 
-.about-card .container-xxl {
-  position: relative;
-  z-index: 2;
-}
+  .about-card .container-xxl {
+    position: relative;
+    z-index: 2;
+  }
 
-.info-box {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 1rem;
-  transition: all 0.3s ease;
-}
-.info-box:hover {
-  background: rgba(255,255,255,0.1);
-  transform: translateY(-5px);
-}
+  .info-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+  }
 
+  .info-box:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+  }
 </style>
 <style>
   .fact-card {
-  background: url('https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=1600&q=80') 
-              center/cover no-repeat;
-  border-radius: 1rem;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
-}
+    background: url('https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    border-radius: 1rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  }
 
-.fact-card .overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(0,0,0,0.9), rgba(0,0,0,0.6));
-  z-index: 1;
-}
+  .fact-card .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6));
+    z-index: 1;
+  }
 
-.fact-card .container-xxl {
-  position: relative;
-  z-index: 2;
-}
+  .fact-card .container-xxl {
+    position: relative;
+    z-index: 2;
+  }
 
-.stat-box {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 1rem;
-  transition: all 0.3s ease;
-}
-.stat-box:hover {
-  transform: translateY(-5px);
-  background: rgba(255,255,255,0.1);
-}
+  .stat-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  .stat-box:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+  }
 </style>
 <style>
   .feature-card {
-  position: relative;
-  border-radius: 1rem;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
-  overflow: hidden;
-}
+    position: relative;
+    border-radius: 1rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+  }
 
-.feature-card .overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(0,0,0,0.9), rgba(0,0,0,0.6));
-  z-index: 1;
-}
+  .feature-card .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6));
+    z-index: 1;
+  }
 
-.feature-card .container-xxl {
-  position: relative;
-  z-index: 2;
-}
+  .feature-card .container-xxl {
+    position: relative;
+    z-index: 2;
+  }
 
-.feature-card i {
-  color: var(--primary);
-}
+  .feature-card i {
+    color: var(--primary);
+  }
 
-.feature-card .d-flex {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 1rem;
-  padding: 1rem;
-  transition: all 0.3s ease;
-}
+  .feature-card .d-flex {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    padding: 1rem;
+    transition: all 0.3s ease;
+  }
 
-.feature-card .d-flex:hover {
-  transform: translateY(-5px);
-  background: rgba(255,255,255,0.1);
-}
-
+  .feature-card .d-flex:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+  }
 </style>
 <style>
   .quote-card {
-  position: relative;
-  border-radius: 1rem;
-  overflow: hidden;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
-}
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  }
 
-.quote-card .overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(0,0,0,0.9), rgba(0,0,0,0.6));
-  z-index: 1;
-}
+  .quote-card .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6));
+    z-index: 1;
+  }
 
-.quote-card .container-xxl {
-  position: relative;
-  z-index: 2;
-}
+  .quote-card .container-xxl {
+    position: relative;
+    z-index: 2;
+  }
 
-.quote-form-card {
-  background: rgba(25,25,25,0.9);
-  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
-  border-radius: 1rem;
-}
+  .quote-form-card {
+    background: rgba(25, 25, 25, 0.9);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+    border-radius: 1rem;
+  }
 
-.quote-form-card input,
-.quote-form-card select,
-.quote-form-card textarea {
-  background: #111;
-  color: #fff;
-}
+  .quote-form-card input,
+  .quote-form-card select,
+  .quote-form-card textarea {
+    background: #111;
+    color: #fff;
+  }
 
-.quote-form-card input::placeholder,
-.quote-form-card select option,
-.quote-form-card textarea::placeholder {
-  color: #aaa;
-}
-
+  .quote-form-card input::placeholder,
+  .quote-form-card select option,
+  .quote-form-card textarea::placeholder {
+    color: #aaa;
+  }
 </style>
 
 <style>
   .team-card {
-  position: relative;
-}
+    position: relative;
+  }
 
-.team-card .overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(0,0,0,0.9), rgba(0,0,0,0.6));
-  z-index: 1;
-}
+  .team-card .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6));
+    z-index: 1;
+  }
 
-.team-card .container {
-  position: relative;
-  z-index: 2;
-}
+  .team-card .container {
+    position: relative;
+    z-index: 2;
+  }
 
-.team-item {
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
+  .team-item {
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
 
-.team-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.6);
-}
+  .team-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+  }
 
-.team-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
+  .team-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
 
-.team-item:hover .team-overlay {
-  opacity: 1;
-}
+  .team-item:hover .team-overlay {
+    opacity: 1;
+  }
 
-.team-overlay h5,
-.team-overlay p {
-  margin: 0;
-}
+  .team-overlay h5,
+  .team-overlay p {
+    margin: 0;
+  }
 
-.team-social a {
-  color: #fff;
-  margin-right: 0.5rem;
-  font-size: 0.9rem;
-  transition: color 0.3s;
-}
+  .team-social a {
+    color: #fff;
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+  }
 
-.team-social a:hover {
-  color: var(--primary);
-}
-
+  .team-social a:hover {
+    color: var(--primary);
+  }
 </style>
 
 <style>
   .video-wrapper {
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%; /* 16:9 ratio */
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 0 25px var(--primary-color), 0 0 50px var(--secondary-color);
-}
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    /* 16:9 ratio */
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 0 25px var(--primary-color), 0 0 50px var(--secondary-color);
+  }
 
-.video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-
-
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
 </style>
 
 <style>
   .why-choose-us {
-  /* background-color: var(--secondary); */
-  padding: 5rem 0;
-  position: relative;
-  overflow: hidden;
-}
+    /* background-color: var(--secondary); */
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+  }
 
-.why-choose-us::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  /* background: linear-gradient(135deg, rgba(29,185,84,0.2), rgba(25,20,20,0.6)); */
-  z-index: 0;
-}
+  .why-choose-us::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* background: linear-gradient(135deg, rgba(29,185,84,0.2), rgba(25,20,20,0.6)); */
+    z-index: 0;
+  }
 
-.why-choose-us .content-wrapper {
-  position: relative;
-  z-index: 2;
-}
+  .why-choose-us .content-wrapper {
+    position: relative;
+    z-index: 2;
+  }
 
-.icon-header {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  font-weight: 600;
-  text-transform: uppercase;
-}
+  .icon-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
 
-.icon-header i {
-  font-size: 2rem;
-  color: var(--primary);
-  text-shadow: 0 0 8px var(--primary);
-}
+  .icon-header i {
+    font-size: 2rem;
+    color: var(--primary);
+    text-shadow: 0 0 8px var(--primary);
+  }
 
-.why-choose-us h2 {
-  font-weight: 700;
-  font-size: 2.5rem;
-}
+  .why-choose-us h2 {
+    font-weight: 700;
+    font-size: 2.5rem;
+  }
 
-.why-choose-us p {
-  color: #ccc;
-  line-height: 1.7;
-}
+  .why-choose-us p {
+    color: #ccc;
+    line-height: 1.7;
+  }
 
-.feature-box {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  background: rgba(255,255,255,0.05);
-  border-radius: 1rem;
-  padding: 1rem;
-  transition: all 0.3s ease;
-}
-.feature-box:hover {
-  transform: translateY(-5px);
-  background: rgba(255,255,255,0.1);
-}
+  .feature-box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+    padding: 1rem;
+    transition: all 0.3s ease;
+  }
 
-.feature-icon i {
-  font-size: 2rem;
-  color: var(--primary);
-  text-shadow: 0 0 10px var(--primary);
-}
+  .feature-box:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+  }
 
-.feature-content h4 {
-  margin: 0;
-  font-size: 1.2rem;
-  color: #fff;
-}
+  .feature-icon i {
+    font-size: 2rem;
+    color: var(--primary);
+    text-shadow: 0 0 10px var(--primary);
+  }
 
-.feature-content p {
-  margin: 0;
-  font-size: 0.95rem;
-  color: #ccc;
-}
+  .feature-content h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #fff;
+  }
 
-.image-wrapper {
-  border-radius: 1.5rem;
-  overflow: hidden;
-  box-shadow: 0 0 25px var(--primary-color), 0 0 50px var(--secondary-color);
-}
+  .feature-content p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #ccc;
+  }
 
-.image-wrapper img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-.image-about-wrapper {
-  border-radius: 1.5rem;
-  overflow: hidden;
-  box-shadow: 0 0 25px var(--primary-color), 0 0 50px var(--secondary-color);
-}
-.image-about-wrapper img {
-  width: 100%;
-  height: auto; 
-  display: block;
-}
+  .image-wrapper {
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 0 25px var(--primary-color), 0 0 50px var(--secondary-color);
+  }
+
+  .image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .image-about-wrapper {
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 0 25px var(--primary-color), 0 0 50px var(--secondary-color);
+  }
+
+  .image-about-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 </style>
 
 
 <style>
   .team-card {
-  background: linear-gradient(135deg, var(--primary-color) 20%, var(--secondary-color) 100%);
-  padding: 2rem;
-  border-radius: 2rem;
-  position: relative;
-  overflow: hidden;
-}
+    background: linear-gradient(135deg, var(--primary-color) 20%, var(--secondary-color) 100%);
+    padding: 2rem;
+    border-radius: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
 
-.team-card .overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-}
+  .team-card .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+  }
 
-.team-item {
-  border-radius: 1rem;
-  overflow: hidden;
-  background: #111;
-  transition: all 0.4s ease;
-  position: relative;
-}
+  .team-item {
+    border-radius: 1rem;
+    overflow: hidden;
+    background: #111;
+    transition: all 0.4s ease;
+    position: relative;
+  }
 
-.team-item img {
-  transition: transform 0.6s ease;
-}
+  .team-item img {
+    transition: transform 0.6s ease;
+  }
 
-.team-item:hover img {
-  transform: scale(1.1);
-}
+  .team-item:hover img {
+    transform: scale(1.1);
+  }
 
-.team-item:hover {
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6), 
-              0 0 15px var(--primary-color), 
-              0 0 30px var(--secondary-color);
-  transform: translateY(-6px);
-}
+  .team-item:hover {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6),
+      0 0 15px var(--primary-color),
+      0 0 30px var(--secondary-color);
+    transform: translateY(-6px);
+  }
 
-.team-overlay {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 50%, transparent);
-  opacity: 0;
-  transition: all 0.4s ease;
-}
+  .team-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 50%, transparent);
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
 
-.team-item:hover .team-overlay {
-  opacity: 1;
-}
+  .team-item:hover .team-overlay {
+    opacity: 1;
+  }
 
-.team-overlay h5 {
-  font-weight: 700;
-  color: #fff;
-}
+  .team-overlay h5 {
+    font-weight: 700;
+    color: #fff;
+  }
 
-.team-overlay p {
-  font-size: 0.9rem;
-  color: #ddd;
-}
+  .team-overlay p {
+    font-size: 0.9rem;
+    color: #ddd;
+  }
 
-.team-social a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 0.5rem;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  background: var(--primary-color);
-  color: #fff;
-  transition: all 0.3s ease;
-}
+  .team-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5rem;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: #fff;
+    transition: all 0.3s ease;
+  }
 
-.team-social a:hover {
-  background: var(--secondary-color);
-  box-shadow: 0 0 12px var(--secondary-color);
-  transform: rotate(12deg) scale(1.1);
-}
+  .team-social a:hover {
+    background: var(--secondary-color);
+    box-shadow: 0 0 12px var(--secondary-color);
+    transform: rotate(12deg) scale(1.1);
+  }
 </style>
 
 
 <style>
- 
   /* Section background */
   .testimonial-carousel {
     padding: 2rem 0;
   }
-  
+
   /* Testimonial item */
   .testimonial-item {
     position: relative;
@@ -841,16 +903,15 @@ section h6 {
     transition: all 0.4s ease;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   }
-  
+
   .testimonial-item:hover {
     transform: translateY(-8px);
     border: 1px solid transparent;
-    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85))
-                padding-box,
-                linear-gradient(135deg, var(--primary-color), var(--secondary-color)) border-box;
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)) padding-box,
+      linear-gradient(135deg, var(--primary-color), var(--secondary-color)) border-box;
     box-shadow: 0 0 20px var(--primary-color), 0 0 40px var(--secondary-color);
   }
-  
+
   /* Quote icon */
   .testimonial-item i.fa-quote-right {
     color: var(--secondary-color);
@@ -858,109 +919,108 @@ section h6 {
     filter: drop-shadow(0 0 8px var(--primary-color));
     transition: all 0.3s ease;
   }
-  
+
   .testimonial-item:hover i.fa-quote-right {
     transform: scale(1.1) rotate(5deg);
     color: var(--primary-color);
   }
-  
+
   /* Client info */
   .testimonial-item img {
     border-radius: 50%;
     border: 3px solid var(--primary-color);
     box-shadow: 0 0 10px var(--secondary-color);
   }
-  
+
   .testimonial-item h5 {
     color: #fff;
     font-weight: 700;
   }
-  
+
   .testimonial-item p {
     color: #ccc;
     font-size: 0.9rem;
     margin-bottom: 0;
   }
-  
+
   /* Carousel Dots */
   .owl-dots .owl-dot span {
     width: 14px;
     height: 14px;
     margin: 5px 7px;
     border-radius: 50%;
-    background: rgba(255,255,255,0.3);
+    background: rgba(255, 255, 255, 0.3);
     transition: all 0.3s ease;
   }
-  
+
   .owl-dots .owl-dot.active span {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     box-shadow: 0 0 8px var(--secondary-color);
   }
-  </style>
+</style>
 
 
 <style>
-
   /* Overlay on background image */
   .quote-card .overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(0,0,0,0.85), rgba(0,0,0,0.75));
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.75));
     z-index: 1;
   }
-  
+
   /* Left content */
   .quote-card h6 {
     letter-spacing: 2px;
     font-weight: 600;
   }
-  
+
   .quote-card h1 {
     font-weight: 800;
-    text-shadow: 0 0 12px rgba(0,0,0,0.7);
+    text-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
   }
-  
+
   /* Form card */
   .quote-form-card {
-    background: rgba(0,0,0,0.65);
+    background: rgba(0, 0, 0, 0.65);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.4s ease;
-    box-shadow: 0 0 20px rgba(0,0,0,0.7);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
   }
-  
+
   .quote-form-card:hover {
     border: 1px solid transparent;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)) padding-box,
-                linear-gradient(135deg, var(--primary-color), var(--secondary-color)) border-box;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) padding-box,
+      linear-gradient(135deg, var(--primary-color), var(--secondary-color)) border-box;
     box-shadow: 0 0 20px var(--primary-color), 0 0 40px var(--secondary-color);
   }
-  
+
   /* Inputs */
   .quote-form-card input,
   .quote-form-card select,
   .quote-form-card textarea {
-    background: rgba(255,255,255,0.08);
+    background: rgba(255, 255, 255, 0.08);
     color: #fff;
     border-radius: 0.6rem;
     transition: all 0.3s ease;
   }
-  
+
   .quote-form-card input:focus,
   .quote-form-card select:focus,
   .quote-form-card textarea:focus {
     outline: none;
-    background: rgba(255,255,255,0.15);
+    background: rgba(255, 255, 255, 0.15);
     border: 1px solid var(--primary-color);
     box-shadow: 0 0 10px var(--secondary-color);
     color: #fff;
   }
-  
+
   /* Placeholder color */
   .quote-form-card ::placeholder {
     color: #bbb;
   }
-  
+
   /* Button */
   .quote-form-card .btn {
     font-weight: 600;
@@ -969,62 +1029,63 @@ section h6 {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     border: none;
   }
-  
+
   .quote-form-card .btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 0 15px var(--primary-color), 0 0 30px var(--secondary-color);
   }
-  
+
   /* Phone icon glow */
   .quote-card i.fa-headphones {
     box-shadow: 0 0 15px var(--primary-color);
   }
-  </style>
-  
-  <style>
-     .btn {
-        border-radius: 30px;
-        font-weight: 600;
-        padding: 0.6em 1.2em;
-        background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-        border: none;
-        color: #fff;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.7);
-    }
-    .btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 20px var(--secondary-color);
-    }
-  </style>
+</style>
+
+<style>
+  .btn {
+    border-radius: 30px;
+    font-weight: 600;
+    padding: 0.6em 1.2em;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border: none;
+    color: #fff;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px var(--secondary-color);
+  }
+</style>
 
 
 </head>
-  <div class="container py-2">
-    <div class="carousel">
-      <div class="carousel-track">
-        {% for slide in slides %}
-        <div class="carousel-slide" style="background-image: url('{{slide.image.url}}');">
-          <!-- <div class="carousel-content">
+<div class="container py-2">
+  <div class="carousel">
+    <div class="carousel-track">
+      {% for slide in slides %}
+      <div class="carousel-slide" style="background-image: url('{{slide.image.url}}');">
+        <!-- <div class="carousel-content">
             <h1 style="color: #f8f9fa">{{slide.headline}}</h1>
             <p>{{slide.subheadline}}</p> 
             <a href="{{slide.cta_url}}" class="btn btn-primary py-3 px-5">{{slide.cta_text}}</a>
           </div> -->
-        </div>
-        {% endfor %}
-        
       </div>
+      {% endfor %}
 
-      <div class="carousel-nav">
-        <button class="carousel-btn prev">&#10094;</button>
-        <button class="carousel-btn next">&#10095;</button>
-      </div>
-
-      <div class="carousel-dots"></div>
     </div>
+
+    <div class="carousel-nav">
+      <button class="carousel-btn prev">&#10094;</button>
+      <button class="carousel-btn next">&#10095;</button>
+    </div>
+
+    <div class="carousel-dots"></div>
   </div>
-      
-  <!-- About Start -->
+</div>
+
+<!-- About Start -->
 <div class="about-card position-relative overflow-hidden text-white">
   <div class="overlay"></div>
   <div class="container-xxl py-5 position-relative">
@@ -1036,19 +1097,16 @@ section h6 {
           <h6 class="text-secondary text-uppercase mb-3">About Us</h6>
           <h1 class="mb-4" style="color: var(--primary);">{{ about_section.heading }}</h1>
           <p class="mb-5">{{ about_section.description }}</p>
-          <a href="{% url 'aboutus:about-page' %}" class="btn btn-primary py-3 px-5 rounded-pill">{{ about_section.button_text }}</a>
+          <a href="{% url 'aboutus:about-page' %}" class="btn btn-primary py-3 px-5 rounded-pill">{{
+            about_section.button_text }}</a>
         </div>
 
         <div class="col-lg-6">
           <div class="image-about-wrapper">
-            <img 
-              src="{{ about_section.background_image.url }}" 
-              alt="{{ whychooseus.title }}"
-              height="70px"
-              >
+            <img src="{{ about_section.background_image.url }}" alt="{{ whychooseus.title }}" height="70px">
           </div>
         </div>
-        
+
 
       </div>
     </div>
@@ -1059,99 +1117,100 @@ section h6 {
 
 
 
-    <!-- Fact Start -->
-    <div class="container py-5">
-      <div class="fact-card position-relative overflow-hidden text-white">
-        <div class="overlay" style="background: {{ fact_section.overlay_color }};"></div>
-        <div class="container-xxl py-5 position-relative">
-          <div class="container py-5">
-            <div class="row g-5">
-              <!-- Left Content -->
-              <div class="col-lg-6">
-                <h6 class="text-secondary text-uppercase mb-3">Some Facts</h6>
-                <h1 class="mb-5" style="color: var(--primary);">{{ fact_section.heading }}</h1>
-                <p class="mb-5">{{ fact_section.subheading }}</p>
-                <div class="d-flex align-items-center">
-                  <i class="fa fa-headphones fa-2x flex-shrink-0 p-3 rounded-circle" style="color: var(--primary-color);"></i>
-                  <div class="ps-4">
-                    <h6 class="text-light">{{ fact_section.call_text }}</h6>
-                    <h3 class="m-0" style="color: var(--primary);">{{siteMainSettings.main_contact}}</h3>
-                  </div>
-                </div>
+<!-- Fact Start -->
+<div class="container py-5">
+  <div class="fact-card position-relative overflow-hidden text-white">
+    <div class="overlay" style="background: {{ fact_section.overlay_color }};"></div>
+    <div class="container-xxl py-5 position-relative">
+      <div class="container py-5">
+        <div class="row g-5">
+          <!-- Left Content -->
+          <div class="col-lg-6">
+            <h6 class="text-secondary text-uppercase mb-3">Some Facts</h6>
+            <h1 class="mb-5" style="color: var(--primary);">{{ fact_section.heading }}</h1>
+            <p class="mb-5">{{ fact_section.subheading }}</p>
+            <div class="d-flex align-items-center">
+              <i class="fa fa-headphones fa-2x flex-shrink-0 p-3 rounded-circle"
+                style="color: var(--primary-color);"></i>
+              <div class="ps-4">
+                <h6 class="text-light">{{ fact_section.call_text }}</h6>
+                <h3 class="m-0" style="color: var(--primary);">{{siteMainSettings.main_contact}}</h3>
               </div>
-    
-              <!-- Facts Grid -->
-              <div class="col-lg-6">
-                <div class="row g-4 align-items-center">
-                  {% for fact in fact_section.facts.all %}
-                  <div class="col-sm-6">
-                    <div class="stat-box p-4 wow fadeIn" data-wow-delay="0.{{ forloop.counter }}s">
-                      <i class="fa {{ fact.icon_class }} fa-2x text-white mb-3"></i>
-                      <h2 class="text-white mb-2" data-toggle="counter-up">{{ fact.number }}</h2>
-                      <p class="text-white mb-0">{{ fact.label }}</p>
-                    </div>
-                  </div>
-                  {% endfor %}
-                </div>
-              </div>
-    
             </div>
           </div>
+
+          <!-- Facts Grid -->
+          <div class="col-lg-6">
+            <div class="row g-4 align-items-center">
+              {% for fact in fact_section.facts.all %}
+              <div class="col-sm-6">
+                <div class="stat-box p-4 wow fadeIn" data-wow-delay="0.{{ forloop.counter }}s">
+                  <i class="fa {{ fact.icon_class }} fa-2x text-white mb-3"></i>
+                  <h2 class="text-white mb-2" data-toggle="counter-up">{{ fact.number }}</h2>
+                  <p class="text-white mb-0">{{ fact.label }}</p>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
-    
+  </div>
+</div>
+
 <!-- Fact End -->
 
-    <!-- Fact End -->
+<!-- Fact End -->
 
 
-    <!-- Service Start -->
-    <div class="container-xxl py-5">
-        <div class="container py-5">
-            <div class="text-center wow fadeInUp mb-6" data-wow-delay="0.1s">
-                <h6 class="text-secondary text-uppercase">Our Services</h6>
-                <h2 class="mb-3 text-primary">Explore Our Services</h2>
-            </div>
-            <div class="row g-4">
-              {% for service in services %}
-              <article class="col-md-4 col-xxl-4">        
-                <a href="" style="text-decoration: none;">
-                    <div class="position-relative card border-0 package-card">
-                   
-                        <img src="{{service.image.url}}" alt="">
-                    
-                        <!-- Overlay Top Title + Duration -->
-                        <div class="overlay-top-text">
-                        <h6 class="mb-0 text-light fw-semibold fs-9 d-none d-md-block">
-                              {{ service.title }}
-                        </h6>
-                        
-                        </div>
-                    
-                        <!-- Gradient Overlay -->
-                        <div class="overlay-gradient"></div>
-                    
-                        <!-- Bottom Text Info -->
-                        <div class="text-layer">
-                        <div class="align-items-center justify-content-between mb-2">
-                          <h4 class="mb-3 text-light">{{service.title}}</h4>
-                          <p class=" text-light">{{ service.category.description|truncatewords:20 }}</p>
-                          <a class="btn btn-primary mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read More</span></a>
-                        </div>
-                    
-      
-                        </div>
-           
-                    </div>
-                </a>
-                
-            </article>
-              {% endfor %}
-            </div>
-        </div>
+<!-- Service Start -->
+<div class="container-xxl py-5">
+  <div class="container py-5">
+    <div class="text-center wow fadeInUp mb-6" data-wow-delay="0.1s">
+      <h6 class="text-secondary text-uppercase">Our Services</h6>
+      <h2 class="mb-3 text-primary">Explore Our Services</h2>
     </div>
-    <!-- Service End -->
+    <div class="row g-4">
+      {% for service in services %}
+      <article class="col-md-4 col-xxl-4">
+        <a href="" style="text-decoration: none;">
+          <div class="position-relative card border-0 package-card">
+
+            <img src="{{service.image.url}}" alt="">
+
+            <!-- Overlay Top Title + Duration -->
+            <div class="overlay-top-text">
+              <h6 class="mb-0 text-light fw-semibold fs-9 d-none d-md-block">
+                {{ service.title }}
+              </h6>
+
+            </div>
+
+            <!-- Gradient Overlay -->
+            <div class="overlay-gradient"></div>
+
+            <!-- Bottom Text Info -->
+            <div class="text-layer">
+              <div class="align-items-center justify-content-between mb-2">
+                <h4 class="mb-3 text-light">{{service.title}}</h4>
+                <p class=" text-light">{{ service.category.description|truncatewords:20 }}</p>
+                <a class="btn btn-primary mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read More</span></a>
+              </div>
+
+
+            </div>
+
+          </div>
+        </a>
+
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<!-- Service End -->
 
 
 <!-- Features Start -->
@@ -1160,8 +1219,8 @@ section h6 {
 
     <!-- Background Image -->
     {% if section.background_image %}
-      <img src="{{section.background_image.url}}" class="w-100 h-100 position-absolute top-0 start-0"
-           style="object-fit: cover;" alt="Feature BG">
+    <img src="{{section.background_image.url}}" class="w-100 h-100 position-absolute top-0 start-0"
+      style="object-fit: cover;" alt="Feature BG">
     {% endif %}
 
     <!-- Black Overlay -->
@@ -1170,7 +1229,7 @@ section h6 {
     <!-- Content -->
     <div class="container-xxl position-relative text-white py-5" style="z-index:2;">
       <div class="row g-5 align-items-center">
-        
+
         <!-- Left Text -->
         <div class="col-lg-6 feature-text">
           <h6 class="text-secondary text-uppercase mb-3">{{ section.subheading }}</h6>
@@ -1179,24 +1238,24 @@ section h6 {
           <!-- Feature Items Grid -->
           <div class="row g-4">
             {% for f in features %}
-              <div class="col-md-6">
-                <div class="d-flex">
-                  <i class="{{ f.icon }} text-primary fa-2x flex-shrink-0"></i>
-                  <div class="ms-3">
-                    <h5 class="text-light mb-1">{{ f.title }}</h5>
-                    <p class="mb-0 small">{{ f.description }}</p>
-                  </div>
+            <div class="col-md-6">
+              <div class="d-flex">
+                <i class="{{ f.icon }} text-primary fa-2x flex-shrink-0"></i>
+                <div class="ms-3">
+                  <h5 class="text-light mb-1">{{ f.title }}</h5>
+                  <p class="mb-0 small">{{ f.description }}</p>
                 </div>
               </div>
+            </div>
             {% endfor %}
           </div>
         </div>
 
         <!-- Right Side (Video Container) -->
-        <div class="col-lg-6 pe-lg-0"> 
+        <div class="col-lg-6 pe-lg-0">
           <div class="video-wrapper">
             {% if section.embed_url %}
-              <iframe 
+            <!-- <iframe 
                 width="100%"
                 height="315"
                 src="{{ section.embed_url }}"
@@ -1204,9 +1263,15 @@ section h6 {
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
-              </iframe>
+              </iframe> -->
+            <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe
+                src="https://www.youtube.com/embed/q3lX2p_Uy9I?rel=0"
+                style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen
+                scrolling="no"
+                allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;"
+                referrerpolicy="strict-origin"></iframe></div>
             {% else %}
-              <p class="text-danger">Invalid or missing YouTube URL</p>
+            <p class="text-danger">Invalid or missing YouTube URL</p>
             {% endif %}
           </div>
         </div>
@@ -1225,7 +1290,7 @@ section h6 {
   <section class="why-choose-us" style="border-radius: 4em;">
     <div class="container-xxl py-5 position-relative">
       <div class="row align-items-center g-5">
-        
+
         <!-- Left Content -->
         <div class="col-lg-6">
           <div class="content-wrapper text-white">
@@ -1235,34 +1300,34 @@ section h6 {
             </div>
             <h2 class="mb-4 text-primary">{{ whychooseus.title }}</h2>
             <p class="mb-5">{{ whychooseus.description }}</p>
-  
+
             <div class="row">
               {% for feature in whychooseus.features.all %}
-                <div class="col-md-6 feature-box">
-                  <div class="feature-icon">
-                    <i class="{{ feature.icon_class }} text-primary"></i>
-                  </div>
-                  <div class="feature-content">
-                    <h4>{{ feature.title }}</h4>
-                    <p>{{ feature.description }}</p>
-                  </div>
+              <div class="col-md-6 feature-box">
+                <div class="feature-icon">
+                  <i class="{{ feature.icon_class }} text-primary"></i>
                 </div>
+                <div class="feature-content">
+                  <h4>{{ feature.title }}</h4>
+                  <p>{{ feature.description }}</p>
+                </div>
+              </div>
               {% endfor %}
             </div>
           </div>
         </div>
-  
+
         <!-- Right Image -->
         <div class="col-lg-6">
           <div class="image-wrapper">
             <img src="{{ whychooseus.image.url }}" alt="{{ whychooseus.title }}">
           </div>
         </div>
-  
+
       </div>
     </div>
   </section>
-  
+
 </div>
 
 
@@ -1280,9 +1345,9 @@ section h6 {
     <!-- Content -->
     <div class="container-xxl position-relative text-white py-5" style="z-index:2;">
       <div class="row g-5 align-items-center">
-        
+
         <!-- Left Content -->
-        <div class="col-lg-5"> 
+        <div class="col-lg-5">
           <h6 class="text-secondary text-uppercase mb-3">{{ quote_section.heading_top }}</h6>
           <h1 class="mb-5 text-primary">{{ quote_section.heading_main }}</h1>
           <p class="mb-5">{{ quote_section.description }}</p>
@@ -1304,24 +1369,28 @@ section h6 {
               {% csrf_token %}
               <div class="row g-3">
                 <div class="col-12 col-sm-6">
-                  <input type="text" name="name" class="form-control border-0 h-14 px-3 rounded" placeholder="Your Name">
+                  <input type="text" name="name" class="form-control border-0 h-14 px-3 rounded"
+                    placeholder="Your Name">
                 </div>
                 <div class="col-12 col-sm-6">
-                  <input type="email" name="email" class="form-control border-0 h-14 px-3 rounded" placeholder="Your Email">
+                  <input type="email" name="email" class="form-control border-0 h-14 px-3 rounded"
+                    placeholder="Your Email">
                 </div>
                 <div class="col-12 col-sm-6">
-                  <input type="text" name="phone" class="form-control border-0 h-14 px-3 rounded" placeholder="Your Mobile">
+                  <input type="text" name="phone" class="form-control border-0 h-14 px-3 rounded"
+                    placeholder="Your Mobile">
                 </div>
                 <div class="col-12 col-sm-6">
-                  <select name="service" class="form-select border-0 h-14 px-3 rounded" required >
-                    <option value="" selected disabled >Select a Freight</option>
+                  <select name="service" class="form-select border-0 h-14 px-3 rounded" required>
+                    <option value="" selected disabled>Select a Freight</option>
                     {% for s in services %}
-                      <option value="{{ s.id }}">{{ s.title }}</option>
+                    <option value="{{ s.id }}">{{ s.title }}</option>
                     {% endfor %}
                   </select>
                 </div>
                 <div class="col-12">
-                  <textarea class="form-control border-0 px-3 py-3 rounded" name="notes" placeholder="Special Note"></textarea>
+                  <textarea class="form-control border-0 px-3 py-3 rounded" name="notes"
+                    placeholder="Special Note"></textarea>
                 </div>
                 <div class="col-12">
                   <button class="btn btn-primary w-100 py-3" type="submit">Submit</button>
@@ -1339,7 +1408,7 @@ section h6 {
 
 
 
-   <!-- Team Start -->
+<!-- Team Start -->
 <div class="container-xxl py-5">
   <div class="team-card position-relative rounded-4 overflow-hidden">
     <!-- Background Overlay -->
@@ -1353,7 +1422,7 @@ section h6 {
 
       <div class="row g-4">
         <!-- Team Member -->
-        
+
         {% for member in team_members %}
         <div class="col-lg-3 col-md-6">
           <div class="team-item position-relative rounded-3 overflow-hidden shadow-lg">
@@ -1379,77 +1448,77 @@ section h6 {
 
 
 
-    <!-- Testimonial Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="text-center">
-                <h6 class="text-secondary text-uppercase">Testimonial</h6>
-                <h1 class="mb-0 text-primary">Our Clients Say!</h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-              {% for review in clientReviews %}
-                <div class="testimonial-item p-4 my-5">
-                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
-                    <div class="d-flex align-items-end mb-4">
-                        <img class="img-fluid flex-shrink-0" src="{{review.avatar.url}}" style="width: 80px; height: 80px;">
-                        <div class="ms-4">
-                            <h5 class="mb-1">{{review.name}}</h5>
-                            <p class="m-0">{{review.role}}</p>
-                        </div>
-                    </div>
-                    <p class="mb-0">{{review.quote}}</p>
-                </div>
-              {% endfor%}
-            </div>
-        </div>
+<!-- Testimonial Start -->
+<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+  <div class="container py-5">
+    <div class="text-center">
+      <h6 class="text-secondary text-uppercase">Testimonial</h6>
+      <h1 class="mb-0 text-primary">Our Clients Say!</h1>
     </div>
-    <!-- Testimonial End -->
+    <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+      {% for review in clientReviews %}
+      <div class="testimonial-item p-4 my-5">
+        <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
+        <div class="d-flex align-items-end mb-4">
+          <img class="img-fluid flex-shrink-0" src="{{review.avatar.url}}" style="width: 80px; height: 80px;">
+          <div class="ms-4">
+            <h5 class="mb-1">{{review.name}}</h5>
+            <p class="m-0">{{review.role}}</p>
+          </div>
+        </div>
+        <p class="mb-0">{{review.quote}}</p>
+      </div>
+      {% endfor%}
+    </div>
+  </div>
+</div>
+<!-- Testimonial End -->
 
 
-  <script>
-    const track = document.querySelector('.carousel-track');
-    const slides = Array.from(track.children);
-    const nextButton = document.querySelector('.next');
-    const prevButton = document.querySelector('.prev');
-    const dotsNav = document.querySelector('.carousel-dots');
+<script>
+  const track = document.querySelector('.carousel-track');
+  const slides = Array.from(track.children);
+  const nextButton = document.querySelector('.next');
+  const prevButton = document.querySelector('.prev');
+  const dotsNav = document.querySelector('.carousel-dots');
 
-    let currentIndex = 0;
+  let currentIndex = 0;
 
-    slides.forEach((_, index) => {
-      const dot = document.createElement('div');
-      dot.classList.add('dot');
-      if (index === 0) dot.classList.add('active');
-      dotsNav.appendChild(dot);
-      dot.addEventListener('click', () => goToSlide(index));
-    });
+  slides.forEach((_, index) => {
+    const dot = document.createElement('div');
+    dot.classList.add('dot');
+    if (index === 0) dot.classList.add('active');
+    dotsNav.appendChild(dot);
+    dot.addEventListener('click', () => goToSlide(index));
+  });
 
-    const dots = Array.from(dotsNav.children);
+  const dots = Array.from(dotsNav.children);
 
-    function updateDots(index) {
-      dots.forEach(dot => dot.classList.remove('active'));
-      dots[index].classList.add('active');
-    }
+  function updateDots(index) {
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[index].classList.add('active');
+  }
 
-    function goToSlide(index) {
-      track.style.transform = 'translateX(-' + index * 100 + '%)';
-      currentIndex = index;
-      updateDots(index);
-    }
+  function goToSlide(index) {
+    track.style.transform = 'translateX(-' + index * 100 + '%)';
+    currentIndex = index;
+    updateDots(index);
+  }
 
-    nextButton.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % slides.length;
-      goToSlide(currentIndex);
-    });
+  nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    goToSlide(currentIndex);
+  });
 
-    prevButton.addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-      goToSlide(currentIndex);
-    });
+  prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    goToSlide(currentIndex);
+  });
 
-    // autoplay
-    setInterval(() => {
-      currentIndex = (currentIndex + 1) % slides.length;
-      goToSlide(currentIndex);
-    }, 5000);
-  </script>
+  // autoplay
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    goToSlide(currentIndex);
+  }, 5000);
+</script>
 {% endblock content %}
