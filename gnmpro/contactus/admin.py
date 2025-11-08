@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.utils.html import format_html
-from .models import SiteSocialHandle, OfficeLocation, SiteSupportContact,ContactInfo
+from .models import SiteSocialHandle, OfficeLocation, SiteSupportContact,ContactInfo,ContactUs
 
 
 @admin.register(ContactInfo)
@@ -95,3 +95,11 @@ class SiteSupportContactAdmin(admin.ModelAdmin):
         super().save_model(request, obj, form, change)
         self.message_user(request, f"💡 Support contact '{obj.contact_name or 'Unnamed'}' saved successfully!")
 
+
+
+@admin.register(ContactUs)
+class ContactUsAdmin(admin.ModelAdmin):
+    list_display = ("full_name", "email", "phone", "subject")
+    search_fields = ("full_name", "email", "phone", "subject")
+    list_filter = ("subject",)
+    ordering = ("-id",)
