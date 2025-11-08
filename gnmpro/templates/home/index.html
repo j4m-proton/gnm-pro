@@ -1218,10 +1218,10 @@
   <div class="feature-card position-relative rounded-4 overflow-hidden">
 
     <!-- Background Image -->
-    {% if section.background_image %}
+    <!-- {% if section.background_image %}
     <img src="{{section.background_image.url}}" class="w-100 h-100 position-absolute top-0 start-0"
       style="object-fit: cover;" alt="Feature BG">
-    {% endif %}
+    {% endif %} -->
 
     <!-- Black Overlay -->
     <div class="overlay position-absolute inset-0"></div>
@@ -1253,27 +1253,14 @@
 
         <!-- Right Side (Video Container) -->
         <div class="col-lg-6 pe-lg-0">
-         
-            {% if section.embed_url %}
-            <!-- <iframe 
-                width="100%"
-                height="315"
-                src="{{ section.embed_url }}"
-                title="YouTube video"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-              </iframe> -->
-            <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe
-                src="https://www.youtube.com/embed/q3lX2p_Uy9I?rel=0"
-                style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen
-                scrolling="no"
-                allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;"
-                referrerpolicy="strict-origin"></iframe></div>
-            {% else %}
-            <p class="text-danger">Invalid or missing YouTube URL</p>
-            {% endif %}
-        
+
+          <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe
+              src="https://www.youtube.com/embed/wspVEP3tAGE?rel=0"
+              style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen
+              scrolling="no"
+              allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;"
+              referrerpolicy="strict-origin"></iframe></div>
+
         </div>
 
 
