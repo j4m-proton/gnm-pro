@@ -1101,9 +1101,24 @@
             about_section.button_text }}</a>
         </div>
 
-        <div class="col-lg-6">
+        <!-- <div class="col-lg-6">
           <div class="image-about-wrapper">
             <img src="{{ about_section.background_image.url }}" alt="{{ whychooseus.title }}" height="70px">
+          </div>
+        </div> -->
+        <div class="col-lg-3 col-md-6 image-about-wrapper ">
+          <div class="team-item position-relative rounded-3 overflow-hidden shadow-lg">
+            <img src="{{ about_section.background_image.url }}" alt="{{ whychooseus.title }}" height="70px">
+            <div class="team-overlay position-absolute inset-0 d-flex flex-column justify-content-end p-4">
+              <h5 class="mb-0 text-white">Mr. Geofrey Mbilinyi</h5>
+              <p class="text-light">Managing Director</p>
+              <div class="team-social mt-2">
+                <a href="{{ member.facebook }}"><i class="fab fa-facebook-f"></i></a>
+                <a href="{{ member.twitter }}"><i class="fab fa-x"></i></a>
+                <a href="{{ member.instagram }}"><i class="fab fa-instagram"></i></a>
+                <a href="{{ member.instagram }}"><i class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
           </div>
         </div>
 
