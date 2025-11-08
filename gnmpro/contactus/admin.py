@@ -53,7 +53,7 @@ class OfficeLocationAdmin(admin.ModelAdmin):
 
     fieldsets = (
         ("🏠 Basic Information", {
-            "fields": ("location_type", "address", "city", "postal_code",'isHQ' , "country")
+            "fields": ("location_type", "address", "city", "postal_code",'isHQ' ,  "country")
         }),
         ("📞 Contact Info", {
             "fields": ("phone", "email")

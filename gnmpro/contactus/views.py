@@ -4,7 +4,9 @@ from .models import OfficeLocation,ContactInfo
 def contact(request):
     office_locations = OfficeLocation.objects.all()
     contactsection = ContactInfo.objects.get()
+    hqOffice = OfficeLocation.objects.filter(isHQ=True)
     context = {
+        'hqOffice': hqOffice,
         'office_locations': office_locations,
         'contactsection': contactsection
     }
