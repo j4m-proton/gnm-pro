@@ -255,7 +255,7 @@
         
         <!-- Left: Image -->
         <div class="contact-image">
-          <img src="https://gnmtrading.co.tz/wp-content/uploads/2023/03/GNM-CARGO_A550a9704-scaled.jpg" alt="GNM Cargo">
+          <img src="{{contactsection.image.url}}" alt="GNM Cargo">
           <div class="image-overlay">
             <i class="fas fa-phone"></i>
             <span>Get in Touch With Us</span>
@@ -265,10 +265,9 @@
         <!-- Right: Info -->
         <div class="contact-content">
           <div class="contact-header">
-            <h2>We are Here for You</h2>
+            <h2>{{contactsection.title}}</h2>
             <p>
-              We would love to hear from you! Use the contact information below to get to us and
-              we’ll be in touch and reach out to you as soon as possible.
+              {{contactsection.description}}
             </p>
           </div>
   
@@ -325,7 +324,7 @@
               <div class="card" style="padding: 20px;">
               <div class="row mb-60">
                   {% for location in office_locations %}
-                  <div class="col-md-4 mb-4">
+                  <div class="col-md-4 mb-4 info-box">
                       <h4 class="mb-15 text-brand">{{ location.location_type }}</h4>
                       <p>{{ location.address }}<br />
                           {{ location.city }}, {{ location.postal_code }}<br />

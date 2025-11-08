@@ -46,14 +46,14 @@ class SiteSocialHandleAdmin(admin.ModelAdmin):
 # ============================
 @admin.register(OfficeLocation)
 class OfficeLocationAdmin(admin.ModelAdmin):
-    list_display = ("location_type", "address", "city", "country", "phone", "email", "map_preview")
+    list_display = ("location_type", "address", "city", "country",'isHQ' ,"phone", "email", "map_preview")
     search_fields = ("address", "city", "country", "email")
     list_filter = ("location_type", "country")
     readonly_fields = ("map_preview",)
 
     fieldsets = (
         ("🏠 Basic Information", {
-            "fields": ("location_type", "address", "city", "postal_code", "country")
+            "fields": ("location_type", "address", "city", "postal_code",'isHQ' , "country")
         }),
         ("📞 Contact Info", {
             "fields": ("phone", "email")

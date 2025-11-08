@@ -59,6 +59,7 @@ class OfficeLocation(models.Model):
     latitude = models.FloatField(blank=True, null=True)
     longitude = models.FloatField(blank=True, null=True)
     map_link = models.URLField(blank=True, null=True)
+    isHQ = models.BooleanField(default=True)
 
     def __str__(self):
         return f"{self.location_type} - {self.address}"
