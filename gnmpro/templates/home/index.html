@@ -1249,7 +1249,7 @@
     <div class="row g-4">
       {% for service in services %}
       <article class="col-md-4 col-xxl-4">
-        <a href="" style="text-decoration: none;">
+        <a href="{% url 'service:Services-Details' service.id %}" style="text-decoration: none;">
           <div class="position-relative card border-0 package-card">
 
             <img src="{{service.image.url}}" alt="">
