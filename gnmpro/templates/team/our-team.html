@@ -227,7 +227,26 @@
     <!-- MD -->
     {% for tT in topTeam %}
     <div class="team-card">
-      <img src="{{tT.photo.url}}" alt="{{tT.name}}">
+      <div class="image-wrapper">
+        <img src="{{ tT.photo.url }}" alt="{{ tT.name }}">
+      </div>
+      <style>
+        .image-wrapper {
+            width: 100%;       /* au width unayotaka */
+            height: 300px;     /* au height unayotaka */
+            overflow: hidden;  /* ili picha isitoke nje ya container */
+            position: relative;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;   /* hii inafanya picha kufit perfectly */
+            object-position: center; /* optional, ili centering picha */
+        }
+
+      </style>
+
       <div class="overlay">
         <div class="info">
           <h3>{{tT.name}}</h3>
