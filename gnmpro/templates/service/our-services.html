@@ -372,7 +372,7 @@
             {% for s in services %}
             <a href="{% url 'service:Services-Details' s.id %}" style="text-decoration: none;">
                 <div class="service-card">
-                    <div class="icon-box"><i class="fas fa-ship"></i></div>
+                    <div class="icon-box"><i class="{{s.icon_class}}"></i></div>
                     <h3>{{s.title}}</h3>
                     <p>{{s.category.description}}</p>
                 </div>
