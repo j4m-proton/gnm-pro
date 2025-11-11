@@ -698,10 +698,10 @@
           <div class="footer-col">
             <h3>Quick Links</h3>
             <ul class="footer-links">
-              <li><a href="/about-us"><i class="fas fa-angle-right"></i> About Us</a></li>
-              <li><a href="/services"><i class="fas fa-angle-right"></i> Services</a></li>
-              <li><a href="/testimonials"><i class="fas fa-angle-right"></i> Testimonials</a></li>
-              <li><a href="/contact"><i class="fas fa-angle-right"></i> Contact</a></li>
+              <li><a href="{% url 'aboutus:about-page'  %}"><i class="fas fa-angle-right"></i> About Us</a></li>
+              <li><a href="{% url 'service:service-page'  %}"><i class="fas fa-angle-right"></i> Services</a></li>
+              <li><a href="{% url 'team:team-page' %}"><i class="fas fa-angle-right"></i> Team</a></li>
+              <li><a href="{% url 'blog:blog-page' %}"><i class="fas fa-angle-right"></i> Blogs</a></li>
             </ul>
           </div>
       
@@ -709,10 +709,10 @@
           <div class="footer-col">
             <h3>Our Services</h3>
             <ul class="footer-links">
-              <li><a href="#"><i class="fas fa-ship"></i> Sea Freight</a></li>
-              <li><a href="#"><i class="fas fa-truck"></i> Delivery Order</a></li>
-              <li><a href="#"><i class="fas fa-warehouse"></i> Warehousing</a></li>
-              <li><a href="#"><i class="fas fa-box"></i> Retail Shipping</a></li>
+                {% for s in service|slice:":3" %}
+                    <li><a href="{% url 'service:Services-Details' s.id %}"><i class="{{s.icon_class}}"></i> {{s.title}}</a></li>    
+                {% endfor %} 
+                <li><a href="{% url 'service:service-page'  %}"><i class="fas fa-plus"></i> More service</a></li>       
             </ul>
           </div>
       

@@ -1,5 +1,6 @@
 from sitesetting.models import SiteTheme, SiteMainSettings
 from contactus.models import SiteSocialHandle
+from service.models import Service
 
 
 def default(request):
@@ -19,15 +20,30 @@ def default(request):
         secondary_color = ''
         
     # Retrieve SiteMainSettings
-    site_settings = SiteMainSettings.objects.first()
-    social_handles = SiteSocialHandle.objects.filter(is_active=True)    
-
-    
+    site_settings = ''
+    social_handles =''
+    try: 
+        site_settings = SiteMainSettings.objects.first()
+    except:
+        site_settings = '' 
+        
+    try:   
+        social_handles = SiteSocialHandle.objects.filter(is_active=True)   
+        
+    except:
+        social_handles = ''       
+ 
+    service = ''
+    try:
+        service = Service.objects.all()
+    except:
+        service = ''
 
     context = {
         'primarycolor':primary_color,
         'secondarycolor':secondary_color,
         'social_handles': social_handles,
+        'service': service,
         'siteMainSettings':{
                 'site_name': site_settings.site_name if site_settings else '',
                 'another_name': site_settings.another_name if site_settings else '',
