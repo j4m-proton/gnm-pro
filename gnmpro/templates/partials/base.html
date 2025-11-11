@@ -167,6 +167,33 @@
             font-size: 28px;
         }
 
+        .ai-button {
+            position: fixed;
+            bottom: 120px;
+            /* Added margin from the bottom */
+            right: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 30px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+            z-index: 1000;
+        }
+
+        .ai-button:hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .ai-button i {
+            font-size: 28px;
+        }
+
         /* Scroll to Top Button Style */
         .scroll-to-top {
             position: fixed;
@@ -408,31 +435,7 @@
 
 </style>
 
-<style>
-    .ai-btn {
-  bottom: 90px;
-  background: linear-gradient(135deg, #4285F4, #A142F4, #F441A5);
-  background-size: 200% 200%;
-  animation: gradientMove 4s ease infinite, glow 2s infinite;
-  border: none;
-  cursor: pointer;
-}
 
-/* Smooth moving gradient */
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Soft glow around */
-@keyframes glow {
-  0% { box-shadow: 0 0 6px #A142F4, 0 0 12px #4285F4; }
-  50% { box-shadow: 0 0 16px #F441A5, 0 0 28px #4285F4; }
-  100% { box-shadow: 0 0 6px #A142F4, 0 0 12px #4285F4; }
-}
-
-</style>
 
 </head>
 
@@ -777,8 +780,8 @@
         <i class="fab fa-whatsapp"></i>
     </a>
     <!-- AI Floating Button -->
-    <a href="" id="aiChatBtn" class="float-btn ai-btn" title="Ask AI">
-        <i class="fas fa-brain"></i>
+    <a href="https://wa.me/{{support_whatsapp}}" class="ai-button" target="_blank">
+        <i class="fab fa-robot">Ask Ai</i>
     </a>
 
 
