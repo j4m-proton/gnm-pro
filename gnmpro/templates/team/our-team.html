@@ -217,7 +217,7 @@
   </style>
 
 
-<style>
+<!-- <style>
     
 .management-team {
   display: flex;
@@ -245,6 +245,58 @@
   object-fit: cover; /* make sure it covers container */
   object-position: center; 
   display: block;
+}
+</style> -->
+<style>
+.management-team {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* center items on large screens */
+}
+
+.team-card {
+  width: 250px; /* default desktop width */
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-wrapper {
+  width: 100%;
+  height: 300px; /* fixed height for consistency */
+  overflow: hidden;
+  position: relative;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  object-position: center;
+  display: block;
+}
+
+/* 🔹 Responsive: small screens */
+@media (max-width: 768px) {
+  .management-team {
+    flex-direction: column; /* stack vertically */
+    align-items: center; /* optional, center on mobile */
+  }
+
+  .team-card {
+    width: 100%; /* take full width */
+    max-width: 100%; /* ensure no limit */
+  }
+
+  .image-wrapper {
+    height: auto; /* adjust height dynamically */
+  }
+
+  .image-wrapper img {
+    width: 100%;
+    height: auto; /* prevent stretching */
+  }
 }
 </style>
 
