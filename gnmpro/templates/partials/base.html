@@ -408,7 +408,31 @@
 
 </style>
 
+<style>
+    .ai-btn {
+  bottom: 90px;
+  background: linear-gradient(135deg, #4285F4, #A142F4, #F441A5);
+  background-size: 200% 200%;
+  animation: gradientMove 4s ease infinite, glow 2s infinite;
+  border: none;
+  cursor: pointer;
+}
 
+/* Smooth moving gradient */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Soft glow around */
+@keyframes glow {
+  0% { box-shadow: 0 0 6px #A142F4, 0 0 12px #4285F4; }
+  50% { box-shadow: 0 0 16px #F441A5, 0 0 28px #4285F4; }
+  100% { box-shadow: 0 0 6px #A142F4, 0 0 12px #4285F4; }
+}
+
+</style>
 
 </head>
 
@@ -556,7 +580,7 @@
                     </div>
                     <div class="header-action-right d-block d-lg-none">
                         
-                        <button class="btn btn-sm btn-primary">Get App</button>
+                        <button id="openAppBtn" class="btn btn-sm btn-primary">Get App</button>
                     </div>
                 </div>
                 {% if messages %}
@@ -752,6 +776,32 @@
     <a href="https://wa.me/{{support_whatsapp}}" class="whatsapp-button" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
+    <!-- AI Floating Button -->
+    <a href="" id="aiChatBtn" class="float-btn ai-btn" title="Ask AI">
+        <i class="fas fa-brain"></i>
+    </a>
+
+
+
+    
+<script>
+  document.getElementById('openAppBtn').addEventListener('click', function(e) {
+    e.preventDefault();
+
+    // custom scheme ya app yako (kama app yako inaitwa gnm_cargo)
+    const appScheme = 'gnmcargo://';
+    const playStoreLink = 'https://play.google.com/store/apps/details?id=hardtechnologysolutions.com.gnm_cargo_mobile';
+
+    // jaribu kufungua app
+    window.location = appScheme;
+
+    // fallback – kama app haipo, peleka Play Store baada ya sekunde 1
+    setTimeout(() => {
+      window.location = playStoreLink;
+    }, 1000);
+  });
+</script>
+
 
 
     <script>
