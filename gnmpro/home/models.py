@@ -9,6 +9,7 @@ class HeroSlide(models.Model):
     image = models.ImageField(upload_to="hero/")
     overlay_opacity = models.FloatField(default=0.5)
     order = models.PositiveIntegerField(default=0)
+    isImageForPC = models.BooleanField(default=False)
 
     class Meta:
         ordering = ["order"]
