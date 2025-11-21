@@ -1123,36 +1123,19 @@
 
 </head>
 <div class="container py-2">
-  <div class="carousel">
-    <div class="carousel-track">
-      
-        {% if slide.isImageForPC %}
-          {% for slide in slides %}
-            <div class="d-none d-lg-block">
-              <div class="carousel-slide " style="background-image: url('{{slide.image.url}}');">
-                <!-- <div class="carousel-content">
-                    <h1 style="color: #f8f9fa">{{slide.headline}}</h1>
-                    <p>{{slide.subheadline}}</p> 
-                    <a href="{{slide.cta_url}}" class="btn btn-primary py-3 px-5">{{slide.cta_text}}</a>
-                  </div> -->
-              </div>
-            </div>
-          {% endfor %}
-        {% else %}
-        {% for slide in slides %}
-        <div class="d-block d-lg-none">
-           <div class="carousel-slide " style="background-image: url('{{slide.image.url}}');">
-            <!-- <div class="carousel-content">
-                <h1 style="color: #f8f9fa">{{slide.headline}}</h1>
-                <p>{{slide.subheadline}}</p> 
-                <a href="{{slide.cta_url}}" class="btn btn-primary py-3 px-5">{{slide.cta_text}}</a>
-              </div> -->
-          </div>
-        </div>  
-        {% endfor %} 
-        {% endif %}  
-      
 
+  <!-- PC CAROUSEL: only visible on large screens -->
+  <div id="carouselPC" class="carousel d-none d-lg-block">
+    <div class="carousel-track">
+      {% for slide in slides %}
+        {% if slide.isImageForPC %}
+          <div class="carousel-item">
+            <div class="carousel-slide" style="background-image: url('{{ slide.image.url }}');">
+              <!-- optional content -->
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
     </div>
 
     <div class="carousel-nav">
@@ -1162,7 +1145,32 @@
 
     <div class="carousel-dots"></div>
   </div>
+
+
+  <!-- MOBILE/TABLET CAROUSEL: visible on small & medium, hidden on large -->
+  <div id="carouselMobile" class="carousel d-block d-lg-none">
+    <div class="carousel-track">
+      {% for slide in slides %}
+        {% if not slide.isImageForPC %}
+          <div class="carousel-item">
+            <div class="carousel-slide" style="background-image: url('{{ slide.image.url }}');">
+              <!-- optional content -->
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="carousel-nav">
+      <button class="carousel-btn prev">&#10094;</button>
+      <button class="carousel-btn next">&#10095;</button>
+    </div>
+
+    <div class="carousel-dots"></div>
+  </div>
+
 </div>
+
 
 <!-- About Start -->
 <div class="about-card position-relative overflow-hidden text-white">
@@ -1555,49 +1563,62 @@
 
 
 <script>
-  const track = document.querySelector('.carousel-track');
-  const slides = Array.from(track.children);
-  const nextButton = document.querySelector('.next');
-  const prevButton = document.querySelector('.prev');
-  const dotsNav = document.querySelector('.carousel-dots');
+document.querySelectorAll('.carousel').forEach(function (carousel) {
 
-  let currentIndex = 0;
+    const track = carousel.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const nextButton = carousel.querySelector('.next');
+    const prevButton = carousel.querySelector('.prev');
+    const dotsNav = carousel.querySelector('.carousel-dots');
 
-  slides.forEach((_, index) => {
-    const dot = document.createElement('div');
-    dot.classList.add('dot');
-    if (index === 0) dot.classList.add('active');
-    dotsNav.appendChild(dot);
-    dot.addEventListener('click', () => goToSlide(index));
-  });
+    let currentIndex = 0;
 
-  const dots = Array.from(dotsNav.children);
+    // Create dots
+    slides.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        if (index === 0) dot.classList.add('active');
+        dotsNav.appendChild(dot);
 
-  function updateDots(index) {
-    dots.forEach(dot => dot.classList.remove('active'));
-    dots[index].classList.add('active');
-  }
+        dot.addEventListener('click', () => goToSlide(index));
+    });
 
-  function goToSlide(index) {
-    track.style.transform = 'translateX(-' + index * 100 + '%)';
-    currentIndex = index;
-    updateDots(index);
-  }
+    const dots = Array.from(dotsNav.children);
 
-  nextButton.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % slides.length;
-    goToSlide(currentIndex);
-  });
+    function updateDots(index) {
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[index].classList.add('active');
+    }
 
-  prevButton.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-    goToSlide(currentIndex);
-  });
+    function goToSlide(index) {
+        track.style.transform = 'translateX(-' + index * 100 + '%)';
+        currentIndex = index;
+        updateDots(index);
+    }
 
-  // autoplay
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % slides.length;
-    goToSlide(currentIndex);
-  }, 5000);
+    // Next Button
+    nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        goToSlide(currentIndex);
+    });
+
+    // Prev Button
+    prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        goToSlide(currentIndex);
+    });
+
+    // Autoplay ONLY for visible carousel
+    setInterval(() => {
+        // If this carousel is hidden (display:none), ignore autoplay
+        if (carousel.offsetParent === null) return;
+
+        currentIndex = (currentIndex + 1) % slides.length;
+        goToSlide(currentIndex);
+    }, 5000);
+
+});
 </script>
+
+
 {% endblock content %}
