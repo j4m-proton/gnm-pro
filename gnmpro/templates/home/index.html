@@ -1125,34 +1125,33 @@
 <div class="container py-2">
   <div class="carousel">
     <div class="carousel-track">
-
-      <!-- PC CAROUSEL -->
-      <div id="heroCarouselPC" class="carousel slide d-none d-lg-block">
-        <div class="carousel-inner">
+      
+        {% if slide.isImageForPC %}
           {% for slide in slides %}
-          {% if slide.isImageForPC %}
-          <div class="carousel-item {% if forloop.first %}active{% endif %}">
-            <div class="carousel-slide" style="background-image: url('{{ slide.image.url }}');"></div>
-          </div>
-          {% endif %}
+            <div class="d-none d-lg-block">
+              <div class="carousel-slide " style="background-image: url('{{slide.image.url}}');">
+                <!-- <div class="carousel-content">
+                    <h1 style="color: #f8f9fa">{{slide.headline}}</h1>
+                    <p>{{slide.subheadline}}</p> 
+                    <a href="{{slide.cta_url}}" class="btn btn-primary py-3 px-5">{{slide.cta_text}}</a>
+                  </div> -->
+              </div>
+            </div>
           {% endfor %}
-        </div>
-      </div>
-
-      <!-- MOBILE/TABLET CAROUSEL -->
-      <div id="heroCarouselMobile" class="carousel slide d-block d-lg-none">
-        <div class="carousel-inner">
-          {% for slide in slides %}
-          {% if not slide.isImageForPC %}
-          <div class="carousel-item {% if forloop.first %}active{% endif %}">
-            <div class="carousel-slide" style="background-image: url('{{ slide.image.url }}');"></div>
+        {% else %}
+        {% for slide in slides %}
+        <div class="d-block d-lg-none">
+           <div class="carousel-slide " style="background-image: url('{{slide.image.url}}');">
+            <!-- <div class="carousel-content">
+                <h1 style="color: #f8f9fa">{{slide.headline}}</h1>
+                <p>{{slide.subheadline}}</p> 
+                <a href="{{slide.cta_url}}" class="btn btn-primary py-3 px-5">{{slide.cta_text}}</a>
+              </div> -->
           </div>
-          {% endif %}
-          {% endfor %}
-        </div>
-      </div>
-
-
+        </div>  
+        {% endfor %} 
+        {% endif %}  
+      
 
     </div>
 
@@ -1177,8 +1176,7 @@
           <h6 class="text-secondary text-uppercase mb-3">About Us</h6>
           <h1 class="mb-4" style="color: var(--primary);">{{ about_section.heading }}</h1>
           <p class="mb-5">{{ about_section.description }}</p>
-          <a href="{% url 'aboutus:about-page' %}"
-            class="btn btn-primary py-3 px-5 rounded-pill">{{about_section.button_text }}</a>
+          <a href="{% url 'aboutus:about-page' %}" class="btn btn-primary py-3 px-5 rounded-pill">{{about_section.button_text }}</a>
         </div>
 
         <div class="col-lg-6">
