@@ -1128,13 +1128,13 @@
   <div id="carouselPC" class="carousel d-none d-lg-block">
     <div class="carousel-track">
       {% for slide in slides %}
-        {% if slide.isImageForPC %}
+        
           <div class="carousel-item">
             <div class="carousel-slide" style="background-image: url('{{ slide.image.url }}');">
               <!-- optional content -->
             </div>
           </div>
-        {% endif %}
+       
       {% endfor %}
     </div>
 
@@ -1148,26 +1148,7 @@
 
 
   <!-- MOBILE/TABLET CAROUSEL: visible on small & medium, hidden on large -->
-  <div id="carouselMobile" class="carousel d-block d-lg-none">
-    <div class="carousel-track">
-      {% for slide in slides %}
-        {% if not slide.isImageForPC %}
-          <div class="carousel-item">
-            <div class="carousel-slide" style="background-image: url('{{ slide.image.url }}');">
-              <!-- optional content -->
-            </div>
-          </div>
-        {% endif %}
-      {% endfor %}
-    </div>
-
-    <div class="carousel-nav">
-      <button class="carousel-btn prev">&#10094;</button>
-      <button class="carousel-btn next">&#10095;</button>
-    </div>
-
-    <div class="carousel-dots"></div>
-  </div>
+ 
 
 </div>
 
