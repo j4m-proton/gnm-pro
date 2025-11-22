@@ -7,6 +7,25 @@
 
 
 <style>
+  :root {
+    --primary: {
+        {
+        primarycolor
+      }
+    }
+
+    ;
+
+    --secondary: {
+        {
+        secondarycolor
+      }
+    }
+
+    ;
+    --dark: #0d1b2a;
+    --light: #f8f9fa;
+  }
   body {
     background-color: #000000 !important;
   }
@@ -47,7 +66,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.12);
+    background: transparent;
     border: none;
     font-size: 2rem;
     padding: 0.5rem 1rem;
@@ -63,7 +82,7 @@
   .carousel-btn.next { right: 20px; }
 
   .carousel-btn:hover {
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(238, 241, 11, 0.904);
   }
 
   .carousel-dots {
@@ -81,13 +100,13 @@
     height: 12px;
     border-radius: 50%;
     border: none;
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(12, 2, 150, 0.918);
     cursor: pointer;
     transition: 0.3s;
   }
 
   .carousel-dots button.active {
-    background: var(--primary);
+    background: var(--secondary);
     transform: scale(1.2);
   }
 
@@ -104,25 +123,7 @@
 
 
 <style>
-  :root {
-    --primary: {
-        {
-        primarycolor
-      }
-    }
-
-    ;
-
-    --secondary: {
-        {
-        secondarycolor
-      }
-    }
-
-    ;
-    --dark: #0d1b2a;
-    --light: #f8f9fa;
-  }
+  
 
   /* ---------- Global ---------- */
   h1,
@@ -1064,9 +1065,9 @@
   <!-- PC CAROUSEL -->
   <div id="carouselPC" class="carousel">
     <div class="carousel-track">
-      <div class="carousel-slide" style="background-image:url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&w=1400');"></div>
-      <div class="carousel-slide" style="background-image:url('https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&w=1400');"></div>
-      <div class="carousel-slide" style="background-image:url('https://images.unsplash.com/photo-1520342868574-5fa3804e551c?auto=format&w=1400');"></div>
+      {% for slide in PCslides %}
+        <div class="carousel-slide" style="background-image:url('{{slide.image.url}}');"></div>
+      {% endfor %}  
     </div>
 
     <button class="carousel-btn prev">&#10094;</button>
@@ -1078,9 +1079,9 @@
   <!-- MOBILE CAROUSEL -->
   <div id="carouselMobile" class="carousel">
     <div class="carousel-track">
-      <div class="carousel-slide" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&w=1000');"></div>
-      <div class="carousel-slide" style="background-image:url('https://images.unsplash.com/photo-1495567720989-cebdbdd97913?auto=format&w=1000');"></div>
-      <div class="carousel-slide" style="background-image:url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&w=1000');"></div>
+      {% for slide in Phoneslides %}
+        <div class="carousel-slide" style="background-image:url('{{slide.image.url}}');"></div>
+      {% endfor %}    
     </div>
 
     <button class="carousel-btn prev">&#10094;</button>

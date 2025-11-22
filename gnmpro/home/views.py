@@ -7,7 +7,8 @@ from team.models import MidleTopTeam
 
 
 def home(request):
-    slides = HeroSlide.objects.filter()
+    PCslides = HeroSlide.objects.filter(isImageForPC=True)
+    Phoneslides = HeroSlide.objects.filter(isImageForPC=False)
     about_section = AboutSection.objects.prefetch_related('features').first()
     fact_section = FactSection.objects.prefetch_related('facts').first()
     
@@ -46,7 +47,8 @@ def home(request):
         return redirect("home:quote_success") 
     
     context = {
-        'slides':slides,
+        'PCslides':PCslides,
+        'Phoneslides': Phoneslides,
         'clientReviews': clientReviews,
         "about_section": about_section,
         "fact_section": fact_section,
