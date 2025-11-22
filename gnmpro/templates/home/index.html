@@ -7,29 +7,6 @@
 
 
 <style>
-  :root {
-
-    --dark: #0d1b2a;
-    --light: #f8f9fa;
-
-    --primary: {
-        {
-        primarycolor
-      }
-    }
-
-    ;
-
-    --secondary: {
-        {
-        secondarycolor
-      }
-    }
-
-    ;
-
-  }
-
   body {
     background-color: #000000 !important;
   }
@@ -41,16 +18,14 @@
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
   }
 
-  /* Slides track */
   .carousel-track {
     display: flex;
     transition: transform 0.8s ease-in-out;
   }
 
-  /* Each Slide */
   .carousel-slide {
     min-width: 100%;
-    height: 77vh;
+    height: 75vh;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -59,16 +34,6 @@
     justify-content: center;
   }
 
-  /* Spotify Overlay */
-  /* .carousel-slide::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(0,0,0,0.9), rgba(0,0,0,0.6));
-  z-index: 1;
-} */
-
-  /* Content inside slide */
   .carousel-content {
     position: relative;
     z-index: 2;
@@ -78,43 +43,11 @@
     padding: 2rem;
   }
 
-  .carousel-content h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--primary);
-    margin-bottom: 1rem;
-  }
-
-  .carousel-content p {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-    color: #ddd;
-  }
-
-  /* CTA button */
-  .cta-btn {
-    display: inline-block;
-    padding: 0.8rem 2rem;
-    border-radius: 50px;
-    background: var(--primary);
-    color: var(--light);
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-  }
-
-  .cta-btn:hover {
-    background: var(--secondary);
-    transform: translateY(-3px);
-  }
-
-  /* Nav Buttons */
   .carousel-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.12);
     border: none;
     font-size: 2rem;
     padding: 0.5rem 1rem;
@@ -126,19 +59,13 @@
     z-index: 3;
   }
 
+  .carousel-btn.prev { left: 20px; }
+  .carousel-btn.next { right: 20px; }
+
   .carousel-btn:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.25);
   }
 
-  .carousel-btn.prev {
-    left: 20px;
-  }
-
-  .carousel-btn.next {
-    right: 20px;
-  }
-
-  /* Dots */
   .carousel-dots {
     position: absolute;
     bottom: 20px;
@@ -156,13 +83,23 @@
     border: none;
     background: rgba(255, 255, 255, 0.4);
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: 0.3s;
   }
 
   .carousel-dots button.active {
     background: var(--primary);
     transform: scale(1.2);
   }
+
+  /* Hide PC on mobile */
+  #carouselPC { display: none; }
+  #carouselMobile { display: block; }
+
+  @media (min-width: 992px) {
+    #carouselPC { display: block; }
+    #carouselMobile { display: none; }
+  }
+
 </style>
 
 
@@ -1124,30 +1061,32 @@
 </head>
 <div class="container py-2">
 
-  <!-- PC CAROUSEL: only visible on large screens -->
-  <div id="carouselPC" class="carousel d-none d-lg-block">
+  <!-- PC CAROUSEL -->
+  <div id="carouselPC" class="carousel">
     <div class="carousel-track">
-      {% for slide in slides %}
-        
-          <div class="carousel-item">
-            <div class="carousel-slide" style="background-image: url('{{ slide.image.url }}');">
-              <!-- optional content -->
-            </div>
-          </div>
-       
-      {% endfor %}
+      <div class="carousel-slide" style="background-image:url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&w=1400');"></div>
+      <div class="carousel-slide" style="background-image:url('https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&w=1400');"></div>
+      <div class="carousel-slide" style="background-image:url('https://images.unsplash.com/photo-1520342868574-5fa3804e551c?auto=format&w=1400');"></div>
     </div>
 
-    <div class="carousel-nav">
-      <button class="carousel-btn prev">&#10094;</button>
-      <button class="carousel-btn next">&#10095;</button>
-    </div>
-
+    <button class="carousel-btn prev">&#10094;</button>
+    <button class="carousel-btn next">&#10095;</button>
     <div class="carousel-dots"></div>
   </div>
 
 
-  <!-- MOBILE/TABLET CAROUSEL: visible on small & medium, hidden on large -->
+  <!-- MOBILE CAROUSEL -->
+  <div id="carouselMobile" class="carousel">
+    <div class="carousel-track">
+      <div class="carousel-slide" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&w=1000');"></div>
+      <div class="carousel-slide" style="background-image:url('https://images.unsplash.com/photo-1495567720989-cebdbdd97913?auto=format&w=1000');"></div>
+      <div class="carousel-slide" style="background-image:url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&w=1000');"></div>
+    </div>
+
+    <button class="carousel-btn prev">&#10094;</button>
+    <button class="carousel-btn next">&#10095;</button>
+    <div class="carousel-dots"></div>
+  </div>
  
 
 </div>
@@ -1542,64 +1481,55 @@
 </div>
 <!-- Testimonial End -->
 
-
 <script>
-document.querySelectorAll('.carousel').forEach(function (carousel) {
+function initCarousel(id) {
+  const carousel = document.querySelector(id);
+  const track = carousel.querySelector('.carousel-track');
+  const slides = Array.from(track.children);
+  const nextButton = carousel.querySelector('.next');
+  const prevButton = carousel.querySelector('.prev');
+  const dotsNav = carousel.querySelector('.carousel-dots');
 
-    const track = carousel.querySelector('.carousel-track');
-    const slides = Array.from(track.children);
-    const nextButton = carousel.querySelector('.next');
-    const prevButton = carousel.querySelector('.prev');
-    const dotsNav = carousel.querySelector('.carousel-dots');
+  let currentIndex = 0;
 
-    let currentIndex = 0;
+  slides.forEach((_, index) => {
+    const dot = document.createElement('button');
+    if (index === 0) dot.classList.add('active');
+    dotsNav.appendChild(dot);
+    dot.addEventListener('click', () => goToSlide(index));
+  });
 
-    // Create dots
-    slides.forEach((_, index) => {
-        const dot = document.createElement('div');
-        dot.classList.add('dot');
-        if (index === 0) dot.classList.add('active');
-        dotsNav.appendChild(dot);
+  const dots = Array.from(dotsNav.children);
 
-        dot.addEventListener('click', () => goToSlide(index));
-    });
+  function updateDots(index) {
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[index].classList.add('active');
+  }
 
-    const dots = Array.from(dotsNav.children);
+  function goToSlide(index) {
+    track.style.transform = `translateX(-${index * 100}%)`;
+    currentIndex = index;
+    updateDots(index);
+  }
 
-    function updateDots(index) {
-        dots.forEach(dot => dot.classList.remove('active'));
-        dots[index].classList.add('active');
-    }
+  nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    goToSlide(currentIndex);
+  });
 
-    function goToSlide(index) {
-        track.style.transform = 'translateX(-' + index * 100 + '%)';
-        currentIndex = index;
-        updateDots(index);
-    }
+  prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    goToSlide(currentIndex);
+  });
 
-    // Next Button
-    nextButton.addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % slides.length;
-        goToSlide(currentIndex);
-    });
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    goToSlide(currentIndex);
+  }, 5000);
+}
 
-    // Prev Button
-    prevButton.addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-        goToSlide(currentIndex);
-    });
-
-    // Autoplay ONLY for visible carousel
-    setInterval(() => {
-        // If this carousel is hidden (display:none), ignore autoplay
-        if (carousel.offsetParent === null) return;
-
-        currentIndex = (currentIndex + 1) % slides.length;
-        goToSlide(currentIndex);
-    }, 5000);
-
-});
+initCarousel("#carouselPC");
+initCarousel("#carouselMobile");
 </script>
-
 
 {% endblock content %}
