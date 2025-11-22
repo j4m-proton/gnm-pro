@@ -43,7 +43,7 @@ def default(request):
         'primarycolor':primary_color,
         'secondarycolor':secondary_color,
         'social_handles': social_handles,
-        'service': service,
+        'GNMservice': service,
         'siteMainSettings':{
                 'site_name': site_settings.site_name if site_settings else '',
                 'another_name': site_settings.another_name if site_settings else '',

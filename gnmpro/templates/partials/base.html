@@ -736,7 +736,7 @@
           <div class="footer-col">
             <h3>Our Services</h3>
             <ul class="footer-links">
-                {% for s in service|slice:":3" %}
+                {% for s in GNMservice|slice:":3" %}
                     <li><a href="{% url 'service:Services-Details' s.id %}"><i class="{{s.icon_class}}"></i> {{s.title}}</a></li>    
                 {% endfor %} 
                 <li><a href="{% url 'service:service-page'  %}"><i class="fas fa-plus"></i> More service</a></li>       
